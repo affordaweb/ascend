@@ -20,16 +20,17 @@ const usefulLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#292733] pt-16 pb-8">
-      <div className="max-w-7xl mx-auto px-4">
+    <footer className="bg-[#0f2744] pt-0 pb-8">
+      <div className="h-1 w-full" style={{background: 'linear-gradient(to right, #f59e0b, #2563eb, #f59e0b)'}} />
+      <div className="max-w-7xl mx-auto px-4 pt-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
             <Image src="/images/ads-logo.webp" alt="Ascend Development Solutions" width={140} height={35} className="h-10 w-auto object-contain mb-4 brightness-0 invert" />
-            <p className="text-[#7A7A7A] text-sm leading-relaxed mb-4">
+            <p className="text-white/60 text-sm leading-relaxed mb-4">
               Ascend Development Solutions (ADS) is a growth-focused consultancy dedicated to empowering organizations through strategic guidance, capacity building, and values-driven development.
             </p>
             <a href="https://www.facebook.com/100080045962662/?locale=tl_PH" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white text-sm px-4 py-2 rounded-full hover:bg-[#A9D6B6] hover:text-[#3A3C51] hover:border-[#A9D6B6] transition-all">
+              className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white text-sm px-4 py-2 rounded-full hover:bg-[#f59e0b] hover:border-[#f59e0b] transition-all">
               <Facebook size={14} /> Facebook
             </a>
           </div>
@@ -38,7 +39,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((l) => (
                 <li key={l.href}>
-                  <a href={l.href} className="text-[#D7C4E3] hover:text-white text-sm transition-colors">{l.label}</a>
+                  <a href={l.href} className="text-white/60 hover:text-[#f59e0b] text-sm transition-colors">{l.label}</a>
                 </li>
               ))}
             </ul>
@@ -48,30 +49,30 @@ export default function Footer() {
             <ul className="space-y-2">
               {usefulLinks.map((l) => (
                 <li key={l.href}>
-                  <a href={l.href} target="_blank" rel="noopener noreferrer" className="text-[#D7C4E3] hover:text-white text-sm transition-colors">{l.label}</a>
+                  <a href={l.href} target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-[#f59e0b] text-sm transition-colors">{l.label}</a>
                 </li>
               ))}
             </ul>
           </div>
           <div>
             <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Contact</h4>
-            <div className="space-y-3 text-sm text-[#7A7A7A]">
+            <div className="space-y-3 text-sm text-white/60">
               <div className="flex items-start gap-3">
-                <Mail size={14} className="text-[#A9D6B6] mt-0.5 shrink-0" />
+                <Mail size={14} className="text-[#f59e0b] mt-0.5 shrink-0" />
                 <a href="mailto:info@ascenddevelopmentsolutions.org" className="hover:text-white transition-colors">info@ascenddevelopmentsolutions.org</a>
               </div>
               <div className="flex items-center gap-3">
-                <Phone size={14} className="text-[#A9D6B6] shrink-0" />
+                <Phone size={14} className="text-[#f59e0b] shrink-0" />
                 <span>+63.912.345.6789</span>
               </div>
               <div className="flex items-start gap-3">
-                <Clock size={14} className="text-[#A9D6B6] mt-0.5 shrink-0" />
+                <Clock size={14} className="text-[#f59e0b] mt-0.5 shrink-0" />
                 <span>Monday &ndash; Friday<br />9:00 AM &ndash; 5:00 PM</span>
               </div>
             </div>
           </div>
         </div>
-        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[#7A7A7A] text-xs">
+        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/40 text-xs">
           <p>&copy; 2026 Ascend Development Solutions (ADS). All Rights Reserved.</p>
           <a href="https://affordawebsolutions.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
             Affordable Web Design Company

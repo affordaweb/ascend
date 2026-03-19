@@ -2,7 +2,7 @@ import { Mail, Facebook } from 'lucide-react'
 
 export default function TopBar() {
   return (
-    <div className="bg-[#292733] text-[#7A7A7A] text-xs py-2 px-4">
+    <div className="bg-[#0f2744] text-white/50 text-xs py-2 px-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="mailto:info@ascenddevelopmentsolutions.org" className="flex items-center gap-2 hover:text-white transition-colors">
           <Mail size={12} />

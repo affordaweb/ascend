@@ -16,9 +16,9 @@ export default function ReportingPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="min-h-[40vh] bg-gradient-to-br from-[#3A3C51] to-[#292733] flex items-center py-24 px-4">
+        <section className="min-h-[40vh] bg-gradient-to-br from-[#0f2744] to-[#1e3a5f] flex items-center py-24 px-4 pt-32">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <p className="text-[#A9D6B6] text-sm font-semibold uppercase tracking-widest mb-4">What We Offer</p>
+            <p className="section-label mb-4">What We Offer</p>
             <h1 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-playfair)] leading-tight mb-6">
               Organizational Reporting
             </h1>
@@ -32,23 +32,24 @@ export default function ReportingPage() {
         </section>
 
         {/* Transforming Data Into Clarity */}
-        <section className="bg-white py-20 px-4">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+        <section className="bg-white py-24 px-4">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image src="/images/9cb744349.png" alt="Organizational Reporting" width={600} height={450} className="w-full h-auto object-cover" />
             </div>
             <div>
-              <p className="text-[#A9D6B6] text-sm font-semibold uppercase tracking-widest mb-2">Our Reporting Services</p>
-              <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-[#3A3C51] mb-4">
+              <p className="section-label mb-3">Our Reporting Services</p>
+              <div className="accent-line mb-6 ml-0" style={{margin:'0.75rem 0 1.5rem'}} />
+              <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-4">
                 Transforming Data Into Clarity
               </h2>
-              <p className="text-xl italic text-[#A9D6B6] mb-6">
+              <p className="text-xl italic text-[#f59e0b] mb-6">
                 &ldquo;Data without context is noise. We turn it into direction.&rdquo;
               </p>
-              <p className="text-[#474747] leading-relaxed mb-6">
+              <p className="text-[#1a1a2e]/70 leading-relaxed mb-6">
                 In today&apos;s complex landscape, the ability to understand and communicate organizational performance is critical. ADS provides comprehensive reporting services that go beyond numbers—we translate data into clear, actionable narratives that empower leaders to make informed, strategic decisions with confidence.
               </p>
-              <ul className="space-y-2 text-[#474747] text-sm mb-6">
+              <ul className="space-y-2 text-[#1a1a2e]/70 text-sm mb-6">
                 {[
                   'Organizational performance reporting',
                   'Program monitoring and evaluation',
@@ -57,7 +58,7 @@ export default function ReportingPage() {
                   'Customized dashboards and progress tracking',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
-                    <span className="text-[#A9D6B6] mt-1">&#x25CF;</span>
+                    <span className="text-[#f59e0b] mt-1">&#x25CF;</span>
                     {item}
                   </li>
                 ))}
@@ -67,11 +68,12 @@ export default function ReportingPage() {
         </section>
 
         {/* Our Reporting Approach */}
-        <section className="bg-[#F8F8F8] py-20 px-4">
+        <section className="bg-[#f0f4f8] py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <p className="text-[#A9D6B6] text-sm font-semibold uppercase tracking-widest mb-2">How We Work</p>
-              <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-[#3A3C51]">
+              <p className="section-label mb-3">How We Work</p>
+              <div className="accent-line mb-6" />
+              <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-[#1e3a5f]">
                 Our Reporting Approach
               </h2>
             </div>
@@ -98,9 +100,10 @@ export default function ReportingPage() {
                   body: 'Every report we deliver is designed to drive action. We translate findings into prioritized recommendations that are practical, strategic, and aligned with your organization\'s direction and values.',
                 },
               ].map((card) => (
-                <div key={card.title} className="bg-white rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition-all p-8 border-t-4 border-t-[#A9D6B6]">
-                  <h3 className="text-xl font-bold text-[#3A3C51] font-[family-name:var(--font-playfair)] mb-3">{card.title}</h3>
-                  <p className="text-[#474747] leading-relaxed text-sm">{card.body}</p>
+                <div key={card.title} className="bg-white rounded-2xl border border-gray-100 card-hover p-8">
+                  <div className="h-1 w-full rounded-full mb-6" style={{background:'linear-gradient(to right, #f59e0b, #2563eb)'}} />
+                  <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-[#1e3a5f] mb-3">{card.title}</h3>
+                  <p className="text-[#1a1a2e]/70 leading-relaxed text-sm">{card.body}</p>
                 </div>
               ))}
             </div>
@@ -108,21 +111,23 @@ export default function ReportingPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-[#3A3C51] py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <p className="text-[#A9D6B6] text-sm font-semibold uppercase tracking-widest mb-2">Make Data Work For You</p>
-            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-6">
+        <section className="bg-[#0f2744] py-24 px-4 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute top-0 right-0 w-96 h-96 rounded-full" style={{background:'radial-gradient(circle, #f59e0b, transparent)'}} />
+          </div>
+          <div className="max-w-4xl mx-auto text-center text-white relative z-10">
+            <p className="section-label mb-3">Make Data Work For You</p>
+            <div className="accent-line mb-8" />
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold mb-6">
               Let&apos;s Build Clarity Together
             </h2>
-            <p className="text-xl italic text-[#A9D6B6] mb-8">
+            <blockquote className="text-xl italic text-[#fbbf24] mb-8">
               &ldquo;The best decisions are rooted in honest data and clear understanding.&rdquo;
-            </p>
-            <p className="text-white/80 leading-relaxed mb-10 text-lg max-w-2xl mx-auto">
+            </blockquote>
+            <p className="text-white/70 leading-relaxed mb-10 text-lg max-w-2xl mx-auto">
               Whether you need a one-time performance report or an ongoing monitoring framework, ADS is here to help you understand where you are—and chart a course to where you want to be.
             </p>
-            <a href="/contact" className="bg-[#A9D6B6] text-[#3A3C51] font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-[#3A3C51] transition-all inline-block">
-              Contact Us
-            </a>
+            <a href="/contact" className="btn-primary inline-block">Contact Us</a>
           </div>
         </section>
       </main>

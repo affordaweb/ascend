@@ -16,9 +16,9 @@ export default function ConsultingPage() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="min-h-[40vh] bg-gradient-to-br from-[#3A3C51] to-[#292733] flex items-center py-24 px-4">
+        <section className="min-h-[40vh] bg-gradient-to-br from-[#0f2744] to-[#1e3a5f] flex items-center py-24 px-4 pt-32">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <p className="text-[#A9D6B6] text-sm font-semibold uppercase tracking-widest mb-4">What We Offer</p>
+            <p className="section-label mb-4">What We Offer</p>
             <h1 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-playfair)] leading-tight mb-6">
               Consulting
             </h1>
@@ -32,23 +32,24 @@ export default function ConsultingPage() {
         </section>
 
         {/* Building Stronger Organizations */}
-        <section className="bg-white py-20 px-4">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+        <section className="bg-white py-24 px-4">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image src="/images/21ab96d2e.webp" alt="Strategic Consulting" width={600} height={450} className="w-full h-auto object-cover" />
             </div>
             <div>
-              <p className="text-[#A9D6B6] text-sm font-semibold uppercase tracking-widest mb-2">Our Approach</p>
-              <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-[#3A3C51] mb-4">
+              <p className="section-label mb-3">Our Approach</p>
+              <div className="accent-line mb-6 ml-0" style={{margin:'0.75rem 0 1.5rem'}} />
+              <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-4">
                 Building Stronger Organizations from the Inside Out
               </h2>
-              <p className="text-xl italic text-[#A9D6B6] mb-6">
+              <p className="text-xl italic text-[#f59e0b] mb-6">
                 &ldquo;Strategy is most powerful when it starts from the inside—with people, purpose, and values.&rdquo;
               </p>
-              <p className="text-[#474747] leading-relaxed mb-6">
+              <p className="text-[#1a1a2e]/70 leading-relaxed mb-6">
                 At ADS, our consulting practice is grounded in the belief that lasting organizational transformation comes from within. We work closely with leadership teams and stakeholders to understand your unique context, challenges, and aspirations—then design strategic frameworks that are both ambitious and achievable.
               </p>
-              <ul className="space-y-2 text-[#474747] text-sm mb-6">
+              <ul className="space-y-2 text-[#1a1a2e]/70 text-sm mb-6">
                 {[
                   'Organizational assessment and transformation',
                   'Strategic planning and execution',
@@ -57,7 +58,7 @@ export default function ConsultingPage() {
                   'Leadership and team alignment initiatives',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
-                    <span className="text-[#A9D6B6] mt-1">&#x25CF;</span>
+                    <span className="text-[#f59e0b] mt-1">&#x25CF;</span>
                     {item}
                   </li>
                 ))}
@@ -67,11 +68,12 @@ export default function ConsultingPage() {
         </section>
 
         {/* Our Consulting Approach */}
-        <section className="bg-[#F8F8F8] py-20 px-4">
+        <section className="bg-[#f0f4f8] py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <p className="text-[#A9D6B6] text-sm font-semibold uppercase tracking-widest mb-2">How We Work</p>
-              <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] text-[#3A3C51]">
+              <p className="section-label mb-3">How We Work</p>
+              <div className="accent-line mb-6" />
+              <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-[#1e3a5f]">
                 Our Consulting Approach
               </h2>
             </div>
@@ -98,9 +100,10 @@ export default function ConsultingPage() {
                   body: 'We help organizations measure, communicate, and improve their social and environmental performance—translating complex data into meaningful narratives that demonstrate real-world impact.',
                 },
               ].map((card) => (
-                <div key={card.title} className="bg-white rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition-all p-8 border-t-4 border-t-[#A9D6B6]">
-                  <h3 className="text-xl font-bold text-[#3A3C51] font-[family-name:var(--font-playfair)] mb-3">{card.title}</h3>
-                  <p className="text-[#474747] leading-relaxed text-sm">{card.body}</p>
+                <div key={card.title} className="bg-white rounded-2xl border border-gray-100 card-hover p-8">
+                  <div className="h-1 w-full rounded-full mb-6" style={{background:'linear-gradient(to right, #f59e0b, #2563eb)'}} />
+                  <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-[#1e3a5f] mb-3">{card.title}</h3>
+                  <p className="text-[#1a1a2e]/70 leading-relaxed text-sm">{card.body}</p>
                 </div>
               ))}
             </div>
@@ -108,21 +111,23 @@ export default function ConsultingPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-[#3A3C51] py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <p className="text-[#A9D6B6] text-sm font-semibold uppercase tracking-widest mb-2">Start Your Journey</p>
-            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-playfair)] mb-6">
+        <section className="bg-[#0f2744] py-24 px-4 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute top-0 right-0 w-96 h-96 rounded-full" style={{background:'radial-gradient(circle, #f59e0b, transparent)'}} />
+          </div>
+          <div className="max-w-4xl mx-auto text-center text-white relative z-10">
+            <p className="section-label mb-3">Start Your Journey</p>
+            <div className="accent-line mb-8" />
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold mb-6">
               Let&apos;s Ascend Together
             </h2>
-            <p className="text-xl italic text-[#A9D6B6] mb-8">
+            <blockquote className="text-xl italic text-[#fbbf24] mb-8">
               &ldquo;Every great organization begins with a clear vision and the courage to pursue it.&rdquo;
-            </p>
-            <p className="text-white/80 leading-relaxed mb-10 text-lg max-w-2xl mx-auto">
+            </blockquote>
+            <p className="text-white/70 leading-relaxed mb-10 text-lg max-w-2xl mx-auto">
               Whether you&apos;re at the start of your transformation journey or looking to accelerate progress, ADS is here to partner with you every step of the way.
             </p>
-            <a href="/contact" className="bg-[#A9D6B6] text-[#3A3C51] font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-[#3A3C51] transition-all inline-block">
-              Contact Us
-            </a>
+            <a href="/contact" className="btn-primary inline-block">Contact Us</a>
           </div>
         </section>
       </main>

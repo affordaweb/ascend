@@ -52,14 +52,14 @@ export default function FAQAccordion() {
       {faqs.map((faq, i) => (
         <div key={i} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
           <button
-            className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 text-[#3A3C51] font-semibold hover:bg-gray-50 transition-colors"
+            className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 text-[#1e3a5f] font-semibold hover:bg-gray-50 transition-colors"
             onClick={() => setOpenFaq(openFaq === i ? null : i)}
           >
             <span>{faq.q}</span>
-            <span className="text-[#A9D6B6] text-xl shrink-0">{openFaq === i ? '−' : '+'}</span>
+            <span className="text-[#f59e0b] text-xl shrink-0">{openFaq === i ? '−' : '+'}</span>
           </button>
           {openFaq === i && (
-            <div className="px-6 pb-5 text-[#474747] leading-relaxed text-sm border-t border-gray-100 pt-4">
+            <div className="px-6 pb-5 text-[#1a1a2e]/70 leading-relaxed text-sm border-t border-gray-100 pt-4">
               {faq.a}
             </div>
           )}
