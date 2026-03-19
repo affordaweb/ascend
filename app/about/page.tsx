@@ -32,7 +32,7 @@ export default function AboutPage() {
         <section className="bg-white py-24 px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <Image src="/images/852da68f.png" alt="Who We Are" width={600} height={450} className="w-full h-auto object-cover" />
+              <Image src="/images/illus-about.svg" alt="Who We Are" width={600} height={450} className="w-full h-auto object-cover" />
             </div>
             <div>
               <p className="section-label mb-3">About ADS</p>
@@ -68,7 +68,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden shadow-2xl">
-              <Image src="/images/21ab96d2e.webp" alt="Our Story" width={600} height={450} className="w-full h-auto object-cover" />
+              <Image src="/images/illus-strategy.svg" alt="Our Story" width={600} height={450} className="w-full h-auto object-cover" />
             </div>
           </div>
         </section>

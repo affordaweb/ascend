@@ -43,7 +43,7 @@ export default function ExclusiveIMGPerksPage() {
         <section className="bg-white py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <Image src="/images/3a105775775.png" alt="IMG Perks" width={1200} height={600} className="w-full h-auto object-cover" />
+              <Image src="/images/illus-perks.svg" alt="IMG Perks" width={1200} height={600} className="w-full h-auto object-cover" />
             </div>
           </div>
         </section>

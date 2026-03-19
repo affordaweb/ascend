@@ -35,7 +35,7 @@ export default function ReportingPage() {
         <section className="bg-white py-24 px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <Image src="/images/9cb744349.png" alt="Organizational Reporting" width={600} height={450} className="w-full h-auto object-cover" />
+              <Image src="/images/illus-reporting.svg" alt="Organizational Reporting" width={600} height={450} className="w-full h-auto object-cover" />
             </div>
             <div>
               <p className="section-label mb-3">Our Reporting Services</p>

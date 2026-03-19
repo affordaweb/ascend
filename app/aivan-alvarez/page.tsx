@@ -99,7 +99,7 @@ export default function AivanAlvarezPage() {
 
         {/* Full-width Image */}
         <section className="relative h-[400px] overflow-hidden">
-          <Image src="/images/sustainability-image-101.png" alt="Sustainability" width={1200} height={600} className="w-full h-full object-cover" />
+          <Image src="/images/illus-sustainability.svg" alt="Sustainability" width={1200} height={600} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-[#0f2744]/70 flex items-center justify-center">
             <p className="text-white text-2xl md:text-3xl font-bold font-[family-name:var(--font-playfair)] text-center px-4 max-w-2xl">
               Building systems that are fair, inclusive, and accountable

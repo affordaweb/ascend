@@ -96,7 +96,7 @@ export default function ContactPage() {
 
         {/* Image Banner */}
         <section className="relative h-[350px] overflow-hidden">
-          <Image src="/images/f7238718fa7f40.png" alt="Empowering Progress" width={1200} height={500} className="w-full h-full object-cover" />
+          <Image src="/images/illus-contact.svg" alt="Empowering Progress" width={1200} height={500} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-[#0f2744]/70 flex items-center justify-center">
             <p className="text-white text-2xl md:text-3xl font-bold font-[family-name:var(--font-playfair)] text-center px-4 max-w-2xl">
               Empowering Progress Through Connection

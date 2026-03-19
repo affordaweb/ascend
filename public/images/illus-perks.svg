@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+  <defs>
+    <filter id="shadow-perks" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#1e3a5f" flood-opacity="0.18"/>
+    </filter>
+    <linearGradient id="perks-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+    <linearGradient id="trophy-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="medal-ribbon" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef3c7" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#fef3c7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="450" fill="url(#perks-bg)" rx="18"/>
+
+  <!-- Glow behind trophy -->
+  <circle cx="300" cy="220" r="160" fill="url(#glow)"/>
+
+  <!-- Decorative stars scattered -->
+  <path d="M60,70 L63,80 L73,80 L65,87 L68,97 L60,90 L52,97 L55,87 L47,80 L57,80Z" fill="#fbbf24" opacity="0.8"/>
+  <path d="M520,55 L523,65 L533,65 L525,72 L528,82 L520,75 L512,82 L515,72 L507,65 L517,65Z" fill="#fbbf24" opacity="0.75"/>
+  <path d="M80,350 L82,357 L89,357 L83,361 L85,368 L80,364 L75,368 L77,361 L71,357 L78,357Z" fill="#f59e0b" opacity="0.6"/>
+  <path d="M530,370 L532,377 L539,377 L533,381 L535,388 L530,384 L525,388 L527,381 L521,377 L528,377Z" fill="#f59e0b" opacity="0.65"/>
+  <path d="M160,50 L162,57 L169,57 L163,62 L165,69 L160,65 L155,69 L157,62 L151,57 L158,57Z" fill="#fbbf24" opacity="0.55"/>
+  <path d="M440,40 L442,47 L449,47 L443,52 L445,59 L440,55 L435,59 L437,52 L431,47 L438,47Z" fill="#fbbf24" opacity="0.6"/>
+
+  <!-- Upward trending chart line (background) -->
+  <path d="M50,380 L110,350 L170,330 L230,295 L290,265 L350,240 L410,210 L470,185 L530,165" stroke="#dbeafe" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- Chart area fill -->
+  <path d="M50,380 L110,350 L170,330 L230,295 L290,265 L350,240 L410,210 L470,185 L530,165 L530,420 L50,420Z" fill="#dbeafe" opacity="0.3"/>
+  <!-- Chart dots -->
+  <circle cx="110" cy="350" r="6" fill="#2563eb" opacity="0.5"/>
+  <circle cx="230" cy="295" r="6" fill="#2563eb" opacity="0.5"/>
+  <circle cx="350" cy="240" r="6" fill="#2563eb" opacity="0.5"/>
+  <circle cx="470" cy="185" r="6" fill="#2563eb" opacity="0.5"/>
+
+  <!-- === Central TROPHY === -->
+  <g transform="translate(300,210)" filter="url(#shadow-perks)">
+    <!-- Trophy cup -->
+    <path d="M-55,-80 Q-65,-30 -45,20 Q-30,50 0,60 Q30,50 45,20 Q65,-30 55,-80Z" fill="url(#trophy-grad)"/>
+    <!-- Trophy handles -->
+    <path d="M-55,-60 Q-90,-55 -85,-25 Q-80,5 -50,-5" stroke="#d97706" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <path d="M55,-60 Q90,-55 85,-25 Q80,5 50,-5" stroke="#d97706" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <!-- Trophy top rim -->
+    <rect x="-58" y="-85" width="116" height="12" rx="6" fill="#f59e0b"/>
+    <!-- Trophy shine -->
+    <path d="M-35,-60 Q-25,-75 -10,-65 Q-20,-45 -35,-60Z" fill="white" opacity="0.25"/>
+    <!-- Trophy stem -->
+    <rect x="-12" y="60" width="24" height="35" rx="4" fill="#d97706"/>
+    <!-- Trophy base -->
+    <rect x="-45" y="92" width="90" height="18" rx="6" fill="#b45309"/>
+    <rect x="-38" y="86" width="76" height="10" rx="4" fill="#d97706"/>
+    <!-- Star on trophy -->
+    <path d="M0,-30 L6,-10 L26,-10 L10,2 L16,22 L0,10 L-16,22 L-10,2 L-26,-10 L-6,-10Z" fill="white" opacity="0.5"/>
+    <!-- Trophy text -->
+    <text x="0" y="-5" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="white" opacity="0.8">IMG</text>
+  </g>
+
+  <!-- === Checkmark badges (left side) === -->
+  <g transform="translate(120,175)" filter="url(#shadow-perks)">
+    <circle r="35" fill="#2563eb"/>
+    <circle r="28" fill="white" opacity="0.15"/>
+    <!-- Check -->
+    <path d="M-14,2 L-4,14 L18,-10" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <!-- Label -->
+    <rect x="-40" y="40" width="80" height="20" rx="5" fill="#2563eb" opacity="0.8"/>
+    <rect x="-28" y="45" width="56" height="5" rx="2" fill="white" opacity="0.5"/>
+    <rect x="-20" y="53" width="40" height="4" rx="2" fill="white" opacity="0.4"/>
+  </g>
+  <text x="120" y="233" text-anchor="middle" font-family="Arial" font-size="9" fill="#1e3a5f" font-weight="bold">Access</text>
+
+  <g transform="translate(120,300)" filter="url(#shadow-perks)">
+    <circle r="30" fill="#1e3a5f"/>
+    <path d="M-12,2 L-3,12 L15,-8" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  <text x="120" y="342" text-anchor="middle" font-family="Arial" font-size="9" fill="#1e3a5f" font-weight="bold">Networking</text>
+
+  <!-- === Checkmark badges (right side) === -->
+  <g transform="translate(480,175)" filter="url(#shadow-perks)">
+    <circle r="35" fill="#2563eb"/>
+    <circle r="28" fill="white" opacity="0.15"/>
+    <path d="M-14,2 L-4,14 L18,-10" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  <text x="480" y="225" text-anchor="middle" font-family="Arial" font-size="9" fill="#1e3a5f" font-weight="bold">Resources</text>
+
+  <g transform="translate(480,300)" filter="url(#shadow-perks)">
+    <circle r="30" fill="#1e3a5f"/>
+    <path d="M-12,2 L-3,12 L15,-8" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  <text x="480" y="342" text-anchor="middle" font-family="Arial" font-size="9" fill="#1e3a5f" font-weight="bold">Training</text>
+
+  <!-- === Handshake at base === -->
+  <g transform="translate(300,405)" filter="url(#shadow-perks)">
+    <!-- Left arm -->
+    <path d="M-110,0 Q-75,-15 -38,-10 L-15,-6 Q-6,-3 0,0" stroke="#fbbf24" stroke-width="16" stroke-linecap="round" fill="none"/>
+    <!-- Right arm -->
+    <path d="M110,0 Q75,-15 38,-10 L15,-6 Q6,-3 0,0" stroke="#fbbf24" stroke-width="16" stroke-linecap="round" fill="none"/>
+    <!-- Clasped hands -->
+    <ellipse cx="0" cy="0" rx="35" ry="22" fill="#fbbf24"/>
+    <ellipse cx="0" cy="0" rx="26" ry="15" fill="#f59e0b"/>
+    <path d="M-20,-5 Q-8,-14 0,-12 Q8,-14 20,-5" stroke="#f59e0b" stroke-width="3.5" fill="none" opacity="0.5"/>
+    <!-- Sleeve cuffs -->
+    <rect x="-110" y="-10" width="30" height="20" rx="5" fill="#1e3a5f" opacity="0.6"/>
+    <rect x="80" y="-10" width="30" height="20" rx="5" fill="#2563eb" opacity="0.6"/>
+  </g>
+
+  <!-- Medal ribbons -->
+  <g transform="translate(300,130)">
+    <!-- Ribbon left -->
+    <path d="M-8,-8 L-8,30 L0,22 L8,30 L8,-8Z" fill="url(#medal-ribbon)"/>
+    <!-- Medal circle -->
+    <circle r="32" fill="#fbbf24" filter="url(#shadow-perks)"/>
+    <circle r="25" fill="#f59e0b"/>
+    <!-- Star on medal -->
+    <path d="M0,-16 L4,-5 L16,-5 L7,2 L10,14 L0,7 L-10,14 L-7,2 L-16,-5 L-4,-5Z" fill="white" opacity="0.85"/>
+  </g>
+
+  <!-- Connection lines from trophy to checkmarks -->
+  <line x1="230" y1="210" x2="155" y2="175" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,4" opacity="0.5"/>
+  <line x1="230" y1="240" x2="150" y2="300" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,4" opacity="0.5"/>
+  <line x1="370" y1="210" x2="445" y2="175" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,4" opacity="0.5"/>
+  <line x1="370" y1="240" x2="450" y2="300" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,4" opacity="0.5"/>
+
+  <!-- Floating sparkles -->
+  <path d="M200,100 L201,106 L207,106 L202,110 L204,116 L200,112 L196,116 L198,110 L193,106 L199,106Z" fill="#fbbf24" opacity="0.65"/>
+  <path d="M395,90 L397,96 L403,96 L398,100 L400,106 L395,102 L390,106 L392,100 L387,96 L393,96Z" fill="#fbbf24" opacity="0.6"/>
+  <circle cx="175" cy="390" r="5" fill="#fbbf24" opacity="0.5"/>
+  <circle cx="425" cy="385" r="5" fill="#fbbf24" opacity="0.5"/>
+  <circle cx="300" cy="60" r="4" fill="#f59e0b" opacity="0.4"/>
+</svg>

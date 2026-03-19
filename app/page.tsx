@@ -77,7 +77,7 @@ export default function HomePage() {
               </div>
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl">
-                  <Image src="/images/ads-image-101.webp" alt="Who We Are" width={600} height={450} className="w-full h-auto object-cover" />
+                  <Image src="/images/illus-team.svg" alt="Who We Are" width={600} height={450} className="w-full h-auto object-cover" />
                 </div>
                 <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-6 hidden md:block">
                   <p className="text-[#f59e0b] font-bold text-2xl">15+</p>
@@ -175,7 +175,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <Image src="/images/e69fa20f93a66.png" alt="Meet Our Experts" width={600} height={450} className="w-full h-auto object-cover" />
+                <Image src="/images/illus-experts.svg" alt="Meet Our Experts" width={600} height={450} className="w-full h-auto object-cover" />
               </div>
               <div>
                 <p className="section-label mb-3">Meet Our Experts</p>
