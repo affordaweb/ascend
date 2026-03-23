@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { DM_Sans, Playfair_Display } from "next/font/google";
+import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
+const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta" });
+const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", style: ["normal", "italic"] });
 
 export const metadata: Metadata = {
   title: "Ascend Development Solutions",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} ${playfair.variable} font-[family-name:var(--font-dm-sans)] text-[#1a1a2e]`}>
+      <body className={`${jakarta.variable} ${fraunces.variable} font-[family-name:var(--font-jakarta)] text-[#1a1a2e]`}>
         {children}
       </body>
     </html>
