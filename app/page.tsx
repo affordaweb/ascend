@@ -74,10 +74,10 @@ export default function HomePage() {
       <Navbar />
       <main>
 
-        {/* Hero — full viewport, text bottom-left like CWA */}
-        <section className="relative w-full min-h-screen flex items-end">
+        {/* Hero — full viewport, centered */}
+        <section className="relative w-full min-h-screen flex items-center justify-center">
           <Image
-            src="/images/ads-image-101.webp"
+            src="/images/ads-hero.png"
             alt="Ascend Development Solutions"
             fill
             className="object-cover"
@@ -87,10 +87,10 @@ export default function HomePage() {
             className="absolute inset-0"
             style={{
               background:
-                'linear-gradient(to top, rgba(15,39,68,0.97) 0%, rgba(15,39,68,0.65) 55%, rgba(15,39,68,0.2) 100%)',
+                'linear-gradient(to bottom, rgba(15,39,68,0.6) 0%, rgba(15,39,68,0.75) 50%, rgba(15,39,68,0.85) 100%)',
             }}
           />
-          <div className="relative z-10 max-w-7xl mx-auto px-4 pb-32 w-full">
+          <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
               <span className="w-2 h-2 rounded-full bg-[#f59e0b] animate-pulse" />
               <span className="text-white/80 text-sm font-medium uppercase tracking-widest">
@@ -101,16 +101,16 @@ export default function HomePage() {
               Building Better{' '}
               <span className="gradient-text-light">Futures Together</span>
             </h1>
-            <p className="text-xl text-white/80 max-w-2xl mb-3 leading-relaxed">
+            <p className="text-xl text-white/80 mb-3 leading-relaxed">
               Ascend. In Our Shared Humanity, There is a Solution
             </p>
-            <p className="text-white/55 max-w-2xl mb-10 leading-relaxed">
+            <p className="text-white/55 max-w-2xl mx-auto mb-10 leading-relaxed">
               Empowering individuals, groups, and institutions through ESG and
               SDG-aligned trainings, seminars, reporting, and consultancy.
               Sama-samang pag-angat para sa makatao, makatarungan, at
               makakalikasang kinabukasan.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               <a href="/consulting" className="btn-primary">Our Services</a>
               <a href="/contact" className="btn-ghost">Contact Us</a>
             </div>
