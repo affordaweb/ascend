@@ -118,8 +118,8 @@ export default function HomePage() {
         </section>
 
         {/* Stats — floating card like CWA */}
-        <section className="bg-white relative z-10">
-          <div className="max-w-5xl mx-auto px-4 -mt-16">
+        <section className="bg-white relative z-10 pt-[75px] pb-[100px]">
+          <div className="max-w-5xl mx-auto px-4 -mt-[75px]">
             <div className="bg-white rounded-2xl shadow-2xl py-8 px-4 grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-100">
               {stats.map((s) => (
                 <div key={s.l} className="text-center px-6 py-2">
