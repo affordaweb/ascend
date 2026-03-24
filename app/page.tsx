@@ -118,8 +118,8 @@ export default function HomePage() {
         </section>
 
         {/* Stats — floating card like CWA */}
-        <section className="bg-white relative z-10 pt-[75px] pb-[100px]">
-          <div className="max-w-5xl mx-auto px-4 -mt-[75px]">
+        <section className="bg-white relative z-10 pt-[75px] pb-[48px]">
+          <div className="max-w-5xl mx-auto px-4 -mt-[100px]">
             <div className="bg-white rounded-2xl shadow-2xl py-8 px-4 grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-100">
               {stats.map((s) => (
                 <div key={s.l} className="text-center px-6 py-2">
@@ -134,7 +134,7 @@ export default function HomePage() {
         </section>
 
         {/* About / Mission — white bg, 2-col text + image like CWA */}
-        <section className="bg-white py-20 sm:py-28">
+        <section className="bg-white pt-10 pb-20 sm:pb-28">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
