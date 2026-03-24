@@ -75,7 +75,7 @@ export default function HomePage() {
       <main>
 
         {/* Hero — full viewport, centered */}
-        <section className="relative w-full min-h-screen flex items-center justify-center">
+        <section className="relative w-full min-h-screen flex items-center justify-center pt-[100px]">
           <Image
             src="/images/ads-hero.png"
             alt="Ascend Development Solutions"
