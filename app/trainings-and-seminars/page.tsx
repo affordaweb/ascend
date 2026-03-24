@@ -1,55 +1,107 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import TopBar from '../components/TopBar'
+import { PenLine, Zap, UserCheck, Heart, ClipboardCheck, ArrowRight } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 export const metadata: Metadata = {
   title: 'Trainings & Seminars — Ascend Development Solutions',
-  description: 'ADS offers customized trainings and seminars to empower people through learning and growth — leadership, communication, culture, and values-driven development.',
+  description:
+    'ADS offers customized trainings and seminars to empower people through learning and growth — leadership, communication, culture, and values-driven development.',
 }
+
+const approaches = [
+  {
+    icon: PenLine,
+    title: 'Customized Learning Design',
+    body: "We don't believe in one-size-fits-all training. Every program we develop is tailored to your organization's objectives, culture, and team dynamics — ensuring relevance, engagement, and lasting behavioral change.",
+  },
+  {
+    icon: Zap,
+    title: 'Engaging & Experiential Sessions',
+    body: 'Our trainers use interactive methods — case studies, simulations, group discussions, and reflective exercises — to create learning experiences that resonate deeply and translate directly into workplace practice.',
+  },
+  {
+    icon: UserCheck,
+    title: 'Expert Facilitators & Trainers',
+    body: 'Our facilitators bring real-world expertise and a genuine passion for people development. They create safe, inclusive spaces where participants feel empowered to learn, share, and grow.',
+  },
+  {
+    icon: Heart,
+    title: 'Values-Centered Development',
+    body: 'Every program is anchored in the principles of integrity, collaboration, and respect. We go beyond skills training to help individuals connect their personal values with their professional roles.',
+  },
+  {
+    icon: ClipboardCheck,
+    title: 'Post-Training Evaluation & Support',
+    body: "Learning doesn't end when the session does. We provide post-training evaluation tools and ongoing support to help organizations measure impact and sustain the gains made through our programs.",
+  },
+]
 
 export default function TrainingsSeminarsPage() {
   return (
     <>
-      <TopBar />
       <Navbar />
       <main>
+
         {/* Hero */}
-        <section className="min-h-[40vh] bg-gradient-to-br from-[#0f2744] to-[#1e3a5f] flex items-center py-24 px-4 pt-32">
-          <div className="max-w-4xl mx-auto text-center text-white">
+        <section className="min-h-[55vh] bg-gradient-to-br from-[#0f2744] to-[#1e3a5f] flex items-center py-24 px-4 pt-32 relative overflow-hidden">
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              backgroundImage:
+                'radial-gradient(circle at 85% 15%, rgba(245,158,11,0.08), transparent 50%), radial-gradient(circle at 15% 85%, rgba(37,99,235,0.08), transparent 50%)',
+            }}
+          />
+          <div className="max-w-4xl mx-auto text-center text-white relative z-10">
             <p className="section-label mb-4">What We Offer</p>
-            <h1 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-playfair)] leading-tight mb-6">
-              Trainings and Seminars
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="h-px w-12 bg-[#f59e0b]/50" />
+              <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b]" />
+              <div className="h-px w-12 bg-[#f59e0b]/50" />
+            </div>
+            <h1 className="font-[family-name:var(--font-fraunces)] text-4xl md:text-6xl font-bold leading-tight mb-4">
+              Trainings &amp; Seminars
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 font-[family-name:var(--font-playfair)] italic mb-4">
+            <p className="font-[family-name:var(--font-fraunces)] text-xl md:text-2xl text-[#fbbf24] italic mb-4">
               Empowering People Through Learning and Growth
             </p>
             <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-              We design and deliver customized learning programs that build capability, inspire leadership, and align teams around shared values and goals.
+              We design and deliver customized learning programs that build capability, inspire
+              leadership, and align teams around shared values and goals.
             </p>
           </div>
         </section>
 
         {/* Strengthening Teams */}
-        <section className="bg-white py-24 px-4">
+        <section className="bg-white py-20 sm:py-28 px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <Image src="/images/illus-training.svg" alt="Trainings and Seminars" width={600} height={450} className="w-full h-auto object-cover" />
+              <Image
+                src="/images/illus-training.svg"
+                alt="Trainings and Seminars"
+                width={600}
+                height={450}
+                className="w-full h-auto object-cover"
+              />
             </div>
             <div>
               <p className="section-label mb-3">Our Training Philosophy</p>
-              <div className="accent-line mb-6 ml-0" style={{margin:'0.75rem 0 1.5rem'}} />
-              <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-4">
+              <div className="accent-line mb-6" style={{ margin: '0.75rem 0 1.5rem' }} />
+              <h2 className="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-4 leading-tight">
                 Strengthening Teams, Inspiring Leaders
               </h2>
-              <p className="text-xl italic text-[#f59e0b] mb-6">
-                &ldquo;Meaningful learning transforms not just what people know—but how they think, lead, and grow together.&rdquo;
+              <p className="font-[family-name:var(--font-fraunces)] text-lg italic text-[#f59e0b] mb-6">
+                &ldquo;Meaningful learning transforms not just what people know — but how they
+                think, lead, and grow together.&rdquo;
               </p>
               <p className="text-[#1a1a2e]/70 leading-relaxed mb-6">
-                At ADS, we believe that people are an organization&apos;s greatest asset. Our training programs are designed to unlock that potential—creating environments where individuals grow, teams collaborate effectively, and organizations thrive. Every session is crafted with purpose, relevance, and impact in mind.
+                At ADS, we believe that people are an organization&apos;s greatest asset. Our
+                training programs are designed to unlock that potential — creating environments
+                where individuals grow, teams collaborate effectively, and organizations thrive.
+                Every session is crafted with purpose, relevance, and impact in mind.
               </p>
-              <ul className="space-y-2 text-[#1a1a2e]/70 text-sm mb-6">
+              <ul className="space-y-2 text-[#1a1a2e]/70 text-sm">
                 {[
                   'Leadership and team development',
                   'Strategic communication and collaboration',
@@ -67,69 +119,89 @@ export default function TrainingsSeminarsPage() {
           </div>
         </section>
 
-        {/* Our Training Approach */}
-        <section className="bg-[#f0f4f8] py-24 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
+        {/* Training Approach — dark grid */}
+        <section className="bg-[#0f2744] py-20 sm:py-28 px-4 relative overflow-hidden">
+          <div
+            className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full opacity-5 pointer-events-none"
+            style={{ background: 'radial-gradient(circle, #f59e0b, transparent)' }}
+          />
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center mb-16">
               <p className="section-label mb-3">How We Deliver</p>
-              <div className="accent-line mb-6" />
-              <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-[#1e3a5f]">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <div className="h-px w-12 bg-[#f59e0b]/50" />
+                <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b]" />
+                <div className="h-px w-12 bg-[#f59e0b]/50" />
+              </div>
+              <h2 className="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl font-bold text-white mb-4">
                 Our Training Approach
               </h2>
+              <p className="text-white/60 max-w-2xl mx-auto">
+                Learning experiences designed to resonate deeply and drive lasting change.
+              </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: 'Customized Learning Design',
-                  body: 'We don\'t believe in one-size-fits-all training. Every program we develop is tailored to your organization\'s objectives, culture, and team dynamics—ensuring relevance, engagement, and lasting behavioral change.',
-                },
-                {
-                  title: 'Engaging and Experiential Sessions',
-                  body: 'Our trainers use interactive methods—case studies, simulations, group discussions, and reflective exercises—to create learning experiences that resonate deeply and translate directly into workplace practice.',
-                },
-                {
-                  title: 'Expert Facilitators and Trainers',
-                  body: 'Our facilitators bring real-world expertise and a genuine passion for people development. They create safe, inclusive spaces where participants feel empowered to learn, share, and grow.',
-                },
-                {
-                  title: 'Values-Centered Development',
-                  body: 'Every program is anchored in the principles of integrity, collaboration, and respect. We go beyond skills training to help individuals connect their personal values with their professional roles.',
-                },
-                {
-                  title: 'Post-Training Evaluation and Support',
-                  body: 'Learning doesn\'t end when the session does. We provide post-training evaluation tools and ongoing support to help organizations measure impact and sustain the gains made through our programs.',
-                },
-              ].map((card) => (
-                <div key={card.title} className="bg-white rounded-2xl border border-gray-100 card-hover p-8">
-                  <div className="h-1 w-full rounded-full mb-6" style={{background:'linear-gradient(to right, #f59e0b, #2563eb)'}} />
-                  <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-[#1e3a5f] mb-3">{card.title}</h3>
-                  <p className="text-[#1a1a2e]/70 leading-relaxed text-sm">{card.body}</p>
-                </div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {approaches.map((a) => {
+                const Icon = a.icon
+                return (
+                  <div
+                    key={a.title}
+                    className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-[#f59e0b]/40 transition-all duration-300 flex flex-col"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-[#f59e0b]/15 flex items-center justify-center mb-5">
+                      <Icon className="text-[#f59e0b]" size={22} />
+                    </div>
+                    <h3 className="font-[family-name:var(--font-fraunces)] text-xl font-bold text-white mb-3">
+                      {a.title}
+                    </h3>
+                    <p className="text-white/55 leading-relaxed text-sm flex-1">{a.body}</p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="bg-[#0f2744] py-24 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-0 right-0 w-96 h-96 rounded-full" style={{background:'radial-gradient(circle, #f59e0b, transparent)'}} />
-          </div>
-          <div className="max-w-4xl mx-auto text-center text-white relative z-10">
-            <p className="section-label mb-3">Empower Your Team</p>
-            <div className="accent-line mb-8" />
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold mb-6">
-              Let&apos;s Build a Learning Culture Together
-            </h2>
-            <blockquote className="text-xl italic text-[#fbbf24] mb-8">
-              &ldquo;Growth is not an event—it is a culture. Let us help you cultivate it.&rdquo;
-            </blockquote>
-            <p className="text-white/70 leading-relaxed mb-10 text-lg max-w-2xl mx-auto">
-              Ready to invest in your most valuable asset—your people? Reach out to ADS today to design a training program that makes a real difference.
-            </p>
-            <a href="/contact" className="btn-primary inline-block">Contact Us</a>
+        <section className="bg-[#f0f4f8] py-20 sm:py-28 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <p className="section-label mb-3">Empower Your Team</p>
+                <div className="accent-line mb-6" style={{ margin: '0.75rem 0 1.5rem' }} />
+                <h2 className="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-6 leading-tight">
+                  Let&apos;s Build a Learning Culture Together
+                </h2>
+                <blockquote className="font-[family-name:var(--font-fraunces)] text-lg italic text-[#f59e0b] border-l-4 border-[#f59e0b] pl-4 mb-6">
+                  &ldquo;Growth is not an event — it is a culture. Let us help you cultivate
+                  it.&rdquo;
+                </blockquote>
+                <p className="text-[#1a1a2e]/70 leading-relaxed mb-8">
+                  Ready to invest in your most valuable asset — your people? Reach out to ADS today
+                  to design a training program that makes a real difference.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <a href="/contact" className="btn-primary inline-flex items-center gap-2">
+                    Contact Us <ArrowRight size={16} />
+                  </a>
+                  <a href="/consulting" className="btn-outline">
+                    View Consulting
+                  </a>
+                </div>
+              </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/illus-team.svg"
+                  alt="Build a Learning Culture"
+                  width={500}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
           </div>
         </section>
+
       </main>
       <Footer />
     </>

@@ -1,132 +1,179 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { Mail, Phone, Clock, Facebook } from 'lucide-react'
-import TopBar from '../components/TopBar'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ContactForm from '../components/ContactForm'
 
 export const metadata: Metadata = {
   title: 'Contact Us — Ascend Development Solutions',
-  description: 'Get in touch with Ascend Development Solutions. We\'re ready to partner with you on strategic consulting, training, and organizational reporting.',
+  description:
+    "Get in touch with Ascend Development Solutions. We're ready to partner with you on strategic consulting, training, and organizational reporting.",
 }
+
+const contactItems = [
+  {
+    icon: Mail,
+    label: 'Email',
+    value: 'info@ascenddevelopmentsolutions.org',
+    href: 'mailto:info@ascenddevelopmentsolutions.org',
+  },
+  {
+    icon: Phone,
+    label: 'Phone',
+    value: '+63.912.345.6789',
+    href: 'tel:+639123456789',
+  },
+  {
+    icon: Clock,
+    label: 'Business Hours',
+    value: 'Monday – Friday, 9:00 AM – 5:00 PM',
+    href: null,
+  },
+  {
+    icon: Facebook,
+    label: 'Facebook',
+    value: 'Ascend Development Solutions',
+    href: 'https://www.facebook.com/100080045962662/?locale=tl_PH',
+  },
+]
 
 export default function ContactPage() {
   return (
     <>
-      <TopBar />
       <Navbar />
       <main>
+
         {/* Hero */}
-        <section className="min-h-[40vh] bg-gradient-to-br from-[#0f2744] to-[#1e3a5f] flex items-center py-24 px-4 pt-32">
-          <div className="max-w-4xl mx-auto text-center text-white">
+        <section className="min-h-[50vh] bg-gradient-to-br from-[#0f2744] to-[#1e3a5f] flex items-center py-24 px-4 pt-32 relative overflow-hidden">
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              backgroundImage:
+                'radial-gradient(circle at 85% 15%, rgba(245,158,11,0.08), transparent 50%), radial-gradient(circle at 15% 85%, rgba(37,99,235,0.08), transparent 50%)',
+            }}
+          />
+          <div className="max-w-4xl mx-auto text-center text-white relative z-10">
             <p className="section-label mb-4">Reach Out</p>
-            <h1 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-playfair)] leading-tight mb-6">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="h-px w-12 bg-[#f59e0b]/50" />
+              <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b]" />
+              <div className="h-px w-12 bg-[#f59e0b]/50" />
+            </div>
+            <h1 className="font-[family-name:var(--font-fraunces)] text-4xl md:text-6xl font-bold leading-tight mb-4">
               Contact Us
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 font-[family-name:var(--font-playfair)] italic">
+            <p className="font-[family-name:var(--font-fraunces)] text-xl md:text-2xl text-[#fbbf24] italic">
               Let&apos;s Build Meaningful Change, Together
             </p>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="bg-white py-24 px-4">
+        <section className="bg-white py-20 sm:py-28 px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+            {/* Contact Info */}
             <div>
               <p className="section-label mb-3">Get In Touch</p>
-              <div className="accent-line mb-6 ml-0" style={{margin:'0.75rem 0 1.5rem'}} />
-              <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-6">
+              <div className="accent-line mb-6" style={{ margin: '0.75rem 0 1.5rem' }} />
+              <h2 className="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-6 leading-tight">
                 We&apos;d Love to Hear From You
               </h2>
-              <p className="text-[#1a1a2e]/70 leading-relaxed mb-8">
-                Whether you&apos;re exploring our services, seeking a partnership, or simply want to learn more about how ADS can support your organization, we&apos;re here to listen and respond.
+              <p className="text-[#1a1a2e]/70 leading-relaxed mb-10">
+                Whether you&apos;re exploring our services, seeking a partnership, or simply want
+                to learn more about how ADS can support your organization, we&apos;re here to
+                listen and respond.
               </p>
-              <div className="space-y-5">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#f59e0b]/10 flex items-center justify-center shrink-0">
-                    <Mail size={16} className="text-[#f59e0b]" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-[#1e3a5f] mb-1">Email</p>
-                    <a href="mailto:info@ascenddevelopmentsolutions.org" className="text-[#1a1a2e]/70 hover:text-[#1e3a5f] transition-colors text-sm">
-                      info@ascenddevelopmentsolutions.org
+              <div className="space-y-6">
+                {contactItems.map((item) => {
+                  const Icon = item.icon
+                  const content = (
+                    <div className="flex items-start gap-4">
+                      <div className="w-11 h-11 rounded-xl bg-[#f59e0b]/10 flex items-center justify-center shrink-0">
+                        <Icon size={18} className="text-[#f59e0b]" />
+                      </div>
+                      <div>
+                        <p className="text-xs font-semibold text-[#1e3a5f] uppercase tracking-wider mb-1">
+                          {item.label}
+                        </p>
+                        <p className="text-[#1a1a2e]/70 text-sm leading-relaxed">{item.value}</p>
+                      </div>
+                    </div>
+                  )
+                  return item.href ? (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      target={item.href.startsWith('http') ? '_blank' : undefined}
+                      rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      className="block hover:opacity-80 transition-opacity"
+                    >
+                      {content}
                     </a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#f59e0b]/10 flex items-center justify-center shrink-0">
-                    <Phone size={16} className="text-[#f59e0b]" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-[#1e3a5f] mb-1">Phone</p>
-                    <a href="tel:+639123456789" className="text-[#1a1a2e]/70 hover:text-[#1e3a5f] transition-colors text-sm">
-                      +63.912.345.6789
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#f59e0b]/10 flex items-center justify-center shrink-0">
-                    <Clock size={16} className="text-[#f59e0b]" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-[#1e3a5f] mb-1">Business Hours</p>
-                    <p className="text-[#1a1a2e]/70 text-sm">Monday &ndash; Friday<br />9:00 AM &ndash; 5:00 PM</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#f59e0b]/10 flex items-center justify-center shrink-0">
-                    <Facebook size={16} className="text-[#f59e0b]" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-[#1e3a5f] mb-1">Facebook</p>
-                    <a href="https://www.facebook.com/100080045962662/?locale=tl_PH" target="_blank" rel="noopener noreferrer" className="text-[#1a1a2e]/70 hover:text-[#1e3a5f] transition-colors text-sm">
-                      Ascend Development Solutions
-                    </a>
-                  </div>
-                </div>
+                  ) : (
+                    <div key={item.label}>{content}</div>
+                  )
+                })}
               </div>
             </div>
+
+            {/* Contact Form */}
             <div className="bg-[#f0f4f8] rounded-2xl p-8 shadow-sm border border-gray-100">
-              <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-[#1e3a5f] mb-6">Send Us a Message</h3>
+              <h3 className="font-[family-name:var(--font-fraunces)] text-2xl font-bold text-[#1e3a5f] mb-2">
+                Send Us a Message
+              </h3>
+              <p className="text-[#1a1a2e]/60 text-sm mb-6">
+                We typically respond within one business day.
+              </p>
               <ContactForm />
             </div>
-          </div>
-        </section>
 
-        {/* Image Banner */}
-        <section className="relative h-[350px] overflow-hidden">
-          <Image src="/images/illus-contact.svg" alt="Empowering Progress" width={1200} height={500} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-[#0f2744]/70 flex items-center justify-center">
-            <p className="text-white text-2xl md:text-3xl font-bold font-[family-name:var(--font-playfair)] text-center px-4 max-w-2xl">
-              Empowering Progress Through Connection
-            </p>
           </div>
         </section>
 
         {/* Partner With Us */}
-        <section className="bg-[#f0f4f8] py-24 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="bg-[#0f2744] py-20 sm:py-28 px-4 relative overflow-hidden">
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              backgroundImage:
+                'radial-gradient(circle at 80% 20%, rgba(245,158,11,0.07), transparent 55%), radial-gradient(circle at 20% 80%, rgba(37,99,235,0.07), transparent 55%)',
+            }}
+          />
+          <div className="max-w-4xl mx-auto text-center relative z-10">
             <p className="section-label mb-3">Partner With Us</p>
-            <div className="accent-line mb-6" />
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-6">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="h-px w-12 bg-[#f59e0b]/50" />
+              <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b]" />
+              <div className="h-px w-12 bg-[#f59e0b]/50" />
+            </div>
+            <h2 className="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
               Together, We Can Create Sustainable Impact
             </h2>
-            <p className="text-[#1a1a2e]/70 leading-relaxed mb-10 text-lg max-w-2xl mx-auto">
-              ADS is committed to building long-term partnerships rooted in trust, transparency, and shared purpose. Let&apos;s start a conversation about how we can support your organization&apos;s journey toward meaningful growth.
+            <p className="text-white/65 leading-relaxed mb-10 text-lg max-w-2xl mx-auto">
+              ADS is committed to building long-term partnerships rooted in trust, transparency,
+              and shared purpose. Let&apos;s start a conversation about how we can support your
+              organization&apos;s journey toward meaningful growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center text-sm text-[#1a1a2e]/70">
-              <a href="mailto:info@ascenddevelopmentsolutions.org" className="flex items-center gap-2 hover:text-[#1e3a5f] transition-colors">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center text-sm text-white/60">
+              <a
+                href="mailto:info@ascenddevelopmentsolutions.org"
+                className="flex items-center gap-2 hover:text-[#f59e0b] transition-colors"
+              >
                 <Mail size={16} className="text-[#f59e0b]" />
                 info@ascenddevelopmentsolutions.org
               </a>
-              <a href="tel:+639123456789" className="flex items-center gap-2 hover:text-[#1e3a5f] transition-colors">
+              <a
+                href="tel:+639123456789"
+                className="flex items-center gap-2 hover:text-[#f59e0b] transition-colors"
+              >
                 <Phone size={16} className="text-[#f59e0b]" />
                 +63.912.345.6789
               </a>
             </div>
           </div>
         </section>
+
       </main>
       <Footer />
     </>

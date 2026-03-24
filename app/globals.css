@@ -34,40 +34,57 @@ body {
 .btn-primary {
   background: linear-gradient(to right, #f59e0b, #fbbf24);
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 700;
   padding: 0.75rem 2rem;
   border-radius: 9999px;
-  transition: all 0.2s;
+  transition: all 0.25s;
   box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+  display: inline-block;
 }
 
 .btn-primary:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.45);
+}
+
+.btn-outline {
+  border: 2px solid #f59e0b;
+  color: #f59e0b;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.25s;
+  display: inline-block;
+}
+
+.btn-outline:hover {
+  background: #f59e0b;
+  color: #ffffff;
 }
 
 .btn-ghost {
-  border: 2px solid rgba(255,255,255,0.25);
+  border: 2px solid rgba(255,255,255,0.35);
   color: #ffffff;
   font-weight: 600;
   padding: 0.75rem 2rem;
   border-radius: 9999px;
-  transition: all 0.2s;
+  transition: all 0.25s;
   backdrop-filter: blur(4px);
+  display: inline-block;
 }
 
 .btn-ghost:hover {
-  background: rgba(255,255,255,0.10);
-  border-color: rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.55);
 }
 
 .card-hover {
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.25s, box-shadow 0.25s;
 }
 
 .card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.13);
 }
 
 .accent-line {
@@ -82,6 +99,6 @@ body {
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: #f59e0b;
 }

@@ -1,55 +1,108 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import TopBar from '../components/TopBar'
+import { Search, Map, RefreshCw, Users, BarChart3, ArrowRight } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 export const metadata: Metadata = {
   title: 'Strategic Consulting — Ascend Development Solutions',
-  description: 'ADS provides strategic consulting for purposeful growth — organizational assessment, strategy development, leadership alignment, and sustainability reporting.',
+  description:
+    'ADS provides strategic consulting for purposeful growth — organizational assessment, strategy development, leadership alignment, and sustainability reporting.',
 }
+
+const approaches = [
+  {
+    icon: Search,
+    title: 'Organizational Assessment',
+    body: "We begin every engagement with a thorough assessment of your organization's current state — examining structures, processes, culture, and performance to identify both strengths and opportunities for growth.",
+  },
+  {
+    icon: Map,
+    title: 'Strategy Development',
+    body: "Using data-driven insights combined with collaborative dialogue, we co-create strategies tailored to your goals, values, and operational realities — ensuring ownership and commitment at every level.",
+  },
+  {
+    icon: RefreshCw,
+    title: 'Process Improvement & Change Management',
+    body: 'We support organizations in streamlining workflows, improving efficiency, and navigating transitions — helping teams adapt to change with confidence, clarity, and a shared sense of purpose.',
+  },
+  {
+    icon: Users,
+    title: 'Leadership & Organizational Alignment',
+    body: 'Strong organizations are led by aligned teams. We work with leadership groups to build cohesion, sharpen decision-making, and cultivate a culture where accountability and collaboration thrive.',
+  },
+  {
+    icon: BarChart3,
+    title: 'Sustainability & Impact Reporting',
+    body: 'We help organizations measure, communicate, and improve their social and environmental performance — translating complex data into meaningful narratives that demonstrate real-world impact.',
+  },
+]
 
 export default function ConsultingPage() {
   return (
     <>
-      <TopBar />
       <Navbar />
       <main>
+
         {/* Hero */}
-        <section className="min-h-[40vh] bg-gradient-to-br from-[#0f2744] to-[#1e3a5f] flex items-center py-24 px-4 pt-32">
-          <div className="max-w-4xl mx-auto text-center text-white">
+        <section className="min-h-[55vh] bg-gradient-to-br from-[#0f2744] to-[#1e3a5f] flex items-center py-24 px-4 pt-32 relative overflow-hidden">
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              backgroundImage:
+                'radial-gradient(circle at 85% 15%, rgba(245,158,11,0.08), transparent 50%), radial-gradient(circle at 15% 85%, rgba(37,99,235,0.08), transparent 50%)',
+            }}
+          />
+          <div className="max-w-4xl mx-auto text-center text-white relative z-10">
             <p className="section-label mb-4">What We Offer</p>
-            <h1 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-playfair)] leading-tight mb-6">
-              Consulting
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="h-px w-12 bg-[#f59e0b]/50" />
+              <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b]" />
+              <div className="h-px w-12 bg-[#f59e0b]/50" />
+            </div>
+            <h1 className="font-[family-name:var(--font-fraunces)] text-4xl md:text-6xl font-bold leading-tight mb-4">
+              Strategic Consulting
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 font-[family-name:var(--font-playfair)] italic mb-4">
-              Strategic Consulting for Purposeful Growth
+            <p className="font-[family-name:var(--font-fraunces)] text-xl md:text-2xl text-[#fbbf24] italic mb-4">
+              For Purposeful Growth
             </p>
             <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-              We partner with organizations to create clarity, alignment, and direction through integrity-driven strategic advisory and consultancy services.
+              We partner with organizations to create clarity, alignment, and direction through
+              integrity-driven strategic advisory and consultancy services.
             </p>
           </div>
         </section>
 
         {/* Building Stronger Organizations */}
-        <section className="bg-white py-24 px-4">
+        <section className="bg-white py-20 sm:py-28 px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <Image src="/images/illus-strategy.svg" alt="Strategic Consulting" width={600} height={450} className="w-full h-auto object-cover" />
+              <Image
+                src="/images/illus-strategy.svg"
+                alt="Strategic Consulting"
+                width={600}
+                height={450}
+                className="w-full h-auto object-cover"
+              />
             </div>
             <div>
               <p className="section-label mb-3">Our Approach</p>
-              <div className="accent-line mb-6 ml-0" style={{margin:'0.75rem 0 1.5rem'}} />
-              <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-4">
+              <div className="accent-line mb-6" style={{ margin: '0.75rem 0 1.5rem' }} />
+              <h2 className="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-4 leading-tight">
                 Building Stronger Organizations from the Inside Out
               </h2>
-              <p className="text-xl italic text-[#f59e0b] mb-6">
-                &ldquo;Strategy is most powerful when it starts from the inside—with people, purpose, and values.&rdquo;
+              <p className="font-[family-name:var(--font-fraunces)] text-lg italic text-[#f59e0b] mb-6">
+                &ldquo;Strategy is most powerful when it starts from the inside — with people,
+                purpose, and values.&rdquo;
               </p>
               <p className="text-[#1a1a2e]/70 leading-relaxed mb-6">
-                At ADS, our consulting practice is grounded in the belief that lasting organizational transformation comes from within. We work closely with leadership teams and stakeholders to understand your unique context, challenges, and aspirations—then design strategic frameworks that are both ambitious and achievable.
+                At ADS, our consulting practice is grounded in the belief that lasting
+                organizational transformation comes from within. We work closely with leadership
+                teams and stakeholders to understand your unique context, challenges, and
+                aspirations — then design strategic frameworks that are both ambitious and
+                achievable.
               </p>
-              <ul className="space-y-2 text-[#1a1a2e]/70 text-sm mb-6">
+              <ul className="space-y-2 text-[#1a1a2e]/70 text-sm">
                 {[
                   'Organizational assessment and transformation',
                   'Strategic planning and execution',
@@ -67,69 +120,89 @@ export default function ConsultingPage() {
           </div>
         </section>
 
-        {/* Our Consulting Approach */}
-        <section className="bg-[#f0f4f8] py-24 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
+        {/* Consulting Approach — dark grid like CWA programs */}
+        <section className="bg-[#0f2744] py-20 sm:py-28 px-4 relative overflow-hidden">
+          <div
+            className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full opacity-5 pointer-events-none"
+            style={{ background: 'radial-gradient(circle, #f59e0b, transparent)' }}
+          />
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center mb-16">
               <p className="section-label mb-3">How We Work</p>
-              <div className="accent-line mb-6" />
-              <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-[#1e3a5f]">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <div className="h-px w-12 bg-[#f59e0b]/50" />
+                <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b]" />
+                <div className="h-px w-12 bg-[#f59e0b]/50" />
+              </div>
+              <h2 className="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl font-bold text-white mb-4">
                 Our Consulting Approach
               </h2>
+              <p className="text-white/60 max-w-2xl mx-auto">
+                A disciplined, people-centered methodology that drives lasting results.
+              </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: 'Organizational Assessment',
-                  body: 'We begin every engagement with a thorough assessment of your organization\'s current state—examining structures, processes, culture, and performance to identify both strengths and opportunities for growth.',
-                },
-                {
-                  title: 'Strategy Development',
-                  body: 'Using data-driven insights combined with collaborative dialogue, we co-create strategies that are tailored to your goals, values, and operational realities—ensuring ownership and commitment at every level.',
-                },
-                {
-                  title: 'Process Improvement and Change Management',
-                  body: 'We support organizations in streamlining workflows, improving efficiency, and navigating transitions—helping teams adapt to change with confidence, clarity, and a shared sense of purpose.',
-                },
-                {
-                  title: 'Leadership and Organizational Alignment',
-                  body: 'Strong organizations are led by aligned teams. We work with leadership groups to build cohesion, sharpen decision-making, and cultivate a culture where accountability and collaboration thrive.',
-                },
-                {
-                  title: 'Sustainability and Impact Reporting',
-                  body: 'We help organizations measure, communicate, and improve their social and environmental performance—translating complex data into meaningful narratives that demonstrate real-world impact.',
-                },
-              ].map((card) => (
-                <div key={card.title} className="bg-white rounded-2xl border border-gray-100 card-hover p-8">
-                  <div className="h-1 w-full rounded-full mb-6" style={{background:'linear-gradient(to right, #f59e0b, #2563eb)'}} />
-                  <h3 className="font-[family-name:var(--font-playfair)] text-xl font-bold text-[#1e3a5f] mb-3">{card.title}</h3>
-                  <p className="text-[#1a1a2e]/70 leading-relaxed text-sm">{card.body}</p>
-                </div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {approaches.map((a) => {
+                const Icon = a.icon
+                return (
+                  <div
+                    key={a.title}
+                    className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-[#f59e0b]/40 transition-all duration-300 flex flex-col"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-[#f59e0b]/15 flex items-center justify-center mb-5">
+                      <Icon className="text-[#f59e0b]" size={22} />
+                    </div>
+                    <h3 className="font-[family-name:var(--font-fraunces)] text-xl font-bold text-white mb-3">
+                      {a.title}
+                    </h3>
+                    <p className="text-white/55 leading-relaxed text-sm flex-1">{a.body}</p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="bg-[#0f2744] py-24 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-0 right-0 w-96 h-96 rounded-full" style={{background:'radial-gradient(circle, #f59e0b, transparent)'}} />
-          </div>
-          <div className="max-w-4xl mx-auto text-center text-white relative z-10">
-            <p className="section-label mb-3">Start Your Journey</p>
-            <div className="accent-line mb-8" />
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold mb-6">
-              Let&apos;s Ascend Together
-            </h2>
-            <blockquote className="text-xl italic text-[#fbbf24] mb-8">
-              &ldquo;Every great organization begins with a clear vision and the courage to pursue it.&rdquo;
-            </blockquote>
-            <p className="text-white/70 leading-relaxed mb-10 text-lg max-w-2xl mx-auto">
-              Whether you&apos;re at the start of your transformation journey or looking to accelerate progress, ADS is here to partner with you every step of the way.
-            </p>
-            <a href="/contact" className="btn-primary inline-block">Contact Us</a>
+        <section className="bg-[#f0f4f8] py-20 sm:py-28 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <p className="section-label mb-3">Start Your Journey</p>
+                <div className="accent-line mb-6" style={{ margin: '0.75rem 0 1.5rem' }} />
+                <h2 className="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-6 leading-tight">
+                  Let&apos;s Ascend Together
+                </h2>
+                <blockquote className="font-[family-name:var(--font-fraunces)] text-lg italic text-[#f59e0b] border-l-4 border-[#f59e0b] pl-4 mb-6">
+                  &ldquo;Every great organization begins with a clear vision and the courage to
+                  pursue it.&rdquo;
+                </blockquote>
+                <p className="text-[#1a1a2e]/70 leading-relaxed mb-8">
+                  Whether you&apos;re at the start of your transformation journey or looking to
+                  accelerate progress, ADS is here to partner with you every step of the way.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <a href="/contact" className="btn-primary inline-flex items-center gap-2">
+                    Contact Us <ArrowRight size={16} />
+                  </a>
+                  <a href="/trainings-and-seminars" className="btn-outline">
+                    View Trainings
+                  </a>
+                </div>
+              </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/illus-about.svg"
+                  alt="Let's Ascend Together"
+                  width={500}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
           </div>
         </section>
+
       </main>
       <Footer />
     </>
