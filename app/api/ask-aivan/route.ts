@@ -58,8 +58,13 @@ export async function POST(req: NextRequest) {
     })
 
     const data = await response.json()
+    if (!response.ok) {
+      console.error('Anthropic API error:', data)
+      return NextResponse.json({ error: data?.error?.message ?? 'Anthropic API error', type: data?.error?.type }, { status: response.status })
+    }
     return NextResponse.json(data)
-  } catch {
+  } catch (err) {
+    console.error('ask-aivan route error:', err)
     return NextResponse.json({ error: 'Failed to process request' }, { status: 500 })
   }
 }

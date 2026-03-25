@@ -43,7 +43,8 @@ export default function AskAivanWidget() {
         body: JSON.stringify({ messages: next }),
       })
       const data = await res.json()
-      const reply = data.content?.[0]?.text ?? 'Pasensya na — something went wrong. Please try again.'
+      const reply = data.content?.[0]?.text
+        ?? (data.error ? `Pasensya na — ${data.error}` : 'Pasensya na — something went wrong. Please try again.')
       setMsgs(prev => [...prev, { role: 'assistant', content: reply }])
     } catch {
       setMsgs(prev => [...prev, { role: 'assistant', content: 'Pasensya na, I had trouble connecting. Please try again.' }])
