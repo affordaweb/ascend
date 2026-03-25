@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { PenLine, Zap, UserCheck, Heart, ClipboardCheck, ArrowRight } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import TrainingsHeroCanvas from '../components/TrainingsHeroCanvas'
 
 export const metadata: Metadata = {
   title: 'Trainings & Seminars — Ascend Development Solutions',
@@ -45,14 +46,9 @@ export default function TrainingsSeminarsPage() {
       <main>
 
         {/* Hero */}
-        <section className="min-h-[55vh] bg-gradient-to-br from-[#0f2744] to-[#1e3a5f] flex items-center py-24 px-4 pt-32 relative overflow-hidden">
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              backgroundImage:
-                'radial-gradient(circle at 85% 15%, rgba(245,158,11,0.08), transparent 50%), radial-gradient(circle at 15% 85%, rgba(37,99,235,0.08), transparent 50%)',
-            }}
-          />
+        <section className="min-h-[55vh] bg-[#150e04] flex items-center py-24 px-4 pt-32 relative overflow-hidden">
+          <TrainingsHeroCanvas />
+          <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)' }} />
           <div className="max-w-4xl mx-auto text-center text-white relative z-10">
             <p className="section-label mb-4">What We Offer</p>
             <div className="flex items-center justify-center gap-3 mb-6">
@@ -148,7 +144,7 @@ export default function TrainingsSeminarsPage() {
                     key={a.title}
                     className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-[#f59e0b]/40 transition-all duration-300 flex flex-col"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-[#f59e0b]/15 flex items-center justify-center mb-5">
+                    <div className="icon-hover w-12 h-12 rounded-xl bg-[#f59e0b]/15 flex items-center justify-center mb-5">
                       <Icon className="text-[#f59e0b]" size={22} />
                     </div>
                     <h3 className="font-[family-name:var(--font-fraunces)] text-xl font-bold text-white mb-3">

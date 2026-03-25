@@ -39,7 +39,7 @@ export default function Footer() {
               href="https://www.facebook.com/100080045962662/?locale=tl_PH"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white/8 border border-white/15 text-white/70 text-sm px-4 py-2 rounded-full hover:bg-[#f59e0b] hover:border-[#f59e0b] hover:text-white transition-all font-medium"
+              className="icon-social inline-flex items-center gap-2 bg-white/8 border border-white/15 text-white/70 text-sm px-4 py-2 rounded-full hover:bg-[#f59e0b] hover:border-[#f59e0b] hover:text-white transition-all font-medium"
             >
               <Facebook size={14} /> Facebook
             </a>

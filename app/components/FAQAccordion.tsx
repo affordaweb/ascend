@@ -56,13 +56,16 @@ export default function FAQAccordion() {
             onClick={() => setOpenFaq(openFaq === i ? null : i)}
           >
             <span>{faq.q}</span>
-            <span className="text-[#f59e0b] text-xl shrink-0">{openFaq === i ? '−' : '+'}</span>
+            <span className={`faq-icon shrink-0${openFaq === i ? ' faq-open' : ''}`}>+</span>
           </button>
-          {openFaq === i && (
+          <div
+            className="overflow-hidden transition-all duration-300 ease-in-out"
+            style={{ maxHeight: openFaq === i ? '300px' : '0' }}
+          >
             <div className="px-6 pb-5 text-[#1a1a2e]/70 leading-relaxed text-sm border-t border-gray-100 pt-4">
               {faq.a}
             </div>
-          )}
+          </div>
         </div>
       ))}
     </div>

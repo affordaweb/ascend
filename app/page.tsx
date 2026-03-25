@@ -15,6 +15,8 @@ import {
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import FAQAccordion from './components/FAQAccordion'
+import ScrollReveal from './components/ScrollReveal'
+import HeroCanvas from './components/HeroCanvas'
 
 export const metadata: Metadata = {
   title: 'Ascend Development Solutions — Building Better Futures Together',
@@ -75,19 +77,13 @@ export default function HomePage() {
       <main>
 
         {/* Hero — full viewport, centered */}
-        <section className="relative w-full min-h-screen flex items-center justify-center pt-[100px]">
-          <Image
-            src="/images/ads-hero.png"
-            alt="Ascend Development Solutions"
-            fill
-            className="object-cover"
-            priority
-          />
+        <section className="relative w-full min-h-screen flex items-center justify-center pt-[100px]" style={{ background: '#071829' }}>
+          <HeroCanvas />
           <div
             className="absolute inset-0"
             style={{
               background:
-                'linear-gradient(to bottom, rgba(15,39,68,0.6) 0%, rgba(15,39,68,0.75) 50%, rgba(15,39,68,0.85) 100%)',
+                'linear-gradient(to bottom, rgba(7,24,41,0.55) 0%, rgba(7,24,41,0.65) 50%, rgba(7,24,41,0.80) 100%)',
             }}
           />
           <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
@@ -202,7 +198,7 @@ export default function HomePage() {
                 Tailored solutions that strengthen people, organizations, and communities.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ScrollReveal className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((s) => {
                 const Icon = s.icon
                 return (
@@ -211,7 +207,7 @@ export default function HomePage() {
                     href={s.href}
                     className="group bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-[#f59e0b]/40 transition-all duration-300 flex flex-col"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-[#f59e0b]/15 flex items-center justify-center mb-5">
+                    <div className="icon-hover w-12 h-12 rounded-xl bg-[#f59e0b]/15 flex items-center justify-center mb-5">
                       <Icon className="text-[#f59e0b]" size={22} />
                     </div>
                     <h3 className="font-[family-name:var(--font-fraunces)] text-xl font-bold text-white mb-3">
@@ -224,7 +220,7 @@ export default function HomePage() {
                   </a>
                 )
               })}
-            </div>
+            </ScrollReveal>
           </div>
         </section>
 

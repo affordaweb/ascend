@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { ShieldCheck, Users, Lightbulb, HeartHandshake } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import AboutHeroCanvas from '../components/AboutHeroCanvas'
 
 export const metadata: Metadata = {
   title: 'About ADS — Ascend Development Solutions',
@@ -40,14 +41,9 @@ export default function AboutPage() {
       <main>
 
         {/* Hero */}
-        <section className="min-h-[55vh] bg-gradient-to-br from-[#0f2744] to-[#1e3a5f] flex items-center py-24 px-4 pt-32 relative overflow-hidden">
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              backgroundImage:
-                'radial-gradient(circle at 85% 15%, rgba(245,158,11,0.08), transparent 50%), radial-gradient(circle at 15% 85%, rgba(37,99,235,0.08), transparent 50%)',
-            }}
-          />
+        <section className="min-h-[55vh] bg-[#0a2a35] flex items-center py-24 px-4 pt-32 relative overflow-hidden">
+          <AboutHeroCanvas />
+          <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)' }} />
           <div className="max-w-4xl mx-auto text-center text-white relative z-10">
             <p className="section-label mb-4">Our Story</p>
             <div className="flex items-center justify-center gap-3 mb-6">

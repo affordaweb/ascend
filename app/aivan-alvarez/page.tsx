@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Mail, Phone, Linkedin, Globe, Users, ShieldCheck, HeartHandshake } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import FounderCanvas from '../components/FounderCanvas'
 
 export const metadata: Metadata = {
   title: 'Aivan Castillo Alvarez — Ascend Development Solutions',
@@ -55,14 +56,9 @@ export default function AivanAlvarezPage() {
       <main>
 
         {/* Hero */}
-        <section className="min-h-[55vh] bg-gradient-to-br from-[#0f2744] to-[#1e3a5f] flex items-center py-24 px-4 pt-32 relative overflow-hidden">
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              backgroundImage:
-                'radial-gradient(circle at 85% 15%, rgba(245,158,11,0.08), transparent 50%), radial-gradient(circle at 15% 85%, rgba(37,99,235,0.08), transparent 50%)',
-            }}
-          />
+        <section className="min-h-[55vh] bg-[#1c1c24] flex items-center py-24 px-4 pt-32 relative overflow-hidden">
+          <FounderCanvas />
+          <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)' }} />
           <div className="max-w-4xl mx-auto text-center text-white relative z-10">
             <p className="section-label mb-4">Aivan Castillo Alvarez</p>
             <div className="flex items-center justify-center gap-3 mb-6">
