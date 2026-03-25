@@ -42,11 +42,14 @@ export async function POST(req: NextRequest) {
   try {
     const { messages } = await req.json()
 
+    const groqKey = process.env.GROQ_API_KEY ?? ''
+    console.log('GROQ_API_KEY length:', groqKey.length, '| starts with:', groqKey.slice(0, 6))
+
     const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.GROQ_API_KEY ?? ''}`,
+        'Authorization': `Bearer ${groqKey}`,
       },
       body: JSON.stringify({
         model: 'llama-3.3-70b-versatile',
