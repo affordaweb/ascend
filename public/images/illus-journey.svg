@@ -1,0 +1,365 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <!-- Sky gradient: deep navy left → gold-warm right -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0f2744;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#1a3d5a;stop-opacity:1" />
+      <stop offset="55%" style="stop-color:#2a5a70;stop-opacity:1" />
+      <stop offset="78%" style="stop-color:#d97706;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    <!-- Sky top overlay to deepen top -->
+    <linearGradient id="skyTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1828;stop-opacity:0.6" />
+      <stop offset="60%" style="stop-color:#0a1828;stop-opacity:0" />
+    </linearGradient>
+    <!-- Coastal water gradient -->
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d2a3a;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#0a2030;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#081828;stop-opacity:1" />
+    </linearGradient>
+    <!-- Sandy shore -->
+    <linearGradient id="sandGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4a855;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c09040;stop-opacity:1" />
+    </linearGradient>
+    <!-- Forest deep green -->
+    <linearGradient id="forestGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d2010;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a3d1a;stop-opacity:1" />
+    </linearGradient>
+    <!-- Terrace hill -->
+    <linearGradient id="terraceHillGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5a9040;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5016;stop-opacity:1" />
+    </linearGradient>
+    <!-- Mountain rock -->
+    <linearGradient id="mountainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6b6050;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a4038;stop-opacity:1" />
+    </linearGradient>
+    <!-- Gold horizon glow on mountain -->
+    <radialGradient id="horizonGlow" cx="90%" cy="60%" r="50%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.45" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0" />
+    </radialGradient>
+    <!-- Water shimmer -->
+    <linearGradient id="waterShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a4060;stop-opacity:0" />
+      <stop offset="40%" style="stop-color:#2a6080;stop-opacity:0.5" />
+      <stop offset="70%" style="stop-color:#3a7090;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1a4060;stop-opacity:0" />
+    </linearGradient>
+    <!-- Drop shadows -->
+    <filter id="hutShadow" x="-30%" y="-30%" width="200%" height="200%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-color="#040c10" flood-opacity="0.6" />
+    </filter>
+    <filter id="treeShadow" x="-20%" y="-20%" width="160%" height="160%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#040c08" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- SKY background full width -->
+  <rect width="600" height="450" fill="url(#skyGrad)" />
+  <rect width="600" height="450" fill="url(#skyTop)" />
+
+  <!-- Soft clouds left-center sky -->
+  <ellipse cx="80" cy="60" rx="55" ry="18" fill="#1a3d5a" opacity="0.5" />
+  <ellipse cx="110" cy="52" rx="40" ry="14" fill="#1e4565" opacity="0.45" />
+  <ellipse cx="55" cy="65" rx="30" ry="10" fill="#1a3d5a" opacity="0.4" />
+
+  <ellipse cx="240" cy="75" rx="65" ry="16" fill="#1e4565" opacity="0.35" />
+  <ellipse cx="265" cy="65" rx="45" ry="12" fill="#224870" opacity="0.3" />
+
+  <!-- Warm haze at horizon right -->
+  <rect x="400" y="100" width="200" height="80" fill="#f59e0b" opacity="0.12" />
+  <ellipse cx="540" cy="148" rx="100" ry="40" fill="#d97706" opacity="0.15" />
+
+  <!-- Stars (far left dark sky, subtle) -->
+  <circle cx="25" cy="30" r="1" fill="#a0c0e0" opacity="0.7" />
+  <circle cx="65" cy="18" r="0.8" fill="#a0c0e0" opacity="0.6" />
+  <circle cx="40" cy="50" r="0.7" fill="#a0c0e0" opacity="0.5" />
+  <circle cx="90" cy="28" r="1" fill="#b0d0e8" opacity="0.5" />
+  <circle cx="130" cy="40" r="0.8" fill="#a0c0e0" opacity="0.4" />
+
+  <!-- ==================== ZONE 1: COASTAL (x: 0-140) ==================== -->
+
+  <!-- Water body -->
+  <path d="M 0,240 L 0,450 L 145,450 L 145,240 C 130,238 110,235 90,236 C 65,237 35,238 0,240 Z" fill="url(#waterGrad)" />
+
+  <!-- Water shimmer ripples -->
+  <path d="M 10,270 C 25,267 45,268 60,270 C 75,272 90,270 105,268" fill="none" stroke="#2a6080" stroke-width="0.8" opacity="0.5" />
+  <path d="M 5,285 C 22,282 42,283 58,285 C 74,287 92,285 108,283" fill="none" stroke="#2a6080" stroke-width="0.7" opacity="0.45" />
+  <path d="M 0,300 C 20,297 40,298 60,300 C 80,302 100,300 120,298 C 132,296 140,295 145,295" fill="none" stroke="#2a6080" stroke-width="0.7" opacity="0.4" />
+  <path d="M 0,318 C 18,315 38,316 58,318 C 78,320 100,318 122,316 C 135,315 142,314 145,314" fill="none" stroke="#3a7090" stroke-width="0.6" opacity="0.35" />
+
+  <!-- Moonlight reflection on water (streak) -->
+  <path d="M 20,255 C 25,260 30,272 28,290 C 26,305 22,315 20,330" fill="none" stroke="#8ac0e0" stroke-width="2.5" opacity="0.3" />
+
+  <!-- Sandy shore strip -->
+  <path d="M 0,240 C 30,236 70,234 100,236 C 118,237 130,238 145,240 L 145,256 C 130,254 108,252 90,252 C 65,252 30,254 0,258 Z" fill="url(#sandGrad)" />
+
+  <!-- Shore line detail / foam -->
+  <path d="M 0,241 C 30,238 68,236 100,238 C 118,239 132,240 145,241" fill="none" stroke="#e8d8a0" stroke-width="1" opacity="0.5" />
+
+  <!-- Nipa hut on stilts -->
+  <g filter="url(#hutShadow)">
+    <!-- Stilts -->
+    <line x1="30" y1="232" x2="30" y2="248" stroke="#4a2810" stroke-width="2.5" />
+    <line x1="42" y1="232" x2="42" y2="248" stroke="#4a2810" stroke-width="2.5" />
+    <line x1="55" y1="232" x2="55" y2="248" stroke="#4a2810" stroke-width="2.5" />
+    <line x1="67" y1="232" x2="67" y2="248" stroke="#4a2810" stroke-width="2.5" />
+    <!-- Floor platform -->
+    <rect x="26" y="226" width="45" height="7" rx="1" fill="#6b4226" />
+    <!-- Walls -->
+    <rect x="28" y="210" width="41" height="17" fill="#8b5e3c" />
+    <!-- Roof — steep nipa thatch shape -->
+    <path d="M 20,210 L 48,188 L 76,210 Z" fill="#4a3020" />
+    <path d="M 22,210 L 48,190 L 74,210 Z" fill="#6b4a30" />
+    <!-- Roof thatch lines -->
+    <line x1="30" y1="210" x2="40" y2="196" stroke="#3a2010" stroke-width="0.8" opacity="0.6" />
+    <line x1="36" y1="210" x2="44" y2="194" stroke="#3a2010" stroke-width="0.8" opacity="0.6" />
+    <line x1="42" y1="210" x2="48" y2="190" stroke="#3a2010" stroke-width="0.8" opacity="0.6" />
+    <line x1="48" y1="210" x2="52" y2="192" stroke="#3a2010" stroke-width="0.7" opacity="0.5" />
+    <line x1="54" y1="210" x2="56" y2="194" stroke="#3a2010" stroke-width="0.7" opacity="0.5" />
+    <line x1="60" y1="210" x2="60" y2="197" stroke="#3a2010" stroke-width="0.7" opacity="0.45" />
+    <!-- Door opening -->
+    <rect x="43" y="215" width="9" height="12" rx="1" fill="#2a1808" />
+    <!-- Window -->
+    <rect x="31" y="213" width="8" height="7" fill="#1a0c08" opacity="0.8" />
+  </g>
+
+  <!-- Coconut palm silhouette -->
+  <g filter="url(#treeShadow)">
+    <!-- Palm trunk — curved -->
+    <path d="M 108,248 C 106,234 107,220 110,210 C 112,200 116,192 118,184 C 120,176 120,168 118,160" fill="none" stroke="#4a2c10" stroke-width="5" stroke-linecap="round" />
+    <!-- Palm fronds -->
+    <path d="M 118,160 C 105,148 92,140 82,138 C 90,142 96,150 100,158" fill="none" stroke="#2d5016" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 118,160 C 108,145 110,130 115,122 C 116,132 117,145 118,158" fill="none" stroke="#1a3d1a" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 118,160 C 130,145 138,136 145,132 C 140,140 132,150 125,160" fill="none" stroke="#2d5016" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M 118,160 C 132,150 142,148 148,150 C 142,154 132,158 124,162" fill="none" stroke="#1a3d1a" stroke-width="2" stroke-linecap="round" />
+    <path d="M 118,160 C 104,155 98,158 96,164 C 104,162 112,161 118,162" fill="none" stroke="#2d5016" stroke-width="2" stroke-linecap="round" />
+    <!-- Coconut at base of fronds -->
+    <circle cx="115" cy="164" r="4" fill="#5a3818" />
+    <circle cx="121" cy="166" r="3.5" fill="#4a2c10" />
+    <!-- Frond leaflets (tiny lines off fronds) -->
+    <path d="M 100,154 C 96,152 93,152 91,154" fill="none" stroke="#1a3d1a" stroke-width="1.2" />
+    <path d="M 104,150 C 100,148 97,148 95,150" fill="none" stroke="#1a3d1a" stroke-width="1.2" />
+    <path d="M 110,145 C 108,142 106,141 104,142" fill="none" stroke="#1a3d1a" stroke-width="1.2" />
+  </g>
+
+  <!-- Second small palm (background) -->
+  <g opacity="0.7">
+    <path d="M 88,250 C 86,236 87,225 89,218 C 91,210 93,205 92,198" fill="none" stroke="#3a2008" stroke-width="3.5" stroke-linecap="round" />
+    <path d="M 92,198 C 82,188 74,183 68,182 C 74,186 80,192 84,200" fill="none" stroke="#1a3d1a" stroke-width="2" stroke-linecap="round" />
+    <path d="M 92,198 C 100,186 105,182 108,180 C 104,186 98,193 94,200" fill="none" stroke="#2d5016" stroke-width="2" stroke-linecap="round" />
+    <path d="M 92,198 C 94,184 96,176 97,170 C 96,178 95,188 92,198" fill="none" stroke="#1a3d1a" stroke-width="1.8" stroke-linecap="round" />
+  </g>
+
+  <!-- Zone 1 ground — sandy foreground shelf -->
+  <path d="M 0,248 C 30,244 70,242 100,244 C 118,245 132,246 145,248 L 145,450 L 0,450 Z" fill="#c49040" opacity="0.55" />
+
+  <!-- ==================== ZONE 2: DENSE FOREST (x: 140-300) ==================== -->
+
+  <!-- Forest ground/base -->
+  <path d="M 140,270 C 160,262 190,255 220,258 C 250,261 278,268 300,265 L 300,450 L 140,450 Z" fill="#0d2010" />
+
+  <!-- Forest floor undergrowth -->
+  <path d="M 140,280 C 165,274 195,270 225,272 C 255,274 280,280 300,278" fill="none" stroke="#1a3d1a" stroke-width="3" opacity="0.8" />
+
+  <!-- Back forest tree layer (dark) -->
+  <g opacity="0.75">
+    <path d="M 145,268 C 150,240 155,215 158,190 C 161,168 162,150 160,134" fill="none" stroke="#0d2010" stroke-width="8" stroke-linecap="round" />
+    <ellipse cx="160" cy="128" rx="25" ry="32" fill="#0d2010" />
+
+    <path d="M 172,265 C 176,235 180,210 183,185 C 185,165 185,148 183,130" fill="none" stroke="#0d2010" stroke-width="7" stroke-linecap="round" />
+    <ellipse cx="183" cy="125" rx="22" ry="28" fill="#0d2010" />
+
+    <path d="M 200,264 C 203,230 205,205 206,180 C 207,158 206,138 204,118" fill="none" stroke="#0d2010" stroke-width="8" stroke-linecap="round" />
+    <ellipse cx="204" cy="112" rx="26" ry="34" fill="#0d2010" />
+
+    <path d="M 230,266 C 232,232 233,205 233,180 C 233,158 231,136 228,116" fill="none" stroke="#0d2010" stroke-width="7" stroke-linecap="round" />
+    <ellipse cx="228" cy="110" rx="24" ry="30" fill="#0d2010" />
+
+    <path d="M 260,266 C 261,232 261,205 260,180 C 259,156 256,134 252,114" fill="none" stroke="#0d2010" stroke-width="8" stroke-linecap="round" />
+    <ellipse cx="252" cy="108" rx="26" ry="32" fill="#0d2010" />
+
+    <path d="M 285,266 C 285,234 284,208 282,184 C 280,162 278,140 275,122" fill="none" stroke="#0d2010" stroke-width="7" stroke-linecap="round" />
+    <ellipse cx="275" cy="116" rx="22" ry="30" fill="#0d2010" />
+  </g>
+
+  <!-- Mid forest tree layer -->
+  <g filter="url(#treeShadow)">
+    <path d="M 148,272 C 152,244 156,220 159,198 C 162,178 163,160 161,144" fill="none" stroke="#1a3d1a" stroke-width="6" stroke-linecap="round" />
+    <ellipse cx="161" cy="136" rx="28" ry="36" fill="#1a3d1a" />
+    <ellipse cx="155" cy="130" rx="18" ry="24" fill="#1a3d1a" />
+    <ellipse cx="168" cy="128" rx="20" ry="28" fill="#0d2010" opacity="0.5" />
+
+    <path d="M 175,270 C 178,240 180,216 181,194 C 182,174 181,155 179,138" fill="none" stroke="#1a3d1a" stroke-width="6" stroke-linecap="round" />
+    <ellipse cx="179" cy="130" rx="26" ry="34" fill="#1a3d1a" />
+    <ellipse cx="172" cy="124" rx="16" ry="22" fill="#2d5016" opacity="0.7" />
+
+    <path d="M 205,268 C 207,236 208,210 208,186 C 208,164 206,144 203,126" fill="none" stroke="#1a3d1a" stroke-width="7" stroke-linecap="round" />
+    <ellipse cx="203" cy="118" rx="28" ry="36" fill="#1a3d1a" />
+    <ellipse cx="196" cy="112" rx="18" ry="26" fill="#2d5016" opacity="0.6" />
+
+    <path d="M 232,268 C 233,236 233,210 232,186 C 231,163 228,142 224,122" fill="none" stroke="#1a3d1a" stroke-width="6" stroke-linecap="round" />
+    <ellipse cx="224" cy="114" rx="26" ry="34" fill="#1a3d1a" />
+    <ellipse cx="218" cy="108" rx="17" ry="24" fill="#2d5016" opacity="0.6" />
+
+    <path d="M 260,268 C 260,236 259,210 257,186 C 255,163 252,141 248,122" fill="none" stroke="#1a3d1a" stroke-width="7" stroke-linecap="round" />
+    <ellipse cx="248" cy="114" rx="28" ry="36" fill="#1a3d1a" />
+    <ellipse cx="242" cy="108" rx="18" ry="25" fill="#2d5016" opacity="0.65" />
+
+    <path d="M 285,268 C 284,237 283,212 281,188 C 279,165 277,143 274,124" fill="none" stroke="#1a3d1a" stroke-width="6" stroke-linecap="round" />
+    <ellipse cx="274" cy="116" rx="25" ry="33" fill="#1a3d1a" />
+    <ellipse cx="267" cy="110" rx="16" ry="23" fill="#2d5016" opacity="0.6" />
+  </g>
+
+  <!-- Foreground forest silhouette -->
+  <path d="
+    M 140,280
+    C 148,260 152,240 150,220 C 148,204 144,192 145,178 C 146,166 150,158 152,148
+    C 154,138 155,130 154,122 C 153,112 150,106 152,100
+    L 158,105 C 158,115 160,125 162,135 C 164,145 168,156 168,168
+    C 168,178 165,190 166,202 C 167,214 172,228 170,244 C 168,258 165,270 164,278
+    C 168,260 172,240 174,222 C 176,206 176,192 178,180 C 180,170 184,162 184,152
+    C 184,142 182,134 183,124 C 184,116 186,110 186,104
+    L 192,108 C 192,116 192,126 193,136 C 194,148 197,160 197,172
+    C 197,184 194,196 195,210 C 196,224 200,240 198,256 C 196,268 193,276 192,282
+    C 198,262 203,238 205,218 C 207,200 208,184 210,170 C 212,158 215,148 215,138
+    C 215,128 214,120 215,112
+    L 222,116 C 222,124 222,134 222,144 C 222,156 223,168 222,180
+    C 221,194 218,208 218,222 C 218,236 222,252 220,266 C 218,276 215,283 214,286
+    C 222,266 228,242 230,222 C 232,204 232,188 233,174 C 234,162 236,152 235,141
+    C 234,132 232,124 233,116
+    L 240,120 C 240,128 240,138 240,148 C 240,160 240,172 238,184
+    C 236,198 232,212 232,226 C 232,240 235,256 233,270 C 231,280 228,286 227,290
+    C 235,270 241,246 242,226 C 243,208 242,192 243,178 C 244,165 246,155 246,144
+    C 246,134 244,126 244,118
+    L 250,122 C 250,130 250,140 250,150 C 250,163 249,176 248,188
+    C 246,202 243,216 243,230 C 243,244 245,260 243,274 C 242,282 239,288 238,292
+    C 248,270 254,246 255,226 C 256,208 255,192 256,178 C 257,164 259,154 258,143
+    L 265,147 C 265,157 264,168 264,180
+    C 263,194 261,208 262,222 C 263,236 266,252 264,266 C 262,277 260,284 259,288
+    C 268,268 273,244 274,224 C 275,206 274,190 275,176 C 276,162 278,152 277,142
+    L 283,146 C 283,156 282,167 281,179
+    C 280,192 278,206 278,220 C 278,234 280,250 278,263 C 277,272 275,280 274,285
+    C 282,265 287,241 288,222 C 289,204 288,188 289,174
+    L 295,178 C 295,190 294,204 292,218 C 290,230 287,244 288,256 C 289,264 291,272 292,278
+    L 300,270 L 300,450 L 140,450 Z
+  " fill="#0d2010" opacity="0.85" />
+
+  <!-- Forest mist/atmosphere -->
+  <path d="M 140,275 C 170,268 220,265 260,268 C 280,269 292,272 300,274" fill="none" stroke="#1a5030" stroke-width="8" opacity="0.3" />
+
+  <!-- ==================== ZONE 3: RICE TERRACES (x: 300-460) ==================== -->
+
+  <!-- Hillside base -->
+  <path d="M 300,265 C 320,258 350,248 380,240 C 408,233 435,228 460,230 L 460,450 L 300,450 Z" fill="#2d5016" />
+
+  <!-- Terrace steps — organic stepped shapes -->
+  <!-- Terrace level 1 (lowest, widest) -->
+  <path d="M 300,310 C 318,304 345,298 372,296 C 398,294 428,298 460,300 L 460,320 C 428,320 398,316 372,318 C 345,320 318,326 300,332 Z" fill="#5a9040" />
+  <path d="M 300,332 C 318,326 345,320 372,318 C 398,316 428,320 460,320 L 460,316 C 428,316 398,312 372,314 C 345,316 318,322 300,328" fill="#4a7c35" opacity="0.6" />
+
+  <!-- Terrace level 2 -->
+  <path d="M 300,278 C 316,272 342,264 368,262 C 393,260 424,264 460,268 L 460,288 C 424,285 393,282 368,284 C 342,286 316,294 300,300 Z" fill="#4a7c35" />
+  <path d="M 300,300 C 316,294 342,286 368,284 C 393,282 424,285 460,288 L 460,284 C 424,281 393,278 368,280 C 342,282 316,290 300,296" fill="#3a6828" opacity="0.5" />
+
+  <!-- Terrace level 3 -->
+  <path d="M 308,252 C 324,246 348,238 374,235 C 400,232 430,234 460,238 L 460,258 C 430,255 400,253 374,256 C 348,259 324,266 308,272 Z" fill="#3a6828" />
+
+  <!-- Terrace level 4 (near top) -->
+  <path d="M 318,232 C 332,228 354,222 378,218 C 402,214 432,215 460,218 L 460,240 C 432,237 402,236 378,240 C 354,244 332,250 318,254 Z" fill="#2d5016" />
+
+  <!-- Terrace level 5 (top, narrow) -->
+  <path d="M 338,210 C 352,206 372,200 394,197 C 416,194 440,195 460,198 L 460,220 C 440,217 416,216 394,219 C 372,222 352,228 338,232 Z" fill="#1a3d1a" />
+
+  <!-- Rice water reflection glints in terraces -->
+  <path d="M 308,314 C 320,312 340,311 360,312 C 380,313 400,315 420,314" fill="none" stroke="#6ab4d0" stroke-width="0.8" opacity="0.35" />
+  <path d="M 306,292 C 320,290 342,289 362,290 C 380,291 398,293 418,292" fill="none" stroke="#6ab4d0" stroke-width="0.7" opacity="0.3" />
+  <path d="M 315,260 C 328,258 348,257 368,258 C 386,259 404,261 424,260" fill="none" stroke="#6ab4d0" stroke-width="0.6" opacity="0.25" />
+
+  <!-- Terrace edge highlights (water edge) -->
+  <path d="M 300,310 C 318,304 345,298 372,296 C 398,294 428,298 460,300" fill="none" stroke="#8ad0a0" stroke-width="1.2" opacity="0.5" />
+  <path d="M 300,278 C 316,272 342,264 368,262 C 393,260 424,264 460,268" fill="none" stroke="#6ab890" stroke-width="1" opacity="0.45" />
+  <path d="M 308,252 C 324,246 348,238 374,235 C 400,232 430,234 460,238" fill="none" stroke="#5aa880" stroke-width="1" opacity="0.4" />
+
+  <!-- Small bamboo clump on terraces -->
+  <g opacity="0.8">
+    <line x1="392" y1="268" x2="390" y2="240" stroke="#2d5016" stroke-width="2" />
+    <line x1="396" y1="268" x2="395" y2="238" stroke="#3a6828" stroke-width="1.8" />
+    <line x1="400" y1="268" x2="400" y2="242" stroke="#2d5016" stroke-width="2" />
+    <line x1="404" y1="268" x2="406" y2="244" stroke="#3a6828" stroke-width="1.8" />
+    <!-- Bamboo leaf tufts -->
+    <path d="M 390,248 C 384,245 380,244 378,246" fill="none" stroke="#4a7c35" stroke-width="1.5" />
+    <path d="M 395,244 C 389,240 385,239 383,241" fill="none" stroke="#4a7c35" stroke-width="1.5" />
+    <path d="M 400,248 C 406,244 410,243 412,245" fill="none" stroke="#3a6828" stroke-width="1.5" />
+  </g>
+
+  <!-- ==================== ZONE 4: MOUNTAIN RIDGE (x: 460-600) ==================== -->
+
+  <!-- Mountain background peaks -->
+  <path d="M 460,230 C 475,210 490,185 510,165 C 525,150 540,142 555,138 C 565,135 572,136 578,140 L 600,135 L 600,450 L 460,450 Z" fill="#4a4038" />
+
+  <!-- Mountain main ridge -->
+  <path d="M 460,230 C 472,215 482,198 495,182 C 506,168 520,155 535,148 C 548,142 558,140 568,142 C 576,144 585,150 592,158 C 596,162 598,166 600,170 L 600,450 L 460,450 Z" fill="#5a5248" />
+
+  <!-- Mountain face highlight (warm gold from right) -->
+  <path d="M 460,230 C 472,215 482,198 495,182 C 506,168 520,155 535,148 C 548,142 558,140 568,142 C 576,144 585,150 592,158 C 596,162 598,166 600,170 L 600,450 L 460,450 Z" fill="url(#horizonGlow)" />
+
+  <!-- Rock formations on ridge -->
+  <path d="M 495,182 C 500,178 506,175 510,178 C 514,181 512,188 508,190 C 504,192 498,190 495,182 Z" fill="#3a3028" />
+  <path d="M 525,162 C 530,156 538,153 543,157 C 548,161 546,170 540,172 C 534,174 527,170 525,162 Z" fill="#4a4035" />
+  <path d="M 555,148 C 560,143 568,141 572,145 C 576,149 574,157 568,159 C 562,161 556,157 555,148 Z" fill="#3a3028" />
+
+  <!-- Rock texture lines on mountain face -->
+  <path d="M 468,225 C 476,215 486,205 496,198 C 504,192 512,188 518,186" fill="none" stroke="#6a6058" stroke-width="1.2" opacity="0.5" />
+  <path d="M 470,240 C 480,228 492,218 504,210 C 514,203 524,198 532,196" fill="none" stroke="#6a6058" stroke-width="1" opacity="0.45" />
+  <path d="M 474,255 C 485,242 498,232 512,224 C 524,217 535,213 544,212" fill="none" stroke="#6a6058" stroke-width="0.9" opacity="0.4" />
+
+  <!-- Gold horizon glow at mountain-sky boundary -->
+  <path d="M 460,230 C 475,214 492,196 510,182 C 522,172 535,164 548,158 C 558,154 568,151 578,150 L 600,148 L 600,155 L 578,157 C 568,158 558,161 548,165 C 535,171 522,179 510,190 C 492,203 475,221 460,238 Z" fill="#f59e0b" opacity="0.18" />
+
+  <!-- Mountain zone lower body with earthy tones -->
+  <path d="M 460,280 L 600,260 L 600,450 L 460,450 Z" fill="#6b4226" opacity="0.4" />
+
+  <!-- ==================== GROUND TRANSITION LINE (flows continuously) ==================== -->
+  <!-- This is the main landscape silhouette flowing across -->
+  <path d="
+    M 0,248
+    C 30,244 70,240 100,242
+    C 118,243 132,244 145,248
+    C 155,252 165,258 178,262
+    C 192,266 210,268 230,268
+    C 252,268 272,265 290,264
+    C 298,263 300,265 308,262
+    C 318,258 330,252 345,246
+    C 358,240 372,234 388,232
+    C 404,230 425,228 445,230
+    C 452,231 456,231 460,232
+  " fill="none" stroke="#8b5e3c" stroke-width="2" opacity="0.6" />
+
+  <!-- Zone transition soft bleeds -->
+  <!-- Coast to Forest transition (x~140) -->
+  <path d="M 132,248 L 132,420 C 136,418 140,416 144,414 L 144,248 Z" fill="#0d2010" opacity="0.4" />
+
+  <!-- Forest to Terrace transition (x~300) -->
+  <path d="M 292,264 L 292,420 C 296,419 300,418 304,417 L 304,265 Z" fill="#1a3d1a" opacity="0.35" />
+
+  <!-- Terrace to Mountain transition (x~460) -->
+  <path d="M 452,230 L 452,420 C 455,420 458,420 460,420 L 460,230 Z" fill="#4a4038" opacity="0.3" />
+
+  <!-- FOREGROUND DETAILS -->
+  <!-- Foreground coastal rocks -->
+  <ellipse cx="15" cy="248" rx="12" ry="5" fill="#6b4226" opacity="0.7" />
+  <ellipse cx="125" cy="252" rx="9" ry="4" fill="#5a3818" opacity="0.7" />
+
+  <!-- Small boat silhouette on water -->
+  <path d="M 35,255 C 40,252 50,251 58,253 C 54,256 44,257 35,255 Z" fill="#2a1808" opacity="0.7" />
+  <path d="M 47,253 L 47,242" stroke="#3a2010" stroke-width="1.2" />
+  <path d="M 47,242 L 42,248 L 52,250" fill="#3a2010" opacity="0.7" />
+
+</svg>

@@ -1,0 +1,307 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <!-- Warm interior background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5e6cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8d4b0;stop-opacity:1" />
+    </linearGradient>
+    <!-- Light shaft from left -->
+    <linearGradient id="lightShaft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fff8e8;stop-opacity:0.7" />
+      <stop offset="60%" style="stop-color:#fff8e8;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#fff8e8;stop-opacity:0" />
+    </linearGradient>
+    <!-- Banig mat gradient -->
+    <linearGradient id="matGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4a855;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#c49040;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b07c30;stop-opacity:1" />
+    </linearGradient>
+    <!-- Pot body gradient: lit left, dark right -->
+    <linearGradient id="potBodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c86030;stop-opacity:1" />
+      <stop offset="35%" style="stop-color:#a04520;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#7a3010;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5a2008;stop-opacity:1" />
+    </linearGradient>
+    <!-- Pot neck gradient -->
+    <linearGradient id="potNeckGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#b05528;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#8b3d18;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6b2d10;stop-opacity:1" />
+    </linearGradient>
+    <!-- Pot shadow -->
+    <radialGradient id="potShadow" cx="60%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#4a2008;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#4a2008;stop-opacity:0" />
+    </radialGradient>
+    <!-- Ground shadow cast to right -->
+    <radialGradient id="groundShadow" cx="40%" cy="20%" r="70%">
+      <stop offset="0%" style="stop-color:#7a4010;stop-opacity:0.45" />
+      <stop offset="100%" style="stop-color:#7a4010;stop-opacity:0" />
+    </radialGradient>
+    <!-- Stone gradient -->
+    <radialGradient id="stoneGrad1" cx="35%" cy="35%" r="60%">
+      <stop offset="0%" style="stop-color:#b8a890;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7a6850;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="stoneGrad2" cx="35%" cy="35%" r="60%">
+      <stop offset="0%" style="stop-color:#c0b098;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#806858;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="stoneGrad3" cx="35%" cy="35%" r="60%">
+      <stop offset="0%" style="stop-color:#a89880;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#706050;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="stoneGrad4" cx="35%" cy="35%" r="60%">
+      <stop offset="0%" style="stop-color:#b8a88c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#786858;stop-opacity:1" />
+    </radialGradient>
+    <!-- Banig mat clip -->
+    <clipPath id="matClip">
+      <ellipse cx="300" cy="360" rx="200" ry="30" />
+    </clipPath>
+    <!-- Drop shadow filter -->
+    <filter id="potDropShadow" x="-20%" y="-20%" width="160%" height="160%">
+      <feDropShadow dx="12" dy="8" stdDeviation="10" flood-color="#3a1a08" flood-opacity="0.45" />
+    </filter>
+    <filter id="leafShadow" x="-20%" y="-20%" width="160%" height="160%">
+      <feDropShadow dx="3" dy="4" stdDeviation="4" flood-color="#0d2010" flood-opacity="0.4" />
+    </filter>
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#f0c060" flood-opacity="0.3" />
+    </filter>
+    <!-- Banig weave pattern -->
+    <pattern id="banigPattern" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="16" height="16" fill="#c49040" />
+      <line x1="0" y1="0" x2="16" y2="0" stroke="#a07030" stroke-width="2.5" />
+      <line x1="0" y1="8" x2="16" y2="8" stroke="#d4a855" stroke-width="1.5" />
+      <line x1="0" y1="0" x2="0" y2="16" stroke="#b07030" stroke-width="2" />
+      <line x1="8" y1="0" x2="8" y2="16" stroke="#d0a040" stroke-width="1.5" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="450" fill="url(#bgGrad)" />
+
+  <!-- Light shaft from left window -->
+  <polygon points="0,60 220,200 220,420 0,450" fill="url(#lightShaft)" opacity="0.9" />
+  <polygon points="0,30 180,180 180,350 0,380" fill="url(#lightShaft)" opacity="0.5" />
+
+  <!-- Subtle wall texture suggestion -->
+  <rect x="0" y="0" width="600" height="450" fill="none" stroke="#d4c0a0" stroke-width="0.3" opacity="0.2" />
+
+  <!-- Surface/tabletop suggestion -->
+  <rect x="0" y="330" width="600" height="120" fill="#dcc8a0" opacity="0.5" />
+  <line x1="0" y1="330" x2="600" y2="330" stroke="#c0a870" stroke-width="1.5" opacity="0.6" />
+
+  <!-- Banig woven mat -->
+  <ellipse cx="300" cy="360" rx="200" ry="28" fill="url(#banigPattern)" />
+  <ellipse cx="300" cy="360" rx="200" ry="28" fill="none" stroke="#8b6020" stroke-width="2" opacity="0.7" />
+  <!-- Mat highlight edge -->
+  <ellipse cx="300" cy="357" rx="198" ry="24" fill="none" stroke="#e0c060" stroke-width="0.8" opacity="0.4" />
+
+  <!-- Ground shadow of pot cast right -->
+  <ellipse cx="340" cy="358" rx="160" ry="18" fill="url(#groundShadow)" />
+
+  <!-- POT GROUP with drop shadow filter -->
+  <g filter="url(#potDropShadow)">
+
+    <!-- Pot base/foot ring -->
+    <ellipse cx="300" cy="348" rx="58" ry="10" fill="#5a2008" />
+    <ellipse cx="300" cy="345" rx="56" ry="8" fill="#7a3010" />
+
+    <!-- Pot main body — classic burnay amphora shape -->
+    <!-- Lower bulge -->
+    <path d="
+      M 242,340
+      C 236,300 228,260 235,225
+      C 240,200 255,188 275,182
+      C 285,179 295,178 300,178
+      C 305,178 315,179 325,182
+      C 345,188 360,200 365,225
+      C 372,260 364,300 358,340
+      Z
+    " fill="url(#potBodyGrad)" />
+
+    <!-- Mid-belly highlight band -->
+    <path d="
+      M 244,295
+      C 241,270 237,250 240,232
+      C 243,220 250,210 258,205
+      C 262,203 266,202 270,202
+      C 274,209 280,215 300,216
+      C 320,215 326,209 330,202
+      C 334,202 338,203 342,205
+      C 350,210 357,220 360,232
+      C 363,250 359,270 356,295
+      Z
+    " fill="#c05828" opacity="0.4" />
+
+    <!-- Neck of pot -->
+    <path d="
+      M 275,182
+      C 270,170 268,158 270,148
+      C 272,140 278,134 285,131
+      C 290,129 295,128 300,128
+      C 305,128 310,129 315,131
+      C 322,134 328,140 330,148
+      C 332,158 330,170 325,182
+      Z
+    " fill="url(#potNeckGrad)" />
+
+    <!-- Neck highlight -->
+    <path d="M 278,170 C 276,158 276,148 279,140 C 281,135 285,131 289,130" fill="none" stroke="#d06030" stroke-width="2" opacity="0.5" />
+
+    <!-- Rim/lip of pot -->
+    <ellipse cx="300" cy="128" rx="33" ry="10" fill="#7a3010" />
+    <ellipse cx="300" cy="126" rx="31" ry="8" fill="#9a4818" />
+    <ellipse cx="300" cy="124" rx="28" ry="6" fill="#5a2008" />
+
+    <!-- Cordillera geometric patterns near base — etched in lighter clay -->
+    <!-- Zigzag band around lower pot -->
+    <path d="
+      M 248,318 L 254,310 L 260,318 L 266,310 L 272,318 L 278,310 L 284,318 L 290,310 L 296,318 L 302,310 L 308,318 L 314,310 L 320,318 L 326,310 L 332,318 L 338,310 L 344,318 L 350,310 L 356,318
+    " fill="none" stroke="#d07040" stroke-width="1.8" opacity="0.75" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Diamond row above zigzag -->
+    <g fill="none" stroke="#c06030" stroke-width="1.4" opacity="0.65">
+      <polygon points="256,304 261,298 266,304 261,310" />
+      <polygon points="272,304 277,298 282,304 277,310" />
+      <polygon points="288,304 293,298 298,304 293,310" />
+      <polygon points="304,304 309,298 314,304 309,310" />
+      <polygon points="320,304 325,298 330,304 325,310" />
+      <polygon points="336,304 341,298 346,304 341,310" />
+    </g>
+
+    <!-- Lower zigzag band -->
+    <path d="
+      M 248,330 L 254,324 L 260,330 L 266,324 L 272,330 L 278,324 L 284,330 L 290,324 L 296,330 L 302,324 L 308,330 L 314,324 L 320,330 L 326,324 L 332,330 L 338,324 L 344,330 L 350,324 L 356,330
+    " fill="none" stroke="#d07040" stroke-width="1.5" opacity="0.6" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Pot side highlight (light reflection left side) -->
+    <path d="
+      M 242,300
+      C 240,270 236,245 240,225
+      C 242,215 246,207 252,202
+      C 255,200 258,199 260,200
+      C 257,205 253,215 252,230
+      C 250,255 252,282 255,305
+      Z
+    " fill="#e08050" opacity="0.35" />
+
+  </g>
+
+  <!-- PLANT growing from pot -->
+  <g filter="url(#leafShadow)">
+
+    <!-- Main stem -->
+    <path d="M 300,124 C 298,108 295,90 290,72 C 286,55 280,42 275,28" fill="none" stroke="#2d5016" stroke-width="3.5" stroke-linecap="round" />
+
+    <!-- Stem to right -->
+    <path d="M 300,124 C 302,108 306,92 312,76 C 318,60 326,46 335,32" fill="none" stroke="#2d5016" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Left branch stem -->
+    <path d="M 296,100 C 284,92 270,86 255,82 C 242,78 230,77 220,79" fill="none" stroke="#3a6020" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Right branch stem -->
+    <path d="M 304,90 C 318,82 335,76 352,73 C 366,71 380,72 390,76" fill="none" stroke="#3a6020" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Far left draping stem -->
+    <path d="M 292,112 C 278,106 260,104 242,106 C 225,108 210,114 198,122" fill="none" stroke="#2d5016" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Leaf 1 — large upright left leaf -->
+    <path d="
+      M 275,28
+      C 258,20 242,24 235,36
+      C 228,48 232,65 248,74
+      C 260,80 278,76 286,64
+      C 292,54 290,36 275,28 Z
+    " fill="#2d5016" />
+    <path d="M 275,28 C 268,48 260,62 248,74" fill="none" stroke="#4a7c35" stroke-width="1.2" opacity="0.7" />
+    <path d="M 265,32 C 260,50 256,64 252,72" fill="none" stroke="#4a7c35" stroke-width="0.8" opacity="0.5" />
+
+    <!-- Leaf 2 — large upright right leaf -->
+    <path d="
+      M 335,32
+      C 350,22 368,26 374,40
+      C 380,54 374,72 358,78
+      C 345,83 328,76 322,62
+      C 316,50 320,38 335,32 Z
+    " fill="#1a3d1a" />
+    <path d="M 335,32 C 342,52 348,66 358,78" fill="none" stroke="#4a7c35" stroke-width="1.2" opacity="0.7" />
+
+    <!-- Leaf 3 — left branch leaf -->
+    <path d="
+      M 220,79
+      C 206,72 196,76 193,88
+      C 190,100 198,114 213,116
+      C 225,118 238,110 240,97
+      C 242,86 232,82 220,79 Z
+    " fill="#3a6828" />
+    <path d="M 220,79 C 216,94 214,106 213,116" fill="none" stroke="#5a9040" stroke-width="1.2" opacity="0.7" />
+
+    <!-- Leaf 4 — right branch leaf -->
+    <path d="
+      M 390,76
+      C 404,68 416,73 418,86
+      C 420,99 410,114 395,114
+      C 382,114 372,104 374,91
+      C 376,80 382,78 390,76 Z
+    " fill="#2d5016" />
+    <path d="M 390,76 C 390,92 390,104 395,114" fill="none" stroke="#5a9040" stroke-width="1.2" opacity="0.7" />
+
+    <!-- Leaf 5 — lower draping left leaf -->
+    <path d="
+      M 198,122
+      C 186,116 176,122 175,134
+      C 174,146 183,158 196,158
+      C 207,158 216,148 215,136
+      C 214,126 207,122 198,122 Z
+    " fill="#4a7c35" />
+    <path d="M 198,122 C 194,136 192,148 196,158" fill="none" stroke="#6aac55" stroke-width="1" opacity="0.6" />
+
+    <!-- Leaf 6 — center upright back leaf (slightly behind) -->
+    <path d="
+      M 300,124
+      C 286,112 274,114 272,126
+      C 270,138 280,152 295,154
+      C 308,154 318,142 316,130
+      C 314,120 308,118 300,124 Z
+    " fill="#1a3d1a" opacity="0.8" />
+
+    <!-- Small unfurling leaf bud center -->
+    <path d="
+      M 300,124
+      C 295,116 293,108 296,100
+      C 298,95 302,93 306,94
+      C 310,96 311,102 308,110
+      C 305,118 302,122 300,124 Z
+    " fill="#5a9040" />
+
+  </g>
+
+  <!-- STONES arranged near base -->
+  <!-- Stone 1 — left of pot -->
+  <ellipse cx="218" cy="354" rx="18" ry="11" fill="url(#stoneGrad1)" transform="rotate(-15, 218, 354)" />
+  <ellipse cx="215" cy="351" rx="10" ry="5" fill="#d0c0a8" opacity="0.4" transform="rotate(-15, 215, 351)" />
+
+  <!-- Stone 2 — left closer -->
+  <ellipse cx="248" cy="358" rx="13" ry="8" fill="url(#stoneGrad2)" transform="rotate(8, 248, 358)" />
+  <ellipse cx="246" cy="356" rx="7" ry="3.5" fill="#ccc0a8" opacity="0.35" transform="rotate(8, 246, 356)" />
+
+  <!-- Stone 3 — right of pot -->
+  <ellipse cx="368" cy="356" rx="16" ry="10" fill="url(#stoneGrad3)" transform="rotate(12, 368, 356)" />
+  <ellipse cx="365" cy="353" rx="8" ry="4" fill="#c0b098" opacity="0.4" transform="rotate(12, 365, 353)" />
+
+  <!-- Stone 4 — right far -->
+  <ellipse cx="392" cy="360" rx="11" ry="7" fill="url(#stoneGrad4)" transform="rotate(-8, 392, 360)" />
+  <ellipse cx="390" cy="358" rx="6" ry="3" fill="#bab098" opacity="0.35" transform="rotate(-8, 390, 358)" />
+
+  <!-- Warm light pool on mat surface (morning glow) -->
+  <ellipse cx="220" cy="355" rx="120" ry="25" fill="#fff0c0" opacity="0.18" />
+
+  <!-- Subtle ambient occlusion under pot -->
+  <ellipse cx="300" cy="346" rx="62" ry="9" fill="#3a1a08" opacity="0.25" />
+
+</svg>

@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <!-- Background forest gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#071829"/>
+      <stop offset="60%" stop-color="#0a1f0a"/>
+      <stop offset="100%" stop-color="#0d2b0d"/>
+    </linearGradient>
+    <!-- Amber glow radial -->
+    <radialGradient id="amberGlow" cx="50%" cy="40%" r="45%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.55"/>
+      <stop offset="30%" stop-color="#d97706" stop-opacity="0.30"/>
+      <stop offset="60%" stop-color="#c8751a" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#071829" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Secondary softer glow -->
+    <radialGradient id="amberGlow2" cx="52%" cy="38%" r="28%">
+      <stop offset="0%" stop-color="#fdf0d5" stop-opacity="0.40"/>
+      <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Ground gradient -->
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d2b0d"/>
+      <stop offset="100%" stop-color="#040f04"/>
+    </linearGradient>
+    <!-- Trunk shadow filter -->
+    <filter id="trunkShadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="6" dy="8" stdDeviation="8" flood-color="#000" flood-opacity="0.7"/>
+    </filter>
+    <!-- Canopy shadow -->
+    <filter id="canopyShadow" x="-15%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="4" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <!-- Root shadow -->
+    <filter id="rootShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="2" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <!-- Aerial root glow filter -->
+    <filter id="aerialGlow" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Light ray filter -->
+    <filter id="rayBlur">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- BACKGROUND: deep forest night -->
+  <rect width="600" height="450" fill="url(#bgGrad)"/>
+
+  <!-- AMBER RADIAL GLOW behind canopy -->
+  <ellipse cx="310" cy="165" rx="240" ry="190" fill="url(#amberGlow)"/>
+  <ellipse cx="315" cy="160" rx="130" ry="120" fill="url(#amberGlow2)"/>
+
+  <!-- LIGHT RAYS from behind canopy (subtle radiating lines) -->
+  <g opacity="0.12" filter="url(#rayBlur)">
+    <line x1="310" y1="155" x2="80" y2="0" stroke="#f59e0b" stroke-width="18"/>
+    <line x1="310" y1="155" x2="160" y2="0" stroke="#f59e0b" stroke-width="14"/>
+    <line x1="310" y1="155" x2="250" y2="0" stroke="#f59e0b" stroke-width="10"/>
+    <line x1="310" y1="155" x2="360" y2="0" stroke="#f59e0b" stroke-width="10"/>
+    <line x1="310" y1="155" x2="460" y2="0" stroke="#f59e0b" stroke-width="14"/>
+    <line x1="310" y1="155" x2="540" y2="0" stroke="#f59e0b" stroke-width="18"/>
+    <line x1="310" y1="155" x2="600" y2="60" stroke="#f59e0b" stroke-width="12"/>
+    <line x1="310" y1="155" x2="0" y2="80" stroke="#f59e0b" stroke-width="12"/>
+  </g>
+  <!-- Second pass, more diffuse -->
+  <g opacity="0.07" filter="url(#rayBlur)">
+    <line x1="310" y1="155" x2="30" y2="0" stroke="#fdf0d5" stroke-width="28"/>
+    <line x1="310" y1="155" x2="200" y2="0" stroke="#fdf0d5" stroke-width="20"/>
+    <line x1="310" y1="155" x2="420" y2="0" stroke="#fdf0d5" stroke-width="20"/>
+    <line x1="310" y1="155" x2="580" y2="10" stroke="#fdf0d5" stroke-width="24"/>
+  </g>
+
+  <!-- DISTANT BACKGROUND FOLIAGE (far depth, very dark) -->
+  <ellipse cx="60" cy="280" rx="90" ry="70" fill="#0a1a0a" opacity="0.9"/>
+  <ellipse cx="130" cy="260" rx="75" ry="60" fill="#0d200d" opacity="0.9"/>
+  <ellipse cx="490" cy="275" rx="85" ry="65" fill="#0a1a0a" opacity="0.9"/>
+  <ellipse cx="555" cy="265" rx="70" ry="58" fill="#0d200d" opacity="0.9"/>
+
+  <!-- MID-LAYER CANOPY BACKGROUND (darkest greens, silhouettes) -->
+  <path d="M0,220 Q40,170 90,185 Q130,165 170,180 Q210,155 260,170 Q310,145 360,165 Q410,150 455,170 Q500,158 545,172 Q575,165 600,178 L600,320 L0,320 Z" fill="#0f1f0f"/>
+
+  <!-- MAIN CANOPY LAYERS (rich overlapping ellipses and paths) -->
+  <!-- Canopy layer 1 - widest, darkest -->
+  <path d="M60,230 Q110,170 170,175 Q220,155 280,165 Q340,148 400,162 Q455,155 510,170 Q555,165 590,185 Q575,250 530,270 Q480,290 420,285 Q360,295 300,290 Q240,298 180,285 Q120,278 70,258 Z"
+        fill="#1a3d1a" filter="url(#canopyShadow)" opacity="0.95"/>
+  <!-- Canopy layer 2 -->
+  <path d="M80,215 Q140,158 210,162 Q265,140 330,150 Q390,138 445,155 Q495,148 540,168 Q525,230 480,255 Q430,275 370,270 Q305,280 245,272 Q185,268 130,250 Q90,238 80,215 Z"
+        fill="#1a3d1a" opacity="0.90"/>
+  <!-- Canopy layer 3 - mid greens -->
+  <path d="M110,200 Q165,145 235,148 Q290,128 355,138 Q415,125 460,145 Q505,138 545,158 Q530,215 490,240 Q445,260 390,255 Q330,265 270,258 Q210,255 160,238 Q120,224 110,200 Z"
+        fill="#2a5a1a" opacity="0.88"/>
+  <!-- Canopy layer 4 - lighter greens, central top -->
+  <path d="M150,188 Q195,138 260,138 Q320,118 380,130 Q430,120 475,142 Q465,195 430,220 Q390,242 335,238 Q275,248 220,238 Q175,228 150,205 Z"
+        fill="#2d5016" opacity="0.85"/>
+  <!-- Canopy layer 5 - top highlight layer -->
+  <path d="M185,175 Q230,128 295,125 Q355,108 410,125 Q455,118 470,142 Q460,182 425,205 Q388,225 338,220 Q278,228 228,218 Q190,208 185,185 Z"
+        fill="#3d6b1a" opacity="0.80"/>
+  <!-- Canopy top cluster -->
+  <ellipse cx="330" cy="148" rx="95" ry="60" fill="#2d5016" opacity="0.75"/>
+  <ellipse cx="315" cy="135" rx="70" ry="48" fill="#3d6b1a" opacity="0.70"/>
+  <ellipse cx="325" cy="125" rx="50" ry="38" fill="#4a7c35" opacity="0.65"/>
+  <!-- Bright catch-light on canopy -->
+  <ellipse cx="320" cy="130" rx="35" ry="28" fill="#4a7c35" opacity="0.45"/>
+
+  <!-- SIDE CANOPY BRANCHES (extending wide left and right) -->
+  <!-- Left branch cluster -->
+  <path d="M120,210 Q80,195 50,205 Q20,198 10,215 Q30,240 60,238 Q95,240 130,228 Z" fill="#1a3d1a" opacity="0.88"/>
+  <path d="M140,220 Q100,208 70,218 Q42,212 25,228 Q48,252 80,248 Q115,250 148,235 Z" fill="#2a5a1a" opacity="0.75"/>
+  <!-- Right branch cluster -->
+  <path d="M495,215 Q535,200 565,210 Q590,205 598,220 Q578,244 548,240 Q515,242 490,228 Z" fill="#1a3d1a" opacity="0.88"/>
+  <path d="M478,225 Q520,212 552,222 Q575,218 592,232 Q570,256 540,250 Q505,252 474,238 Z" fill="#2a5a1a" opacity="0.75"/>
+
+  <!-- Amber leaf glints on canopy edges -->
+  <g opacity="0.25">
+    <ellipse cx="290" cy="118" rx="12" ry="8" fill="#f59e0b"/>
+    <ellipse cx="345" cy="112" rx="9" ry="6" fill="#e8a020"/>
+    <ellipse cx="375" cy="128" rx="8" ry="5" fill="#f59e0b"/>
+    <ellipse cx="260" cy="122" rx="7" ry="5" fill="#d97706"/>
+    <ellipse cx="415" cy="135" rx="7" ry="5" fill="#e8a020"/>
+    <ellipse cx="230" cy="135" rx="6" ry="4" fill="#f59e0b"/>
+    <ellipse cx="445" cy="148" rx="8" ry="5" fill="#d97706"/>
+    <ellipse cx="175" cy="165" rx="7" ry="5" fill="#e8a020"/>
+    <ellipse cx="490" cy="158" rx="7" ry="4" fill="#f59e0b"/>
+  </g>
+
+  <!-- MAIN TRUNK -->
+  <path d="M285,450 Q278,420 272,390 Q265,355 270,320 Q274,295 280,265 Q285,240 288,215 Q292,200 298,188 Q305,178 318,172 Q330,165 335,178 Q340,192 338,215 Q336,240 340,268 Q345,298 348,325 Q352,358 350,390 Q348,420 342,450 Z"
+        fill="#0d1a08" filter="url(#trunkShadow)"/>
+  <!-- Trunk texture / bark ridges -->
+  <path d="M290,420 Q285,400 282,370 Q280,340 284,310 Q287,285 292,260 Q296,240 300,220" stroke="#1a3008" stroke-width="2.5" fill="none" opacity="0.6"/>
+  <path d="M325,420 Q330,398 333,368 Q336,335 332,305 Q328,278 324,252 Q320,232 318,210" stroke="#1a3008" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M307,430 Q304,405 302,378 Q300,350 303,322 Q306,298 309,272 Q312,250 314,228" stroke="#0f2008" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <!-- Trunk highlight (amber side light) -->
+  <path d="M330,450 Q326,420 323,388 Q319,350 322,315 Q325,285 328,255 Q331,232 335,210 Q338,195 336,180"
+        stroke="#4a7c35" stroke-width="3" fill="none" opacity="0.2"/>
+
+  <!-- GROUND ROOTS spreading from trunk base -->
+  <g filter="url(#rootShadow)">
+    <!-- Root 1: far left -->
+    <path d="M285,430 Q260,420 230,415 Q200,410 170,418 Q145,424 120,430" stroke="#0d1a08" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M285,435 Q258,428 225,425 Q195,422 165,432" stroke="#152510" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- Root 1 sub-branch -->
+    <path d="M210,418 Q195,410 178,402 Q162,395 148,408" stroke="#0d1a08" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- Root 2: left -->
+    <path d="M288,438 Q272,430 252,428 Q230,426 208,435" stroke="#0d1a08" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- Root 3: far right -->
+    <path d="M342,430 Q368,418 398,412 Q428,406 458,415 Q482,422 505,428" stroke="#0d1a08" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M342,435 Q370,426 402,422 Q432,420 462,430" stroke="#152510" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- Root 3 sub-branch -->
+    <path d="M418,413 Q435,404 452,397 Q468,390 482,403" stroke="#0d1a08" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- Root 4: right -->
+    <path d="M338,438 Q356,428 378,425 Q400,422 420,432" stroke="#0d1a08" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- Root 5: center-left slight -->
+    <path d="M295,444 Q282,440 268,444 Q252,448 238,450" stroke="#0d1a08" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- Root 6: center-right slight -->
+    <path d="M330,444 Q345,440 360,443 Q376,446 390,450" stroke="#0d1a08" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- AERIAL ROOTS: cascading from branches (many thin curved strokes) -->
+  <g stroke-linecap="round" fill="none" opacity="0.75" filter="url(#aerialGlow)">
+    <!-- From left canopy zone -->
+    <path d="M175,230 Q168,265 172,300 Q175,335 170,375 Q167,405 170,440" stroke="#152a10" stroke-width="1.8"/>
+    <path d="M185,235 Q180,275 182,318 Q184,355 180,395" stroke="#1a3010" stroke-width="1.5"/>
+    <path d="M200,225 Q195,268 198,310 Q200,350 196,390 Q193,418 196,445" stroke="#152a10" stroke-width="1.6"/>
+    <path d="M215,228 Q210,260 215,295 Q218,332 212,368 Q208,400 212,435" stroke="#1a3010" stroke-width="1.4"/>
+    <path d="M228,222 Q224,258 228,295 Q232,332 226,368" stroke="#152a10" stroke-width="1.5"/>
+    <path d="M160,242 Q152,280 156,322 Q158,360 152,398" stroke="#1a3010" stroke-width="1.3"/>
+    <path d="M148,248 Q140,290 143,335 Q145,370 140,410" stroke="#152a10" stroke-width="1.2"/>
+    <path d="M132,255 Q124,295 128,340 Q130,378 124,415" stroke="#1a3010" stroke-width="1.2"/>
+    <!-- From right canopy zone -->
+    <path d="M425,228 Q432,268 428,308 Q425,345 430,382 Q433,412 428,445" stroke="#152a10" stroke-width="1.8"/>
+    <path d="M415,232 Q420,272 416,315 Q413,352 418,390" stroke="#1a3010" stroke-width="1.5"/>
+    <path d="M400,225 Q406,265 402,308 Q398,348 404,388 Q407,418 402,445" stroke="#152a10" stroke-width="1.6"/>
+    <path d="M385,228 Q390,262 386,298 Q382,335 388,370 Q392,402 386,436" stroke="#1a3010" stroke-width="1.4"/>
+    <path d="M372,222 Q378,258 374,295 Q370,332 376,368" stroke="#152a10" stroke-width="1.5"/>
+    <path d="M440,242 Q448,280 444,322 Q441,360 446,398" stroke="#1a3010" stroke-width="1.3"/>
+    <path d="M455,248 Q462,290 458,335 Q455,370 460,410" stroke="#152a10" stroke-width="1.2"/>
+    <path d="M468,255 Q475,295 471,340 Q468,378 474,415" stroke="#1a3010" stroke-width="1.2"/>
+    <!-- Central aerial roots (hanging near trunk) -->
+    <path d="M255,225 Q248,265 252,308 Q255,348 250,390" stroke="#1a3010" stroke-width="1.5"/>
+    <path d="M268,220 Q262,258 266,298 Q269,338 264,375 Q260,408 264,440" stroke="#152a10" stroke-width="1.6"/>
+    <path d="M355,222 Q362,260 358,300 Q354,340 360,378 Q363,410 358,442" stroke="#152a10" stroke-width="1.6"/>
+    <path d="M368,228 Q374,268 370,308 Q366,348 372,385" stroke="#1a3010" stroke-width="1.5"/>
+    <!-- Thin wisps -->
+    <path d="M243,230 Q237,268 240,308 Q242,342 238,375" stroke="#1a3010" stroke-width="1.0" opacity="0.7"/>
+    <path d="M280,218 Q275,255 278,295 Q280,330 275,365" stroke="#152a10" stroke-width="1.0" opacity="0.7"/>
+    <path d="M340,218 Q346,255 342,295 Q338,330 344,365" stroke="#1a3010" stroke-width="1.0" opacity="0.7"/>
+    <path d="M382,230 Q388,268 384,308 Q380,342 386,375" stroke="#152a10" stroke-width="1.0" opacity="0.7"/>
+  </g>
+
+  <!-- FOREGROUND GROUND LAYER (dark floor) -->
+  <path d="M0,400 Q60,388 130,392 Q200,396 270,388 Q310,384 350,388 Q420,394 490,388 Q540,384 600,392 L600,450 L0,450 Z"
+        fill="url(#groundGrad)"/>
+  <!-- Ground surface undulation -->
+  <path d="M0,418 Q80,408 160,412 Q240,416 310,408 Q380,402 460,408 Q530,412 600,408 L600,450 L0,450 Z"
+        fill="#040f04"/>
+  <!-- Moss / ground cover hints -->
+  <g opacity="0.35">
+    <ellipse cx="100" cy="430" rx="45" ry="12" fill="#1a3d1a"/>
+    <ellipse cx="200" cy="425" rx="35" ry="9" fill="#2d5016"/>
+    <ellipse cx="480" cy="428" rx="40" ry="11" fill="#1a3d1a"/>
+    <ellipse cx="555" cy="422" rx="32" ry="9" fill="#2d5016"/>
+    <ellipse cx="310" cy="432" rx="28" ry="8" fill="#1a3d1a"/>
+  </g>
+
+  <!-- AMBER LEAF LIGHT GLINTS (scattered across canopy) -->
+  <g opacity="0.18">
+    <circle cx="310" cy="132" r="6" fill="#fdf0d5"/>
+    <circle cx="335" cy="122" r="4" fill="#f59e0b"/>
+    <circle cx="285" cy="128" r="3.5" fill="#fdf0d5"/>
+    <circle cx="358" cy="138" r="3" fill="#f59e0b"/>
+    <circle cx="265" cy="140" r="3" fill="#e8a020"/>
+    <circle cx="385" cy="148" r="4" fill="#f59e0b"/>
+    <circle cx="240" cy="152" r="3" fill="#fdf0d5"/>
+    <circle cx="410" cy="158" r="3.5" fill="#e8a020"/>
+  </g>
+
+  <!-- Subtle ambient particles (fireflies or dust motes) -->
+  <g opacity="0.22">
+    <circle cx="155" cy="288" r="1.8" fill="#f59e0b"/>
+    <circle cx="218" cy="255" r="1.5" fill="#e8a020"/>
+    <circle cx="390" cy="262" r="1.8" fill="#f59e0b"/>
+    <circle cx="455" cy="292" r="1.5" fill="#e8a020"/>
+    <circle cx="182" cy="342" r="1.3" fill="#d97706"/>
+    <circle cx="425" cy="338" r="1.3" fill="#d97706"/>
+    <circle cx="510" cy="315" r="1.5" fill="#f59e0b"/>
+    <circle cx="88" cy="318" r="1.5" fill="#e8a020"/>
+  </g>
+</svg>

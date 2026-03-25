@@ -106,7 +106,7 @@ export default function ExclusiveIMGPerksPage() {
           <div className="max-w-7xl mx-auto">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/illus-perks.svg"
+                src="/images/illus-harvest.svg"
                 alt="IMG Perks"
                 width={1200}
                 height={600}

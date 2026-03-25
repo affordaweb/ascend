@@ -184,7 +184,7 @@ export default function AivanAlvarezPage() {
         {/* Full-width Quote Banner */}
         <section className="relative h-[320px] overflow-hidden">
           <Image
-            src="/images/illus-sustainability.svg"
+            src="/images/illus-journey.svg"
             alt="Sustainability"
             width={1200}
             height={600}

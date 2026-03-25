@@ -1,0 +1,272 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <!-- Forest floor background gradient -->
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a10"/>
+      <stop offset="100%" stop-color="#2a3a18"/>
+    </linearGradient>
+
+    <!-- Canopy gradient at top -->
+    <linearGradient id="canopyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1f08"/>
+      <stop offset="100%" stop-color="#1a3d1a" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <!-- Amber light shaft gradient -->
+    <linearGradient id="lightShaft1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lightShaft2" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#e8a020" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#e8a020" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lightShaft3" x1="0.2" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Seedling glow -->
+    <radialGradient id="seedlingGlow" cx="50%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#e8a020" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Book page gradient -->
+    <linearGradient id="pageLeft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8dfc0"/>
+      <stop offset="100%" stop-color="#fdf0d5"/>
+    </linearGradient>
+    <linearGradient id="pageRight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fdf0d5"/>
+      <stop offset="100%" stop-color="#e8dfc0"/>
+    </linearGradient>
+
+    <!-- Book shadow on floor -->
+    <radialGradient id="bookShadow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Canopy overhead light pool -->
+    <radialGradient id="lightPool" cx="50%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Drop shadow filter -->
+    <filter id="bookDropShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="leafGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#f59e0b" flood-opacity="0.7"/>
+    </filter>
+    <filter id="softBlur" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+
+    <!-- Moss texture clip -->
+    <clipPath id="sceneClip">
+      <rect x="0" y="0" width="600" height="450"/>
+    </clipPath>
+  </defs>
+
+  <!-- ============ BACKGROUND: Forest Floor ============ -->
+  <rect x="0" y="0" width="600" height="450" fill="url(#floorGrad)" clip-path="url(#sceneClip)"/>
+
+  <!-- Subtle floor texture variation bands -->
+  <ellipse cx="100" cy="380" rx="180" ry="40" fill="#1e3012" opacity="0.5"/>
+  <ellipse cx="500" cy="400" rx="160" ry="35" fill="#243818" opacity="0.4"/>
+  <ellipse cx="300" cy="430" rx="250" ry="30" fill="#162410" opacity="0.6"/>
+
+  <!-- ============ CANOPY: Top organic shapes ============ -->
+  <!-- Main canopy mass -->
+  <path d="M0,0 Q80,-10 120,40 Q160,80 100,100 Q50,120 0,90 Z" fill="#0f2744" opacity="0.3"/>
+  <path d="M0,0 L600,0 L600,120 Q540,140 480,100 Q420,60 370,110 Q320,155 270,100 Q230,55 180,90 Q140,120 90,80 Q40,45 0,70 Z" fill="url(#canopyGrad)"/>
+
+  <!-- Canopy leaf organic masses - left cluster -->
+  <ellipse cx="60" cy="60" rx="85" ry="55" fill="#1a3d1a" opacity="0.95"/>
+  <ellipse cx="30" cy="50" rx="60" ry="45" fill="#2d5016" opacity="0.85"/>
+  <ellipse cx="90" cy="40" rx="70" ry="40" fill="#1a3d1a" opacity="0.9"/>
+  <path d="M0,20 Q30,5 60,25 Q90,45 70,80 Q40,95 10,75 Z" fill="#243818" opacity="0.8"/>
+
+  <!-- Canopy leaf masses - center -->
+  <ellipse cx="280" cy="45" rx="100" ry="60" fill="#1a3d1a" opacity="0.9"/>
+  <ellipse cx="250" cy="30" rx="80" ry="42" fill="#2d5016" opacity="0.85"/>
+  <ellipse cx="320" cy="35" rx="90" ry="50" fill="#1a3d1a"/>
+  <path d="M200,0 Q260,10 300,50 Q340,85 290,110 Q240,130 200,100 Q165,75 175,40 Z" fill="#3a5820" opacity="0.7"/>
+
+  <!-- Canopy leaf masses - right cluster -->
+  <ellipse cx="510" cy="55" rx="90" ry="55" fill="#1a3d1a" opacity="0.95"/>
+  <ellipse cx="570" cy="40" rx="65" ry="48" fill="#2d5016" opacity="0.85"/>
+  <ellipse cx="480" cy="35" rx="75" ry="45" fill="#243818" opacity="0.9"/>
+  <path d="M450,0 Q510,15 550,50 Q590,80 600,60 L600,0 Z" fill="#1a3d1a" opacity="0.9"/>
+
+  <!-- Canopy additional overlapping leaves for depth -->
+  <path d="M130,0 Q170,20 190,70 Q170,100 140,85 Q110,65 120,30 Z" fill="#2d5016" opacity="0.75"/>
+  <path d="M350,0 Q400,25 420,80 Q400,105 370,90 Q345,65 360,30 Z" fill="#1a3d1a" opacity="0.8"/>
+  <path d="M430,10 Q465,30 470,75 Q445,90 420,70 Q405,50 420,25 Z" fill="#2d5016" opacity="0.7"/>
+
+  <!-- ============ LIGHT SHAFTS: Diagonal rays from canopy ============ -->
+  <!-- Left shaft -->
+  <polygon points="150,80 175,80 300,420 260,420" fill="url(#lightShaft1)" opacity="1"/>
+  <!-- Center main shaft - focused on seedling area -->
+  <polygon points="255,60 345,60 340,450 260,450" fill="url(#lightShaft2)" opacity="1"/>
+  <!-- Right shaft -->
+  <polygon points="390,75 420,75 500,420 470,420" fill="url(#lightShaft3)" opacity="1"/>
+  <!-- Narrow bright center shaft -->
+  <polygon points="285,55 315,55 310,380 290,380" fill="#f59e0b" opacity="0.07"/>
+
+  <!-- Overhead ambient light pool -->
+  <ellipse cx="300" cy="180" rx="200" ry="120" fill="url(#lightPool)" opacity="0.8"/>
+
+  <!-- ============ MOSS PATCHES on floor ============ -->
+  <!-- Large moss patch - left -->
+  <ellipse cx="75" cy="370" rx="60" ry="22" fill="#2d5016" opacity="0.85"/>
+  <ellipse cx="65" cy="365" rx="45" ry="16" fill="#4a7c35" opacity="0.7"/>
+  <ellipse cx="85" cy="375" rx="38" ry="14" fill="#3a6828" opacity="0.6"/>
+  <!-- Moss texture bumps left -->
+  <ellipse cx="50" cy="363" rx="12" ry="8" fill="#4a7c35" opacity="0.6"/>
+  <ellipse cx="75" cy="358" rx="15" ry="9" fill="#3a6828" opacity="0.55"/>
+  <ellipse cx="100" cy="368" rx="11" ry="7" fill="#5a8840" opacity="0.5"/>
+
+  <!-- Moss patch - right -->
+  <ellipse cx="510" cy="380" rx="65" ry="24" fill="#2d5016" opacity="0.8"/>
+  <ellipse cx="525" cy="372" rx="48" ry="17" fill="#4a7c35" opacity="0.65"/>
+  <ellipse cx="495" cy="383" rx="42" ry="15" fill="#3a6828" opacity="0.6"/>
+  <!-- Moss bumps right -->
+  <ellipse cx="490" cy="370" rx="13" ry="8" fill="#4a7c35" opacity="0.55"/>
+  <ellipse cx="515" cy="365" rx="16" ry="9" fill="#5a8840" opacity="0.5"/>
+  <ellipse cx="540" cy="375" rx="12" ry="8" fill="#3a6828" opacity="0.55"/>
+
+  <!-- Small moss patch - lower left -->
+  <ellipse cx="140" cy="415" rx="45" ry="16" fill="#2d5016" opacity="0.7"/>
+  <ellipse cx="130" cy="410" rx="30" ry="11" fill="#4a7c35" opacity="0.6"/>
+
+  <!-- Moss near book base -->
+  <ellipse cx="200" cy="360" rx="35" ry="13" fill="#2d5016" opacity="0.6"/>
+  <ellipse cx="390" cy="358" rx="30" ry="11" fill="#2d5016" opacity="0.55"/>
+
+  <!-- Small moss - upper right floor -->
+  <ellipse cx="555" cy="330" rx="30" ry="11" fill="#2d5016" opacity="0.6"/>
+  <ellipse cx="560" cy="323" rx="20" ry="8" fill="#4a7c35" opacity="0.5"/>
+
+  <!-- ============ PEBBLES scattered ============ -->
+  <!-- Left area pebbles -->
+  <ellipse cx="40" cy="345" rx="8" ry="5" fill="#7a7060" opacity="0.75" transform="rotate(-15, 40, 345)"/>
+  <ellipse cx="120" cy="390" rx="6" ry="4" fill="#8a8070" opacity="0.7" transform="rotate(20, 120, 390)"/>
+  <ellipse cx="155" cy="360" rx="9" ry="5" fill="#6a6255" opacity="0.7" transform="rotate(-8, 155, 360)"/>
+  <ellipse cx="80" cy="410" rx="5" ry="3.5" fill="#908070" opacity="0.65" transform="rotate(12, 80, 410)"/>
+  <ellipse cx="165" cy="395" rx="7" ry="4" fill="#7a7060" opacity="0.65" transform="rotate(-20, 165, 395)"/>
+
+  <!-- Right area pebbles -->
+  <ellipse cx="455" cy="350" rx="8" ry="5" fill="#8a8070" opacity="0.7" transform="rotate(10, 455, 350)"/>
+  <ellipse cx="480" cy="395" rx="6" ry="3.5" fill="#6a6255" opacity="0.7" transform="rotate(-15, 480, 395)"/>
+  <ellipse cx="555" cy="355" rx="9" ry="5.5" fill="#7a7060" opacity="0.65" transform="rotate(18, 555, 355)"/>
+  <ellipse cx="440" cy="408" rx="5" ry="3" fill="#908070" opacity="0.6" transform="rotate(-8, 440, 408)"/>
+  <ellipse cx="575" cy="400" rx="7" ry="4" fill="#8a8070" opacity="0.65" transform="rotate(22, 575, 400)"/>
+
+  <!-- Scattered center pebbles -->
+  <ellipse cx="210" cy="405" rx="6" ry="3.5" fill="#7a7060" opacity="0.6" transform="rotate(-12, 210, 405)"/>
+  <ellipse cx="385" cy="410" rx="7" ry="4" fill="#6a6255" opacity="0.6" transform="rotate(15, 385, 410)"/>
+  <ellipse cx="250" cy="430" rx="5" ry="3" fill="#8a8070" opacity="0.55" transform="rotate(8, 250, 430)"/>
+  <ellipse cx="350" cy="432" rx="6" ry="3.5" fill="#7a7060" opacity="0.55" transform="rotate(-10, 350, 432)"/>
+
+  <!-- ============ BOOK SHADOW on floor ============ -->
+  <ellipse cx="300" cy="310" rx="175" ry="40" fill="#000000" opacity="0.3" filter="url(#softBlur)"/>
+
+  <!-- ============ OPEN BOOK ============ -->
+  <g filter="url(#bookDropShadow)">
+    <!-- Book cover base (slightly visible at edges) -->
+    <path d="M115,295 Q118,330 300,335 Q482,330 485,295 Q482,260 300,258 Q118,260 115,295 Z" fill="#4a3020" opacity="0.4"/>
+
+    <!-- Left page -->
+    <path d="M118,292 Q120,325 298,328 Q299,275 299,265 Q180,265 118,292 Z" fill="url(#pageLeft)"/>
+    <!-- Left page subtle curl at outer edge -->
+    <path d="M118,292 Q117,310 119,325 Q120,332 125,330 Q120,310 122,292 Z" fill="#c8b89a" opacity="0.5"/>
+    <!-- Left page top edge curl -->
+    <path d="M118,292 Q170,268 240,265 Q299,265 299,265 Q240,268 175,272 Q140,278 118,292 Z" fill="#e8dfc0" opacity="0.4"/>
+
+    <!-- Right page -->
+    <path d="M302,265 Q302,275 302,328 Q480,325 482,292 Q482,260 302,265 Z" fill="url(#pageRight)"/>
+    <!-- Right page outer edge curl -->
+    <path d="M482,292 Q483,310 481,326 Q480,332 475,330 Q480,310 478,292 Z" fill="#c8b89a" opacity="0.5"/>
+    <!-- Right page top edge curl -->
+    <path d="M302,265 Q360,262 420,265 Q455,268 480,280 Q460,270 420,268 Q360,265 302,265 Z" fill="#fdf8ec" opacity="0.5"/>
+
+    <!-- Book spine center -->
+    <path d="M297,265 Q299,285 299,328 Q301,328 301,285 Q303,265 297,265 Z" fill="#c8a870" opacity="0.8"/>
+    <line x1="299" y1="266" x2="299" y2="328" stroke="#b89858" stroke-width="1.5" opacity="0.7"/>
+
+    <!-- Page ruled lines - left page -->
+    <line x1="140" y1="285" x2="290" y2="285" stroke="#c8b89a" stroke-width="0.7" opacity="0.5"/>
+    <line x1="135" y1="293" x2="290" y2="293" stroke="#c8b89a" stroke-width="0.7" opacity="0.45"/>
+    <line x1="132" y1="301" x2="290" y2="301" stroke="#c8b89a" stroke-width="0.7" opacity="0.4"/>
+    <line x1="130" y1="309" x2="290" y2="309" stroke="#c8b89a" stroke-width="0.7" opacity="0.38"/>
+    <line x1="129" y1="317" x2="290" y2="317" stroke="#c8b89a" stroke-width="0.7" opacity="0.35"/>
+    <line x1="129" y1="325" x2="290" y2="325" stroke="#c8b89a" stroke-width="0.7" opacity="0.32"/>
+
+    <!-- Page ruled lines - right page -->
+    <line x1="310" y1="285" x2="460" y2="285" stroke="#c8b89a" stroke-width="0.7" opacity="0.5"/>
+    <line x1="310" y1="293" x2="465" y2="293" stroke="#c8b89a" stroke-width="0.7" opacity="0.45"/>
+    <line x1="310" y1="301" x2="468" y2="301" stroke="#c8b89a" stroke-width="0.7" opacity="0.4"/>
+    <line x1="310" y1="309" x2="470" y2="309" stroke="#c8b89a" stroke-width="0.7" opacity="0.38"/>
+    <line x1="310" y1="317" x2="470" y2="317" stroke="#c8b89a" stroke-width="0.7" opacity="0.35"/>
+    <line x1="310" y1="325" x2="468" y2="325" stroke="#c8b89a" stroke-width="0.7" opacity="0.32"/>
+
+    <!-- Page bottom edge visible -->
+    <path d="M125,327 Q299,334 473,327" stroke="#d4c4a0" stroke-width="1.2" fill="none" opacity="0.7"/>
+  </g>
+
+  <!-- ============ SEEDLING GLOW ============ -->
+  <ellipse cx="300" cy="270" rx="80" ry="70" fill="url(#seedlingGlow)" opacity="0.9"/>
+
+  <!-- ============ SEEDLING ============ -->
+  <g filter="url(#leafGlow)">
+    <!-- Stem -->
+    <path d="M299,295 Q298,268 299,228" stroke="#4a7c35" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Secondary stem curve for organic feel -->
+    <path d="M299,295 Q300,270 300,240" stroke="#5a8840" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Left leaf - unfurling -->
+    <path d="M299,252 Q278,238 265,225 Q260,218 265,214 Q272,210 280,218 Q290,228 298,244 Z" fill="#5a9040"/>
+    <!-- Left leaf mid-vein -->
+    <path d="M299,252 Q282,236 268,220" stroke="#4a7c35" stroke-width="1" fill="none" opacity="0.6"/>
+
+    <!-- Right leaf - unfurling -->
+    <path d="M300,248 Q320,235 335,222 Q341,216 337,212 Q330,207 322,215 Q312,226 301,243 Z" fill="#5a9040"/>
+    <!-- Right leaf mid-vein -->
+    <path d="M300,248 Q318,233 334,218" stroke="#4a7c35" stroke-width="1" fill="none" opacity="0.6"/>
+
+    <!-- Small bud tip at top of stem -->
+    <ellipse cx="299" cy="228" rx="5" ry="7" fill="#6aaa50" transform="rotate(-5, 299, 228)"/>
+    <ellipse cx="299" cy="225" rx="3" ry="4" fill="#7abc60"/>
+  </g>
+
+  <!-- Ambient glow halo on book page near seedling base -->
+  <ellipse cx="299" cy="300" rx="40" ry="12" fill="#f59e0b" opacity="0.15"/>
+
+  <!-- ============ FOREGROUND: Extra floor details ============ -->
+  <!-- Fallen dry leaf - left -->
+  <path d="M170,335 Q185,325 195,330 Q200,338 190,345 Q178,348 170,340 Z" fill="#6b4226" opacity="0.5" transform="rotate(-20, 182, 338)"/>
+  <line x1="170" y1="338" x2="194" y2="334" stroke="#8b5e3c" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Fallen dry leaf - right -->
+  <path d="M410,340 Q424,328 433,334 Q438,342 428,350 Q416,352 410,344 Z" fill="#6b4226" opacity="0.45" transform="rotate(15, 422, 340)"/>
+  <line x1="411" y1="343" x2="432" y2="336" stroke="#8b5e3c" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Small twig -->
+  <path d="M50,320 Q90,318 110,330" stroke="#6b4226" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round"/>
+  <path d="M80,318 Q82,308 86,302" stroke="#6b4226" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+
+  <!-- Another small twig right side -->
+  <path d="M490,325 Q520,322 545,335" stroke="#6b4226" stroke-width="2" fill="none" opacity="0.55" stroke-linecap="round"/>
+  <path d="M518,322 Q520,312 516,306" stroke="#6b4226" stroke-width="1.5" fill="none" opacity="0.45" stroke-linecap="round"/>
+
+  <!-- Foreground dark vignette edges -->
+  <rect x="0" y="0" width="80" height="450" fill="#0f1a08" opacity="0.45"/>
+  <rect x="520" y="0" width="80" height="450" fill="#0f1a08" opacity="0.45"/>
+  <rect x="0" y="380" width="600" height="70" fill="#0f1a08" opacity="0.5"/>
+  <rect x="0" y="0" width="600" height="60" fill="#0f1a08" opacity="0.3"/>
+</svg>

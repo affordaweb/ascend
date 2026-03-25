@@ -1,0 +1,345 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <!-- Sky gradient -->
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c5dff0"/>
+      <stop offset="60%" stop-color="#daeef8"/>
+      <stop offset="100%" stop-color="#eef7fb"/>
+    </linearGradient>
+
+    <!-- Grass surface gradient -->
+    <linearGradient id="grassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a7c35"/>
+      <stop offset="100%" stop-color="#2d5016"/>
+    </linearGradient>
+
+    <!-- Topsoil layer -->
+    <linearGradient id="topsoilGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3d2010"/>
+      <stop offset="100%" stop-color="#4a2a18"/>
+    </linearGradient>
+
+    <!-- Subsoil layer -->
+    <linearGradient id="subsoilGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a3018"/>
+      <stop offset="100%" stop-color="#6b3a1a"/>
+    </linearGradient>
+
+    <!-- Clay layer -->
+    <linearGradient id="clayGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7a4a22"/>
+      <stop offset="100%" stop-color="#8b5a2a"/>
+    </linearGradient>
+
+    <!-- Deep rock layer -->
+    <linearGradient id="rockGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a3020"/>
+      <stop offset="100%" stop-color="#3a2418"/>
+    </linearGradient>
+
+    <!-- Underground water stream -->
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b07010" stop-opacity="0.7"/>
+      <stop offset="25%" stop-color="#d97706"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="75%" stop-color="#e8a020"/>
+      <stop offset="100%" stop-color="#b07010" stop-opacity="0.7"/>
+    </linearGradient>
+
+    <!-- Water glow -->
+    <radialGradient id="waterGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Magnifying lens gradient -->
+    <radialGradient id="lensGrad" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#c5e8f0" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#8ab0c0" stop-opacity="0.15"/>
+    </radialGradient>
+
+    <!-- Lens highlight for roots -->
+    <radialGradient id="lensHighlight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e8a020" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Drop shadow filters -->
+    <filter id="shadowFilter" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-color="#1a1008" flood-opacity="0.5"/>
+    </filter>
+    <filter id="magnifyGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="waterGlowFilter" x="-30%" y="-100%" width="160%" height="300%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#f59e0b" flood-opacity="0.6"/>
+    </filter>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- ============ SKY BACKGROUND ============ -->
+  <rect x="0" y="0" width="600" height="185" fill="url(#skyGrad)"/>
+
+  <!-- Soft cloud shapes -->
+  <ellipse cx="120" cy="55" rx="75" ry="28" fill="#ffffff" opacity="0.65"/>
+  <ellipse cx="165" cy="48" rx="55" ry="22" fill="#ffffff" opacity="0.55"/>
+  <ellipse cx="80" cy="60" rx="45" ry="20" fill="#ffffff" opacity="0.5"/>
+
+  <ellipse cx="430" cy="72" rx="85" ry="26" fill="#ffffff" opacity="0.55"/>
+  <ellipse cx="480" cy="65" rx="60" ry="22" fill="#ffffff" opacity="0.5"/>
+  <ellipse cx="385" cy="78" rx="50" ry="19" fill="#ffffff" opacity="0.45"/>
+
+  <ellipse cx="285" cy="40" rx="60" ry="20" fill="#ffffff" opacity="0.45"/>
+
+  <!-- ============ GRASS SURFACE LAYER ============ -->
+  <!-- Organic ground surface line -->
+  <path d="M0,165 Q30,162 60,168 Q90,174 120,163 Q150,152 180,165 Q210,178 240,167 Q270,156 300,163 Q330,170 360,160 Q390,150 420,165 Q450,180 480,168 Q510,156 540,165 Q570,174 600,163 L600,200 Q500,205 400,198 Q300,192 200,200 Q100,208 0,200 Z" fill="url(#grassGrad)"/>
+
+  <!-- Grass blades -->
+  <g opacity="0.85">
+    <!-- Left grass cluster -->
+    <path d="M30,165 Q28,145 25,128" stroke="#5a9040" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M36,163 Q38,142 44,125" stroke="#4a7c35" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M42,165 Q40,148 36,134" stroke="#5a9040" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M50,162 Q52,140 58,122" stroke="#4a7c35" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M58,165 Q56,146 52,130" stroke="#6aaa50" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Center-left cluster -->
+    <path d="M130,163 Q128,143 125,126" stroke="#5a9040" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M138,161 Q140,140 146,123" stroke="#4a7c35" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M145,164 Q143,148 139,134" stroke="#5a9040" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M152,160 Q154,138 160,120" stroke="#6aaa50" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Right-center cluster -->
+    <path d="M420,165 Q418,145 415,128" stroke="#5a9040" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M428,163 Q430,142 436,125" stroke="#4a7c35" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M435,166 Q433,149 429,135" stroke="#5a9040" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Right cluster -->
+    <path d="M530,165 Q528,145 525,128" stroke="#5a9040" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M538,163 Q540,142 546,125" stroke="#4a7c35" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M545,166 Q543,149 539,135" stroke="#5a9040" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M552,163 Q554,141 560,123" stroke="#6aaa50" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M560,166 Q558,147 554,131" stroke="#5a9040" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Scattered individual blades -->
+    <path d="M80,170 Q79,152 77,138" stroke="#4a7c35" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M195,167 Q197,148 201,133" stroke="#5a9040" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M340,162 Q338,144 334,128" stroke="#4a7c35" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M490,167 Q492,148 496,133" stroke="#5a9040" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- ============ WILDFLOWERS ============ -->
+  <!-- White daisy - left -->
+  <g transform="translate(68, 148)">
+    <circle r="5" fill="#f5e060"/>
+    <line x1="0" y1="0" x2="0" y2="-9" stroke="white" stroke-width="2.5"/>
+    <line x1="0" y1="0" x2="9" y2="0" stroke="white" stroke-width="2.5"/>
+    <line x1="0" y1="0" x2="0" y2="9" stroke="white" stroke-width="2.5"/>
+    <line x1="0" y1="0" x2="-9" y2="0" stroke="white" stroke-width="2.5"/>
+    <line x1="0" y1="0" x2="6.4" y2="-6.4" stroke="white" stroke-width="2"/>
+    <line x1="0" y1="0" x2="-6.4" y2="-6.4" stroke="white" stroke-width="2"/>
+    <line x1="0" y1="0" x2="6.4" y2="6.4" stroke="white" stroke-width="2"/>
+    <line x1="0" y1="0" x2="-6.4" y2="6.4" stroke="white" stroke-width="2"/>
+  </g>
+  <!-- Stem for left daisy -->
+  <line x1="68" y1="153" x2="68" y2="170" stroke="#4a7c35" stroke-width="1.5"/>
+
+  <!-- Yellow wildflower - center area -->
+  <g transform="translate(268, 152)">
+    <circle r="5" fill="#f59e0b"/>
+    <line x1="0" y1="0" x2="0" y2="-8" stroke="#f5e060" stroke-width="2.5"/>
+    <line x1="0" y1="0" x2="8" y2="0" stroke="#f5e060" stroke-width="2.5"/>
+    <line x1="0" y1="0" x2="0" y2="8" stroke="#f5e060" stroke-width="2.5"/>
+    <line x1="0" y1="0" x2="-8" y2="0" stroke="#f5e060" stroke-width="2.5"/>
+    <line x1="0" y1="0" x2="5.7" y2="-5.7" stroke="#f5e060" stroke-width="2"/>
+    <line x1="0" y1="0" x2="-5.7" y2="-5.7" stroke="#f5e060" stroke-width="2"/>
+    <line x1="0" y1="0" x2="5.7" y2="5.7" stroke="#f5e060" stroke-width="2"/>
+    <line x1="0" y1="0" x2="-5.7" y2="5.7" stroke="#f5e060" stroke-width="2"/>
+  </g>
+  <line x1="268" y1="157" x2="268" y2="170" stroke="#4a7c35" stroke-width="1.5"/>
+
+  <!-- Amber small flower - right -->
+  <g transform="translate(462, 155)">
+    <circle r="4" fill="#d97706"/>
+    <line x1="0" y1="0" x2="0" y2="-8" stroke="#f59e0b" stroke-width="2.2"/>
+    <line x1="0" y1="0" x2="8" y2="0" stroke="#f59e0b" stroke-width="2.2"/>
+    <line x1="0" y1="0" x2="0" y2="8" stroke="#f59e0b" stroke-width="2.2"/>
+    <line x1="0" y1="0" x2="-8" y2="0" stroke="#f59e0b" stroke-width="2.2"/>
+    <line x1="0" y1="0" x2="5.7" y2="-5.7" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="0" y1="0" x2="-5.7" y2="-5.7" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="0" y1="0" x2="5.7" y2="5.7" stroke="#f59e0b" stroke-width="1.8"/>
+    <line x1="0" y1="0" x2="-5.7" y2="5.7" stroke="#f59e0b" stroke-width="1.8"/>
+  </g>
+  <line x1="462" y1="159" x2="462" y2="168" stroke="#4a7c35" stroke-width="1.5"/>
+
+  <!-- White small flower - right side -->
+  <g transform="translate(540, 150)">
+    <circle r="3.5" fill="#fdf0d5"/>
+    <line x1="0" y1="0" x2="0" y2="-7" stroke="white" stroke-width="2"/>
+    <line x1="0" y1="0" x2="7" y2="0" stroke="white" stroke-width="2"/>
+    <line x1="0" y1="0" x2="0" y2="7" stroke="white" stroke-width="2"/>
+    <line x1="0" y1="0" x2="-7" y2="0" stroke="white" stroke-width="2"/>
+    <line x1="0" y1="0" x2="5" y2="-5" stroke="white" stroke-width="1.5"/>
+    <line x1="0" y1="0" x2="-5" y2="-5" stroke="white" stroke-width="1.5"/>
+  </g>
+  <line x1="540" y1="154" x2="540" y2="165" stroke="#4a7c35" stroke-width="1.5"/>
+
+  <!-- ============ UNDERGROUND CROSS-SECTION ============ -->
+  <!-- Topsoil -->
+  <rect x="0" y="193" width="600" height="65" fill="url(#topsoilGrad)"/>
+  <!-- Topsoil texture lines -->
+  <path d="M20,205 Q80,202 140,208 Q200,214 260,206 Q320,198 380,207 Q440,216 500,208 Q550,202 600,206" stroke="#2a1408" stroke-width="0.8" fill="none" opacity="0.4"/>
+  <path d="M0,218 Q60,215 120,221 Q180,227 240,219 Q300,211 360,220 Q420,229 480,221 Q540,215 600,218" stroke="#2a1408" stroke-width="0.7" fill="none" opacity="0.3"/>
+  <path d="M0,232 Q70,229 140,235 Q210,241 280,233 Q350,225 420,234 Q490,243 560,236 Q580,233 600,234" stroke="#2a1408" stroke-width="0.7" fill="none" opacity="0.25"/>
+  <!-- Organic matter dots in topsoil -->
+  <circle cx="45" cy="210" r="2" fill="#1a0a05" opacity="0.5"/>
+  <circle cx="112" cy="222" r="2.5" fill="#1a0a05" opacity="0.45"/>
+  <circle cx="185" cy="215" r="1.8" fill="#1a0a05" opacity="0.4"/>
+  <circle cx="260" cy="225" r="2.2" fill="#1a0a05" opacity="0.45"/>
+  <circle cx="348" cy="212" r="2" fill="#1a0a05" opacity="0.4"/>
+  <circle cx="425" cy="228" r="2.5" fill="#1a0a05" opacity="0.45"/>
+  <circle cx="510" cy="218" r="2" fill="#1a0a05" opacity="0.4"/>
+
+  <!-- Subsoil -->
+  <rect x="0" y="258" width="600" height="65" fill="url(#subsoilGrad)"/>
+  <!-- Subsoil striations -->
+  <path d="M0,272 Q100,269 200,275 Q300,281 400,273 Q500,265 600,270" stroke="#4a2010" stroke-width="1" fill="none" opacity="0.35"/>
+  <path d="M0,288 Q120,285 240,291 Q360,297 480,289 Q540,285 600,288" stroke="#4a2010" stroke-width="1" fill="none" opacity="0.3"/>
+  <path d="M0,305 Q90,302 180,308 Q270,314 360,306 Q450,298 540,305 Q570,307 600,305" stroke="#3a1808" stroke-width="0.8" fill="none" opacity="0.25"/>
+  <!-- Small rock inclusions -->
+  <ellipse cx="78" cy="278" rx="8" ry="5" fill="#3a2010" opacity="0.5" transform="rotate(-15,78,278)"/>
+  <ellipse cx="210" cy="295" rx="6" ry="4" fill="#4a2a18" opacity="0.45" transform="rotate(10,210,295)"/>
+  <ellipse cx="380" cy="282" rx="9" ry="5.5" fill="#3a2010" opacity="0.5" transform="rotate(-8,380,282)"/>
+  <ellipse cx="520" cy="298" rx="7" ry="4.5" fill="#4a2a18" opacity="0.45" transform="rotate(15,520,298)"/>
+
+  <!-- Clay layer -->
+  <rect x="0" y="323" width="600" height="60" fill="url(#clayGrad)"/>
+  <!-- Clay texture - more horizontal bands -->
+  <path d="M0,335 Q150,332 300,338 Q450,344 600,337" stroke="#6a3a15" stroke-width="1.2" fill="none" opacity="0.4"/>
+  <path d="M0,348 Q200,345 400,351 Q500,354 600,350" stroke="#6a3a15" stroke-width="1" fill="none" opacity="0.35"/>
+  <path d="M0,362 Q180,359 360,365 Q480,368 600,362" stroke="#6a3a15" stroke-width="1" fill="none" opacity="0.3"/>
+  <!-- Clay mineral inclusions -->
+  <ellipse cx="145" cy="340" rx="12" ry="5" fill="#9a7040" opacity="0.4" transform="rotate(5,145,340)"/>
+  <ellipse cx="310" cy="355" rx="10" ry="4" fill="#9a7040" opacity="0.35" transform="rotate(-8,310,355)"/>
+  <ellipse cx="468" cy="345" rx="11" ry="5" fill="#7a5030" opacity="0.4" transform="rotate(12,468,345)"/>
+
+  <!-- Deep rock layer -->
+  <rect x="0" y="383" width="600" height="67" fill="url(#rockGrad)"/>
+  <!-- Rock texture -->
+  <path d="M0,395 Q100,392 200,398 Q300,404 400,396 Q500,388 600,394" stroke="#2a1810" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <path d="M0,410 Q150,407 300,413 Q450,419 600,412" stroke="#2a1810" stroke-width="1.2" fill="none" opacity="0.35"/>
+  <!-- Rock fracture lines -->
+  <path d="M180,383 Q188,405 182,430" stroke="#1a1008" stroke-width="1.5" fill="none" opacity="0.45"/>
+  <path d="M380,390 Q388,412 375,440" stroke="#1a1008" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <!-- Large rock masses -->
+  <ellipse cx="80" cy="415" rx="50" ry="22" fill="#3a2818" opacity="0.5"/>
+  <ellipse cx="300" cy="425" rx="65" ry="20" fill="#2e2012" opacity="0.45"/>
+  <ellipse cx="510" cy="410" rx="55" ry="24" fill="#3a2818" opacity="0.5"/>
+
+  <!-- Layer boundary lines for clarity -->
+  <path d="M0,193 Q60,190 120,196 Q180,202 240,194 Q300,186 360,195 Q420,204 480,196 Q540,190 600,193" stroke="#5a3820" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M0,258 Q80,255 160,261 Q240,267 320,259 Q400,251 480,260 Q540,265 600,258" stroke="#7a4a25" stroke-width="1.5" fill="none" opacity="0.55"/>
+  <path d="M0,323 Q100,320 200,326 Q300,332 400,324 Q500,316 600,322" stroke="#9a6030" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M0,383 Q90,380 180,386 Q270,392 360,384 Q450,376 540,383 Q570,385 600,383" stroke="#5a3820" stroke-width="1.5" fill="none" opacity="0.5"/>
+
+  <!-- ============ ROOT NETWORKS ============ -->
+  <g opacity="0.75">
+    <!-- Main root trunk - center -->
+    <path d="M300,193 Q298,220 302,258" stroke="#6b4226" stroke-width="2.5" fill="none"/>
+    <path d="M302,258 Q300,285 304,323" stroke="#6b4226" stroke-width="2" fill="none"/>
+    <path d="M304,323 Q302,345 306,360" stroke="#8b5e3c" stroke-width="1.5" fill="none"/>
+
+    <!-- Left main branch from topsoil -->
+    <path d="M295,215 Q260,225 220,240 Q180,255 145,248" stroke="#6b4226" stroke-width="2" fill="none"/>
+    <path d="M145,248 Q110,252 75,265 Q50,275 30,270" stroke="#6b4226" stroke-width="1.5" fill="none"/>
+    <!-- Sub-branches left -->
+    <path d="M220,240 Q205,258 190,280 Q178,298 175,315" stroke="#8b5e3c" stroke-width="1.2" fill="none"/>
+    <path d="M145,248 Q138,270 130,295 Q125,315 128,330" stroke="#8b5e3c" stroke-width="1.2" fill="none"/>
+    <path d="M75,265 Q65,285 58,310 Q54,330 60,345" stroke="#8b5e3c" stroke-width="1" fill="none"/>
+    <!-- Tiny root tendrils left -->
+    <path d="M190,280 Q175,290 165,305" stroke="#a07050" stroke-width="0.8" fill="none"/>
+    <path d="M190,280 Q200,295 198,312" stroke="#a07050" stroke-width="0.8" fill="none"/>
+    <path d="M130,295 Q118,310 115,328" stroke="#a07050" stroke-width="0.8" fill="none"/>
+    <path d="M130,295 Q140,312 136,332" stroke="#a07050" stroke-width="0.8" fill="none"/>
+    <path d="M58,310 Q45,325 42,345" stroke="#a07050" stroke-width="0.8" fill="none"/>
+
+    <!-- Right main branch -->
+    <path d="M305,215 Q340,225 380,238 Q420,250 460,245" stroke="#6b4226" stroke-width="2" fill="none"/>
+    <path d="M460,245 Q498,250 530,262 Q558,272 575,268" stroke="#6b4226" stroke-width="1.5" fill="none"/>
+    <!-- Sub-branches right -->
+    <path d="M380,238 Q392,258 405,280 Q415,300 410,320" stroke="#8b5e3c" stroke-width="1.2" fill="none"/>
+    <path d="M460,245 Q468,268 465,292 Q462,315 468,332" stroke="#8b5e3c" stroke-width="1.2" fill="none"/>
+    <path d="M530,262 Q535,282 528,308 Q522,328 528,342" stroke="#8b5e3c" stroke-width="1" fill="none"/>
+    <!-- Tiny tendrils right -->
+    <path d="M405,280 Q418,295 416,314" stroke="#a07050" stroke-width="0.8" fill="none"/>
+    <path d="M405,280 Q392,295 392,315" stroke="#a07050" stroke-width="0.8" fill="none"/>
+    <path d="M465,292 Q475,308 471,328" stroke="#a07050" stroke-width="0.8" fill="none"/>
+    <path d="M528,308 Q540,322 537,340" stroke="#a07050" stroke-width="0.8" fill="none"/>
+
+    <!-- Deep central roots going into clay -->
+    <path d="M298,323 Q294,345 290,365 Q286,382 285,400" stroke="#d97706" stroke-width="1.5" fill="none" opacity="0.7"/>
+    <path d="M306,323 Q310,345 312,365 Q316,382 314,400" stroke="#d97706" stroke-width="1.5" fill="none" opacity="0.7"/>
+    <!-- Amber-tinted deep roots approaching water -->
+    <path d="M285,365 Q270,375 255,388 Q240,400 238,418" stroke="#d97706" stroke-width="1.2" fill="none" opacity="0.65"/>
+    <path d="M314,365 Q330,375 345,388 Q360,400 358,418" stroke="#d97706" stroke-width="1.2" fill="none" opacity="0.65"/>
+    <path d="M290,400 Q285,415 282,430" stroke="#e8a020" stroke-width="1" fill="none" opacity="0.6"/>
+    <path d="M314,400 Q318,415 315,430" stroke="#e8a020" stroke-width="1" fill="none" opacity="0.6"/>
+  </g>
+
+  <!-- ============ UNDERGROUND WATER STREAM ============ -->
+  <g filter="url(#waterGlowFilter)">
+    <path d="M0,380 Q60,372 120,378 Q180,384 240,376 Q300,368 360,376 Q420,384 480,376 Q540,369 600,373" stroke="url(#waterGrad)" stroke-width="7" fill="none" opacity="0.9"/>
+    <path d="M0,380 Q60,372 120,378 Q180,384 240,376 Q300,368 360,376 Q420,384 480,376 Q540,369 600,373" stroke="#f59e0b" stroke-width="3" fill="none" opacity="0.5"/>
+  </g>
+  <!-- Water shimmer highlights -->
+  <path d="M50,375 Q90,371 130,375" stroke="#fdf0d5" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M200,372 Q250,368 300,372" stroke="#fdf0d5" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M380,373 Q430,369 480,373" stroke="#fdf0d5" stroke-width="1.5" fill="none" opacity="0.45"/>
+
+  <!-- ============ SOIL SURFACE LABEL AREA ============ -->
+  <!-- Ground surface visual reinforcement -->
+  <path d="M0,190 Q100,185 200,192 Q300,199 400,188 Q500,178 600,186 L600,200 Q500,200 400,200 Q300,200 200,200 Q100,200 0,200 Z" fill="#2d5016" opacity="0.6"/>
+
+  <!-- ============ MAGNIFYING GLASS ============ -->
+  <g filter="url(#magnifyGlow)" transform="translate(165, 185)">
+    <!-- Glass lens background - shows soil/roots beneath -->
+    <circle cx="0" cy="0" r="52" fill="#3d2010" opacity="0.85"/>
+    <!-- Root detail visible through lens (slightly highlighted/enlarged) -->
+    <path d="M0,-25 Q-5,0 0,25" stroke="#d97706" stroke-width="3" fill="none" opacity="0.85"/>
+    <path d="M-5,0 Q-20,10 -35,8 Q-48,6 -55,10" stroke="#d97706" stroke-width="2.5" fill="none" opacity="0.8"/>
+    <path d="M-5,0 Q10,12 25,10 Q40,8 50,14" stroke="#d97706" stroke-width="2.5" fill="none" opacity="0.8"/>
+    <path d="M-25,8 Q-22,22 -28,38" stroke="#e8a020" stroke-width="1.5" fill="none" opacity="0.75"/>
+    <path d="M25,10 Q28,24 22,38" stroke="#e8a020" stroke-width="1.5" fill="none" opacity="0.75"/>
+    <!-- Soil texture in lens -->
+    <path d="M-40,-15 Q-10,-18 20,-12" stroke="#2a1408" stroke-width="1" fill="none" opacity="0.5"/>
+    <path d="M-42,-5 Q-12,-8 18,-2" stroke="#2a1408" stroke-width="1" fill="none" opacity="0.5"/>
+
+    <!-- Lens glass overlay -->
+    <circle cx="0" cy="0" r="52" fill="url(#lensGrad)"/>
+    <!-- Lens ring -->
+    <circle cx="0" cy="0" r="52" stroke="#8b5e3c" stroke-width="5" fill="none"/>
+    <circle cx="0" cy="0" r="52" stroke="#c8a050" stroke-width="2" fill="none" opacity="0.6"/>
+    <!-- Lens reflection highlight -->
+    <path d="M-28,-30 Q-10,-40 10,-35" stroke="white" stroke-width="3" fill="none" opacity="0.45" stroke-linecap="round"/>
+
+    <!-- Handle -->
+    <rect x="-7" y="50" width="14" height="55" rx="5" fill="#6b4226"/>
+    <rect x="-7" y="50" width="14" height="55" rx="5" fill="none" stroke="#8b5e3c" stroke-width="1.5"/>
+    <!-- Handle grip lines -->
+    <line x1="-5" y1="65" x2="5" y2="65" stroke="#8b5e3c" stroke-width="1.2" opacity="0.6"/>
+    <line x1="-5" y1="73" x2="5" y2="73" stroke="#8b5e3c" stroke-width="1.2" opacity="0.6"/>
+    <line x1="-5" y1="81" x2="5" y2="81" stroke="#8b5e3c" stroke-width="1.2" opacity="0.6"/>
+    <line x1="-5" y1="89" x2="5" y2="89" stroke="#8b5e3c" stroke-width="1.2" opacity="0.5"/>
+    <!-- Handle highlight -->
+    <rect x="-3" y="52" width="4" height="50" rx="2" fill="#8b5e3c" opacity="0.3"/>
+  </g>
+
+  <!-- ============ VIGNETTE ============ -->
+  <rect x="0" y="0" width="30" height="450" fill="#0f2744" opacity="0.2"/>
+  <rect x="570" y="0" width="30" height="450" fill="#0f2744" opacity="0.2"/>
+  <rect x="0" y="420" width="600" height="30" fill="#1a0a05" opacity="0.4"/>
+</svg>

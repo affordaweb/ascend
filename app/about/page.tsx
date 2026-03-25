@@ -66,7 +66,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/illus-about.svg"
+                src="/images/illus-burnay.svg"
                 alt="Who We Are"
                 width={600}
                 height={450}

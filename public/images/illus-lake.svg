@@ -1,0 +1,285 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <!-- Sky gradient -->
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050d1a"/>
+      <stop offset="55%" stop-color="#0d1f35"/>
+      <stop offset="100%" stop-color="#1a2a3a"/>
+    </linearGradient>
+    <!-- Water reflection gradient -->
+    <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f2030"/>
+      <stop offset="50%" stop-color="#081520"/>
+      <stop offset="100%" stop-color="#040c14"/>
+    </linearGradient>
+    <!-- Lantern amber glow -->
+    <radialGradient id="lanternGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fdf0d5" stop-opacity="0.95"/>
+      <stop offset="25%" stop-color="#f59e0b" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="#d97706" stop-opacity="0.50"/>
+      <stop offset="80%" stop-color="#c8751a" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#c8751a" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Lantern reflection in water -->
+    <radialGradient id="reflectGlow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.70"/>
+      <stop offset="40%" stop-color="#d97706" stop-opacity="0.35"/>
+      <stop offset="80%" stop-color="#c8751a" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#c8751a" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Mountain silhouette gradient (faint) -->
+    <linearGradient id="mtGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1a28"/>
+      <stop offset="100%" stop-color="#0a1520"/>
+    </linearGradient>
+    <!-- Shore/bank gradient -->
+    <linearGradient id="shoreGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2d1a"/>
+      <stop offset="100%" stop-color="#0d1f0d"/>
+    </linearGradient>
+    <!-- Star twinkle filter -->
+    <filter id="starGlow">
+      <feGaussianBlur stdDeviation="0.8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Lantern glow filter -->
+    <filter id="glowFilter" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Water shimmer filter -->
+    <filter id="waterShimmer">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.5" numOctaves="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <!-- Ripple shadow -->
+    <filter id="rippleShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#f59e0b" flood-opacity="0.3"/>
+    </filter>
+    <!-- Tree shadow -->
+    <filter id="treeShadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- SKY BACKGROUND -->
+  <rect width="600" height="450" fill="url(#skyGrad)"/>
+
+  <!-- STARS (sky upper portion) -->
+  <g filter="url(#starGlow)">
+    <!-- Bright stars -->
+    <circle cx="45" cy="22" r="1.8" fill="#fdf0d5" opacity="0.9"/>
+    <circle cx="112" cy="15" r="1.4" fill="#fdf0d5" opacity="0.85"/>
+    <circle cx="178" cy="30" r="1.6" fill="#fdf0d5" opacity="0.8"/>
+    <circle cx="240" cy="12" r="1.2" fill="#fdf0d5" opacity="0.9"/>
+    <circle cx="295" cy="25" r="1.5" fill="#fdf0d5" opacity="0.75"/>
+    <circle cx="360" cy="10" r="1.8" fill="#fdf0d5" opacity="0.88"/>
+    <circle cx="418" cy="28" r="1.3" fill="#fdf0d5" opacity="0.8"/>
+    <circle cx="475" cy="16" r="1.6" fill="#fdf0d5" opacity="0.85"/>
+    <circle cx="530" cy="32" r="1.4" fill="#fdf0d5" opacity="0.8"/>
+    <circle cx="572" cy="18" r="1.7" fill="#fdf0d5" opacity="0.9"/>
+    <!-- Dimmer stars -->
+    <circle cx="68" cy="48" r="1.0" fill="#c8d8e8" opacity="0.6"/>
+    <circle cx="140" cy="42" r="0.9" fill="#c8d8e8" opacity="0.5"/>
+    <circle cx="205" cy="55" r="1.0" fill="#c8d8e8" opacity="0.55"/>
+    <circle cx="265" cy="38" r="0.8" fill="#c8d8e8" opacity="0.5"/>
+    <circle cx="328" cy="50" r="1.0" fill="#c8d8e8" opacity="0.6"/>
+    <circle cx="392" cy="44" r="0.8" fill="#c8d8e8" opacity="0.5"/>
+    <circle cx="448" cy="58" r="1.0" fill="#c8d8e8" opacity="0.55"/>
+    <circle cx="505" cy="46" r="0.9" fill="#c8d8e8" opacity="0.5"/>
+    <circle cx="558" cy="60" r="0.8" fill="#c8d8e8" opacity="0.5"/>
+    <!-- Tiny star cluster -->
+    <circle cx="82" cy="70" r="0.7" fill="#c8d8e8" opacity="0.45"/>
+    <circle cx="92" cy="64" r="0.6" fill="#c8d8e8" opacity="0.4"/>
+    <circle cx="160" cy="68" r="0.7" fill="#c8d8e8" opacity="0.4"/>
+    <circle cx="335" cy="75" r="0.7" fill="#c8d8e8" opacity="0.4"/>
+    <circle cx="508" cy="72" r="0.6" fill="#c8d8e8" opacity="0.4"/>
+    <!-- Constellation-hint star -->
+    <circle cx="488" cy="38" r="2.2" fill="#e8f0ff" opacity="0.7"/>
+  </g>
+
+  <!-- DISTANT MOUNTAIN SILHOUETTE on horizon -->
+  <path d="M0,190 Q40,168 85,178 Q115,162 145,175 Q175,155 215,165 Q248,148 278,162 Q305,145 340,158 Q372,142 408,155 Q438,140 470,153 Q500,138 535,152 Q560,140 600,148 L600,215 L0,215 Z"
+        fill="#0d1a28" opacity="0.75"/>
+  <!-- Second, closer mountain layer -->
+  <path d="M0,200 Q50,180 95,192 Q128,170 162,182 Q195,162 232,175 Q265,155 302,168 Q335,150 370,164 Q405,148 440,162 Q472,148 510,160 Q540,148 600,158 L600,220 L0,220 Z"
+        fill="#0a1520" opacity="0.55"/>
+
+  <!-- TREE SILHOUETTES LEFT SIDE (multiple layers) -->
+  <!-- Far left trees (background) -->
+  <g fill="#0a1808" filter="url(#treeShadow)">
+    <path d="M0,220 Q8,190 18,175 Q28,155 38,172 Q48,155 58,168 Q65,148 75,162 Q82,142 95,158 Q105,138 118,155 Q128,140 138,158 L138,320 L0,320 Z"/>
+    <!-- Individual tree tops -->
+    <path d="M8,200 Q18,182 28,172 Q24,168 18,175 Q12,182 8,200 Z"/>
+    <path d="M35,185 Q48,162 58,168 Q52,158 45,162 Q38,168 35,185 Z"/>
+    <path d="M62,175 Q75,148 88,158 Q80,142 72,148 Q64,158 62,175 Z"/>
+    <path d="M95,165 Q108,142 120,155 Q112,138 104,142 Q96,148 95,165 Z"/>
+  </g>
+  <!-- Mid left trees (closer) -->
+  <g fill="#0d2010" filter="url(#treeShadow)">
+    <path d="M0,230 Q12,202 24,185 Q35,165 50,180 Q58,158 72,172 Q80,152 95,165 Q105,145 118,160 Q125,142 135,158 L135,340 L0,340 Z"/>
+    <!-- Rounded tree tops for variety -->
+    <ellipse cx="24" cy="195" rx="18" ry="25"/>
+    <ellipse cx="52" cy="188" rx="16" ry="22"/>
+    <ellipse cx="82" cy="178" rx="15" ry="20"/>
+    <ellipse cx="110" cy="168" rx="14" ry="18"/>
+  </g>
+  <!-- Foreground left trees (darkest) -->
+  <g fill="#081508">
+    <path d="M0,240 Q10,215 22,198 Q30,180 44,195 Q52,175 64,188 Q72,168 86,180 Q95,162 105,175 L105,380 L0,380 Z"/>
+    <!-- Pine-like tree shapes -->
+    <path d="M10,238 L22,200 L34,238 Z" fill="#071208"/>
+    <path d="M14,228 L26,188 L38,228 Z" fill="#081508"/>
+    <path d="M44,225 L56,188 L68,225 Z" fill="#071208"/>
+    <path d="M72,218 L84,182 L96,218 Z" fill="#081508"/>
+  </g>
+
+  <!-- TREE SILHOUETTES RIGHT SIDE (mirrored) -->
+  <!-- Far right trees (background) -->
+  <g fill="#0a1808" filter="url(#treeShadow)">
+    <path d="M600,220 Q592,190 582,175 Q572,155 562,172 Q552,155 542,168 Q535,148 522,162 Q512,142 498,158 Q488,140 474,155 Q464,140 452,158 L452,320 L600,320 Z"/>
+    <ellipse cx="578" cy="188" rx="16" ry="22"/>
+    <ellipse cx="550" cy="178" rx="15" ry="20"/>
+    <ellipse cx="522" cy="168" rx="14" ry="18"/>
+    <ellipse cx="494" cy="158" rx="13" ry="17"/>
+  </g>
+  <!-- Mid right trees -->
+  <g fill="#0d2010" filter="url(#treeShadow)">
+    <path d="M600,230 Q588,202 576,185 Q565,165 550,180 Q542,158 528,172 Q520,152 505,165 Q495,145 482,160 Q475,142 465,158 L465,340 L600,340 Z"/>
+    <ellipse cx="576" cy="195" rx="18" ry="25"/>
+    <ellipse cx="548" cy="185" rx="16" ry="22"/>
+    <ellipse cx="518" cy="175" rx="15" ry="20"/>
+    <ellipse cx="488" cy="165" rx="14" ry="18"/>
+  </g>
+  <!-- Foreground right trees (darkest) -->
+  <g fill="#081508">
+    <path d="M600,240 Q590,215 578,198 Q570,180 556,195 Q548,175 536,188 Q528,168 514,180 Q505,162 495,175 L495,380 L600,380 Z"/>
+    <path d="M590,238 L578,200 L566,238 Z" fill="#071208"/>
+    <path d="M586,228 L574,188 L562,228 Z" fill="#081508"/>
+    <path d="M556,225 L544,188 L532,225 Z" fill="#071208"/>
+    <path d="M528,218 L516,182 L504,218 Z" fill="#081508"/>
+  </g>
+
+  <!-- HORIZON LINE / SHORE LINE -->
+  <path d="M0,225 Q100,218 200,222 Q300,218 400,222 Q500,218 600,222 L600,235 Q500,232 400,236 Q300,232 200,236 Q100,232 0,235 Z"
+        fill="url(#shoreGrad)" opacity="0.8"/>
+
+  <!-- WATER SURFACE (lower half) -->
+  <rect x="0" y="228" width="600" height="222" fill="url(#waterGrad)"/>
+
+  <!-- PAROL LANTERN at shore center-left -->
+  <!-- Ambient glow halo behind lantern -->
+  <circle cx="188" cy="220" r="78" fill="url(#lanternGlow)" filter="url(#glowFilter)"/>
+  <circle cx="188" cy="220" r="42" fill="#f59e0b" opacity="0.20"/>
+
+  <!-- Parol geometric star body -->
+  <g filter="url(#glowFilter)" transform="translate(188,218)">
+    <!-- 8-pointed star / parol faceted polygon -->
+    <!-- Outer star points -->
+    <polygon points="0,-38 9,-14 35,-14 14,4 22,30 0,16 -22,30 -14,4 -35,-14 -9,-14"
+             fill="#f59e0b" stroke="#e8a020" stroke-width="1.5"/>
+    <!-- Inner octagon -->
+    <polygon points="0,-22 10,-10 22,-10 10,4 10,18 0,10 -10,18 -10,4 -22,-10 -10,-10"
+             fill="#fdf0d5" opacity="0.90"/>
+    <!-- Faceted inner glow segments -->
+    <polygon points="0,-22 10,-10 0,-4" fill="#f59e0b" opacity="0.5"/>
+    <polygon points="10,-10 22,-10 14,-2" fill="#e8a020" opacity="0.4"/>
+    <polygon points="22,-10 10,4 14,-2" fill="#f59e0b" opacity="0.5"/>
+    <polygon points="10,4 10,18 2,10" fill="#e8a020" opacity="0.4"/>
+    <polygon points="10,18 0,10 2,10" fill="#f59e0b" opacity="0.3"/>
+    <polygon points="0,10 -10,18 -2,10" fill="#e8a020" opacity="0.4"/>
+    <polygon points="-10,18 -10,4 -2,10" fill="#f59e0b" opacity="0.3"/>
+    <polygon points="-10,4 -22,-10 -14,-2" fill="#e8a020" opacity="0.4"/>
+    <polygon points="-22,-10 -10,-10 -14,-2" fill="#f59e0b" opacity="0.5"/>
+    <polygon points="-10,-10 0,-22 -4,-10" fill="#e8a020" opacity="0.4"/>
+    <!-- Center bright spot -->
+    <circle cx="0" cy="2" r="7" fill="#fdf0d5" opacity="0.95"/>
+    <circle cx="0" cy="2" r="3" fill="#fff" opacity="0.9"/>
+    <!-- Star point accent tassels (traditional parol detail) -->
+    <line x1="0" y1="-38" x2="0" y2="-48" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="35" y1="-14" x2="44" y2="-18" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+    <line x1="22" y1="30" x2="28" y2="38" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-22" y1="30" x2="-28" y2="38" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+    <line x1="-35" y1="-14" x2="-44" y2="-18" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+    <!-- Hanging string -->
+    <line x1="0" y1="-48" x2="0" y2="-60" stroke="#8b5e3c" stroke-width="1.5"/>
+    <!-- Tassel ends (decorative) -->
+    <circle cx="0" cy="-50" r="3" fill="#d97706"/>
+    <circle cx="44" cy="-20" r="2.5" fill="#d97706"/>
+    <circle cx="28" cy="40" r="2.5" fill="#d97706"/>
+    <circle cx="-28" cy="40" r="2.5" fill="#d97706"/>
+    <circle cx="-44" cy="-20" r="2.5" fill="#d97706"/>
+  </g>
+
+  <!-- LANTERN POST/STAKE in ground -->
+  <rect x="185" y="250" width="6" height="35" rx="2" fill="#6b4226"/>
+
+  <!-- SHORELINE / near bank details -->
+  <path d="M0,248 Q60,240 130,244 Q190,240 250,245 Q310,250 370,245 Q430,240 500,244 Q555,240 600,244 L600,260 Q555,256 500,260 Q430,256 370,261 Q310,266 250,261 Q190,256 130,260 Q60,256 0,264 Z"
+        fill="#0d2010" opacity="0.85"/>
+
+  <!-- WATER RIPPLES from lantern reflection -->
+  <!-- Reflection glow in water -->
+  <ellipse cx="188" cy="290" rx="55" ry="28" fill="url(#reflectGlow)"/>
+  <ellipse cx="188" cy="310" rx="38" ry="18" fill="#d97706" opacity="0.12"/>
+
+  <!-- Ripple lines emanating from lantern reflection -->
+  <g fill="none" opacity="0.55" stroke-linecap="round">
+    <ellipse cx="188" cy="280" rx="25" ry="6" stroke="#f59e0b" stroke-width="1.8"/>
+    <ellipse cx="188" cy="292" rx="40" ry="10" stroke="#e8a020" stroke-width="1.5"/>
+    <ellipse cx="188" cy="306" rx="58" ry="14" stroke="#d97706" stroke-width="1.3"/>
+    <ellipse cx="188" cy="322" rx="78" ry="18" stroke="#c8751a" stroke-width="1.1"/>
+    <ellipse cx="188" cy="340" rx="100" ry="22" stroke="#c8751a" stroke-width="0.9"/>
+    <ellipse cx="188" cy="360" rx="125" ry="26" stroke="#c8751a" stroke-width="0.7"/>
+    <ellipse cx="188" cy="380" rx="150" ry="30" stroke="#c8751a" stroke-width="0.5"/>
+  </g>
+
+  <!-- WATER SURFACE REFLECTIONS (tree reflections, subtle) -->
+  <!-- Left tree reflection -->
+  <path d="M0,260 Q30,265 55,260 Q75,255 90,262 L90,320 Q75,315 55,320 Q30,325 0,320 Z"
+        fill="#0a1808" opacity="0.35"/>
+  <!-- Right tree reflection -->
+  <path d="M600,260 Q570,265 545,260 Q525,255 510,262 L510,320 Q525,315 545,320 Q570,325 600,320 Z"
+        fill="#0a1808" opacity="0.35"/>
+
+  <!-- GENERAL WATER HORIZONTAL SHIMMER LINES (night sky reflection) -->
+  <g stroke="#1a3a5a" stroke-width="0.6" opacity="0.3" fill="none">
+    <line x1="0" y1="270" x2="600" y2="270"/>
+    <line x1="0" y1="285" x2="600" y2="285"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="0" y1="318" x2="600" y2="318"/>
+    <line x1="0" y1="338" x2="600" y2="338"/>
+    <line x1="0" y1="360" x2="600" y2="360"/>
+    <line x1="0" y1="385" x2="600" y2="385"/>
+    <line x1="0" y1="412" x2="600" y2="412"/>
+  </g>
+
+  <!-- STAR REFLECTIONS in still water -->
+  <g opacity="0.22">
+    <ellipse cx="112" cy="290" rx="1" ry="3" fill="#c8d8e8"/>
+    <ellipse cx="245" cy="305" rx="1" ry="3" fill="#c8d8e8"/>
+    <ellipse cx="365" cy="285" rx="1" ry="3" fill="#c8d8e8"/>
+    <ellipse cx="478" cy="300" rx="1" ry="3" fill="#c8d8e8"/>
+    <ellipse cx="540" cy="315" rx="1" ry="3" fill="#c8d8e8"/>
+  </g>
+
+  <!-- MOON REFLECTION (faint crescent hint far right in sky) -->
+  <path d="M548,65 Q560,55 568,65 Q555,80 545,72 Q542,68 548,65 Z" fill="#d8e8f8" opacity="0.55"/>
+
+  <!-- FOREGROUND WATER DARK (depth at very bottom) -->
+  <rect x="0" y="410" width="600" height="40" fill="#030a10" opacity="0.65"/>
+
+  <!-- Foreground shore grass/reeds hints -->
+  <g stroke="#1a3d1a" stroke-width="2" opacity="0.6" fill="none" stroke-linecap="round">
+    <path d="M28,258 Q25,240 30,222"/>
+    <path d="M38,260 Q36,245 40,228"/>
+    <path d="M50,256 Q52,240 48,218"/>
+    <path d="M555,258 Q558,240 552,222"/>
+    <path d="M568,260 Q565,244 570,228"/>
+    <path d="M578,256 Q580,242 575,220"/>
+  </g>
+</svg>

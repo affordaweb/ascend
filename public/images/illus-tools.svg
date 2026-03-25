@@ -1,0 +1,350 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <!-- Workbench surface gradient -->
+    <linearGradient id="benchGrad" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="#d4894a"/>
+      <stop offset="35%" stop-color="#c8751a"/>
+      <stop offset="100%" stop-color="#a85f14"/>
+    </linearGradient>
+    <!-- Wood grain overlay gradient -->
+    <linearGradient id="grainLight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fdf0d5" stop-opacity="0.06"/>
+      <stop offset="50%" stop-color="#fdf0d5" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#fdf0d5" stop-opacity="0.04"/>
+    </linearGradient>
+    <!-- Tool drop shadow -->
+    <filter id="toolShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="5" stdDeviation="5" flood-color="#5a2f00" flood-opacity="0.55"/>
+    </filter>
+    <!-- Soft tool shadow -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#4a2000" flood-opacity="0.45"/>
+    </filter>
+    <!-- Lens gleam filter -->
+    <radialGradient id="lensGrad" cx="35%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#d0e8d0" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#4a7c35" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#1a3d1a" stop-opacity="0.7"/>
+    </radialGradient>
+    <!-- Compass face -->
+    <radialGradient id="compassFace" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#fdf0d5"/>
+      <stop offset="70%" stop-color="#f0d8a8"/>
+      <stop offset="100%" stop-color="#d4b87a"/>
+    </radialGradient>
+    <!-- Notebook page -->
+    <linearGradient id="notebookPage" x1="0" y1="0" x2="0.08" y2="1">
+      <stop offset="0%" stop-color="#fdf0d5"/>
+      <stop offset="100%" stop-color="#f0ddb8"/>
+    </linearGradient>
+    <!-- Trowel blade gradient (metal) -->
+    <linearGradient id="trowelBlade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b8b7a"/>
+      <stop offset="40%" stop-color="#c8c8b0"/>
+      <stop offset="100%" stop-color="#6b6b5a"/>
+    </linearGradient>
+    <!-- Wooden handle gradient -->
+    <linearGradient id="woodHandle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6b4226"/>
+      <stop offset="40%" stop-color="#8b5e3c"/>
+      <stop offset="100%" stop-color="#5a3418"/>
+    </linearGradient>
+    <!-- Measuring tape ribbon -->
+    <linearGradient id="tapeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fdf0d5"/>
+      <stop offset="100%" stop-color="#e8c878"/>
+    </linearGradient>
+    <!-- Soil gradient -->
+    <radialGradient id="soilGrad" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#8b5e3c"/>
+      <stop offset="60%" stop-color="#6b4226"/>
+      <stop offset="100%" stop-color="#4a2c10"/>
+    </radialGradient>
+    <!-- Ambient light from left (warm side lighting) -->
+    <linearGradient id="sideLight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.08"/>
+      <stop offset="30%" stop-color="#f59e0b" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#0f2744" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+
+  <!-- BACKGROUND: workbench surface -->
+  <rect width="600" height="450" fill="url(#benchGrad)"/>
+  <!-- Side lighting overlay -->
+  <rect width="600" height="450" fill="url(#sideLight)"/>
+
+  <!-- WOOD GRAIN LINES (horizontal, subtle) -->
+  <g stroke="#a06010" stroke-width="1" opacity="0.18" fill="none">
+    <path d="M0,35 Q150,30 300,36 Q450,42 600,36"/>
+    <path d="M0,68 Q120,63 280,70 Q420,76 600,68"/>
+    <path d="M0,102 Q180,96 330,103 Q480,110 600,102"/>
+    <path d="M0,138 Q100,132 260,139 Q400,146 600,138"/>
+    <path d="M0,172 Q160,166 320,173 Q460,180 600,172"/>
+    <path d="M0,205 Q140,199 300,206 Q440,213 600,206"/>
+    <path d="M0,242 Q170,236 330,243 Q470,250 600,242"/>
+    <path d="M0,278 Q130,272 290,279 Q430,286 600,278"/>
+    <path d="M0,315 Q155,309 315,316 Q455,323 600,315"/>
+    <path d="M0,352 Q145,346 305,353 Q445,360 600,352"/>
+    <path d="M0,388 Q165,382 325,389 Q465,396 600,388"/>
+    <path d="M0,422 Q135,416 295,423 Q435,430 600,422"/>
+  </g>
+  <!-- Subtle cross-grain flecks -->
+  <g stroke="#b87020" stroke-width="0.5" opacity="0.10" fill="none">
+    <path d="M85,0 Q88,120 84,240 Q81,360 85,450"/>
+    <path d="M192,0 Q196,110 192,230 Q188,350 192,450"/>
+    <path d="M308,0 Q312,130 308,260 Q304,380 308,450"/>
+    <path d="M415,0 Q418,115 415,235 Q412,355 415,450"/>
+    <path d="M522,0 Q525,125 522,248 Q519,368 522,450"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TOOL 1: COMPASS (top center, ~295,85) -->
+  <!-- ============================================================ -->
+  <g filter="url(#toolShadow)" transform="translate(295,78)">
+    <!-- Compass body/circle -->
+    <circle cx="0" cy="0" r="52" fill="#8b7a52" stroke="#5a4a28" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="46" fill="url(#compassFace)" stroke="#a08848" stroke-width="1.5"/>
+    <!-- Cardinal direction tick marks -->
+    <line x1="0" y1="-38" x2="0" y2="-28" stroke="#2d5016" stroke-width="2.5"/>
+    <line x1="0" y1="28" x2="0" y2="38" stroke="#2d5016" stroke-width="2.5"/>
+    <line x1="-38" y1="0" x2="-28" y2="0" stroke="#2d5016" stroke-width="2.5"/>
+    <line x1="28" y1="0" x2="38" y2="0" stroke="#2d5016" stroke-width="2.5"/>
+    <!-- Intercardinal smaller ticks -->
+    <line x1="24" y1="-24" x2="20" y2="-20" stroke="#8b7a52" stroke-width="1.5"/>
+    <line x1="-24" y1="-24" x2="-20" y2="-20" stroke="#8b7a52" stroke-width="1.5"/>
+    <line x1="24" y1="24" x2="20" y2="20" stroke="#8b7a52" stroke-width="1.5"/>
+    <line x1="-24" y1="24" x2="-20" y2="20" stroke="#8b7a52" stroke-width="1.5"/>
+    <!-- Cardinal letters -->
+    <text x="0" y="-19" text-anchor="middle" font-size="9" font-family="serif" fill="#1a3d1a" font-weight="bold">N</text>
+    <text x="0" y="26" text-anchor="middle" font-size="8" font-family="serif" fill="#6b4226">S</text>
+    <text x="20" y="4" text-anchor="middle" font-size="8" font-family="serif" fill="#6b4226">E</text>
+    <text x="-20" y="4" text-anchor="middle" font-size="8" font-family="serif" fill="#6b4226">W</text>
+    <!-- Rotating needle (pointing NNE) -->
+    <polygon points="3,-30 -3,-30 0,-2" fill="#c8380a" transform="rotate(-18)"/>
+    <polygon points="3,30 -3,30 0,2" fill="#4a4a4a" transform="rotate(-18)"/>
+    <!-- Center pivot -->
+    <circle cx="0" cy="0" r="5" fill="#8b7a52" stroke="#5a4a28" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="2" fill="#f59e0b"/>
+    <!-- Compass degree ring marks -->
+    <g stroke="#a08848" stroke-width="0.8" opacity="0.5">
+      <line x1="0" y1="-43" x2="0" y2="-38" transform="rotate(30)"/>
+      <line x1="0" y1="-43" x2="0" y2="-38" transform="rotate(60)"/>
+      <line x1="0" y1="-43" x2="0" y2="-38" transform="rotate(120)"/>
+      <line x1="0" y1="-43" x2="0" y2="-38" transform="rotate(150)"/>
+      <line x1="0" y1="-43" x2="0" y2="-38" transform="rotate(210)"/>
+      <line x1="0" y1="-43" x2="0" y2="-38" transform="rotate(240)"/>
+      <line x1="0" y1="-43" x2="0" y2="-38" transform="rotate(300)"/>
+      <line x1="0" y1="-43" x2="0" y2="-38" transform="rotate(330)"/>
+    </g>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TOOL 2: TROWEL (top right, ~455,115) rotated -->
+  <!-- ============================================================ -->
+  <g filter="url(#toolShadow)" transform="translate(460,105) rotate(-32)">
+    <!-- Wooden handle -->
+    <rect x="-10" y="-18" width="20" height="68" rx="6" fill="url(#woodHandle)"/>
+    <!-- Handle grip wrapping lines -->
+    <line x1="-9" y1="10" x2="9" y2="10" stroke="#4a2c10" stroke-width="1.5" opacity="0.6"/>
+    <line x1="-9" y1="18" x2="9" y2="18" stroke="#4a2c10" stroke-width="1.5" opacity="0.6"/>
+    <line x1="-9" y1="26" x2="9" y2="26" stroke="#4a2c10" stroke-width="1.5" opacity="0.6"/>
+    <!-- Handle end cap -->
+    <ellipse cx="0" cy="50" rx="10" ry="5" fill="#5a3418"/>
+    <ellipse cx="0" cy="-18" rx="10" ry="5" fill="#6b4226"/>
+    <!-- Metal collar -->
+    <rect x="-11" y="-22" width="22" height="10" rx="3" fill="#7a7a68" stroke="#5a5a4a" stroke-width="1"/>
+    <!-- Trowel blade (pointed) -->
+    <path d="M-11,-22 L11,-22 L9,-60 Q0,-88 -9,-60 Z" fill="url(#trowelBlade)" stroke="#5a5a4a" stroke-width="1.2"/>
+    <!-- Blade center ridge -->
+    <line x1="0" y1="-24" x2="0" y2="-72" stroke="#d8d8c0" stroke-width="1.5" opacity="0.7"/>
+    <!-- Blade highlight -->
+    <path d="M-6,-28 L-4,-62 Q0,-85 2,-62 L4,-28 Z" fill="#e0e0c8" opacity="0.35"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TOOL 3: OPEN NOTEBOOK (right, ~440,245) -->
+  <!-- ============================================================ -->
+  <g filter="url(#softShadow)" transform="translate(430,238) rotate(8)">
+    <!-- Notebook cover (slight shadow behind) -->
+    <rect x="-72" y="-58" width="148" height="112" rx="4" fill="#2d5016"/>
+    <!-- Left page -->
+    <rect x="-70" y="-55" width="70" height="106" rx="2" fill="url(#notebookPage)" stroke="#c8a870" stroke-width="0.5"/>
+    <!-- Right page -->
+    <rect x="0" y="-55" width="70" height="106" rx="2" fill="#fdf0d5" stroke="#c8a870" stroke-width="0.5"/>
+    <!-- Page ruled lines - left -->
+    <g stroke="#c8b890" stroke-width="0.8" opacity="0.7">
+      <line x1="-62" y1="-38" x2="-6" y2="-38"/>
+      <line x1="-62" y1="-26" x2="-6" y2="-26"/>
+      <line x1="-62" y1="-14" x2="-6" y2="-14"/>
+      <line x1="-62" y1="-2" x2="-6" y2="-2"/>
+      <line x1="-62" y1="10" x2="-6" y2="10"/>
+      <line x1="-62" y1="22" x2="-6" y2="22"/>
+      <line x1="-62" y1="34" x2="-6" y2="34"/>
+    </g>
+    <!-- Page ruled lines - right -->
+    <g stroke="#c8b890" stroke-width="0.8" opacity="0.7">
+      <line x1="6" y1="-38" x2="63" y2="-38"/>
+      <line x1="6" y1="-26" x2="63" y2="-26"/>
+      <line x1="6" y1="-14" x2="63" y2="-14"/>
+      <line x1="6" y1="-2" x2="63" y2="-2"/>
+      <line x1="6" y1="10" x2="63" y2="10"/>
+      <line x1="6" y1="22" x2="63" y2="22"/>
+      <line x1="6" y1="34" x2="63" y2="34"/>
+    </g>
+    <!-- Handwritten text lines (left page) -->
+    <g stroke="#4a7c35" stroke-width="1.2" opacity="0.65" fill="none">
+      <path d="M-62,-44 Q-50,-46 -38,-44 Q-26,-42 -14,-44 Q-10,-44 -6,-44"/>
+      <path d="M-62,-32 Q-45,-34 -30,-32 Q-18,-30 -6,-32"/>
+      <path d="M-62,-20 Q-48,-22 -35,-20 Q-20,-18 -6,-20"/>
+    </g>
+    <!-- Small sketch on right page (simple mountain/terrain sketch) -->
+    <g stroke="#6b4226" stroke-width="1.2" fill="none" opacity="0.75">
+      <path d="M10,30 Q22,8 34,-5 Q46,8 58,30"/>
+      <path d="M6,30 Q16,18 28,10 Q40,18 50,30"/>
+      <path d="M6,30 L62,30"/>
+      <!-- Sun sketch -->
+      <circle cx="50" cy="-20" r="7" stroke="#d97706" stroke-width="1.2" fill="none"/>
+      <line x1="50" y1="-30" x2="50" y2="-35" stroke="#d97706" stroke-width="1"/>
+      <line x1="58" y1="-22" x2="62" y2="-18" stroke="#d97706" stroke-width="1"/>
+      <line x1="60" y1="-20" x2="64" y2="-20" stroke="#d97706" stroke-width="1"/>
+    </g>
+    <!-- Spine/binding center -->
+    <line x1="0" y1="-55" x2="0" y2="51" stroke="#1a3d1a" stroke-width="3"/>
+    <!-- Binding dots -->
+    <circle cx="0" cy="-40" r="2.5" fill="#4a7c35"/>
+    <circle cx="0" cy="-20" r="2.5" fill="#4a7c35"/>
+    <circle cx="0" cy="0" r="2.5" fill="#4a7c35"/>
+    <circle cx="0" cy="20" r="2.5" fill="#4a7c35"/>
+    <circle cx="0" cy="40" r="2.5" fill="#4a7c35"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TOOL 4: MAGNIFYING GLASS (bottom right, ~448,345) -->
+  <!-- ============================================================ -->
+  <g filter="url(#toolShadow)" transform="translate(452,350) rotate(22)">
+    <!-- Handle -->
+    <rect x="-7" y="28" width="14" height="62" rx="5" fill="url(#woodHandle)"/>
+    <!-- Handle grain lines -->
+    <line x1="-6" y1="42" x2="6" y2="42" stroke="#4a2c10" stroke-width="1" opacity="0.5"/>
+    <line x1="-6" y1="56" x2="6" y2="56" stroke="#4a2c10" stroke-width="1" opacity="0.5"/>
+    <line x1="-6" y1="70" x2="6" y2="70" stroke="#4a2c10" stroke-width="1" opacity="0.5"/>
+    <!-- Handle cap -->
+    <ellipse cx="0" cy="90" rx="7" ry="4" fill="#5a3418"/>
+    <!-- Metal band connecting handle to lens ring -->
+    <rect x="-9" y="22" width="18" height="10" rx="3" fill="#7a7a68" stroke="#5a5a4a" stroke-width="1"/>
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="36" fill="none" stroke="#8b7a52" stroke-width="5"/>
+    <!-- Inner ring detail -->
+    <circle cx="0" cy="0" r="33" fill="none" stroke="#a09060" stroke-width="1.5" opacity="0.5"/>
+    <!-- Lens -->
+    <circle cx="0" cy="0" r="31" fill="url(#lensGrad)"/>
+    <!-- Lens reflection highlight -->
+    <ellipse cx="-10" cy="-10" rx="10" ry="7" fill="#fdf0d5" opacity="0.25" transform="rotate(-15)"/>
+    <!-- Lens magnified content (tiny leaf detail) -->
+    <g opacity="0.5">
+      <ellipse cx="0" cy="0" rx="14" ry="9" fill="none" stroke="#4a7c35" stroke-width="1.2" transform="rotate(20)"/>
+      <line x1="-12" y1="0" x2="12" y2="0" stroke="#4a7c35" stroke-width="0.8" transform="rotate(20)"/>
+      <path d="M-8,-4 Q0,-8 8,-4" stroke="#4a7c35" stroke-width="0.8" fill="none" transform="rotate(20)"/>
+    </g>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TOOL 5: SEEDLING IN SOIL (bottom left, ~148,355) -->
+  <!-- ============================================================ -->
+  <g filter="url(#softShadow)" transform="translate(148,355)">
+    <!-- Small terracotta pot / soil mound -->
+    <ellipse cx="0" cy="30" rx="42" ry="16" fill="#6b4226"/>
+    <path d="M-42,30 Q-38,15 -30,8 Q-18,0 0,0 Q18,0 30,8 Q38,15 42,30 Z" fill="url(#soilGrad)"/>
+    <!-- Soil texture lines -->
+    <g stroke="#4a2c10" stroke-width="0.8" opacity="0.45" fill="none">
+      <path d="M-28,18 Q-15,15 0,16 Q15,15 28,18"/>
+      <path d="M-35,24 Q-20,20 0,21 Q20,20 35,24"/>
+    </g>
+    <!-- Soil pebbles -->
+    <ellipse cx="-18" cy="22" rx="4" ry="2.5" fill="#8b5e3c" opacity="0.7"/>
+    <ellipse cx="12" cy="24" rx="3.5" ry="2" fill="#8b5e3c" opacity="0.7"/>
+    <ellipse cx="-5" cy="28" rx="3" ry="2" fill="#9b6e4c" opacity="0.6"/>
+    <!-- Seedling stem -->
+    <path d="M0,0 Q-2,-18 0,-42 Q2,-55 0,-68" stroke="#2d5016" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <!-- Left leaf -->
+    <path d="M0,-38 Q-18,-48 -24,-38 Q-20,-28 0,-32 Z" fill="#4a7c35"/>
+    <path d="M0,-38 Q-12,-43 -24,-38" stroke="#2d5016" stroke-width="0.8" fill="none"/>
+    <!-- Right leaf -->
+    <path d="M0,-48 Q18,-58 24,-48 Q20,-38 0,-42 Z" fill="#4a7c35"/>
+    <path d="M0,-48 Q12,-53 24,-48" stroke="#2d5016" stroke-width="0.8" fill="none"/>
+    <!-- Small top leaf bud -->
+    <path d="M0,-65 Q-6,-72 0,-78 Q6,-72 0,-65 Z" fill="#3d6b1a"/>
+    <!-- Dew drop on leaf -->
+    <circle cx="-14" cy="-38" r="2.5" fill="#fdf0d5" opacity="0.6"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TOOL 6: MEASURING TAPE (left, ~138,220) -->
+  <!-- ============================================================ -->
+  <g filter="url(#toolShadow)" transform="translate(135,218)">
+    <!-- Tape housing/case (round) -->
+    <circle cx="0" cy="0" r="38" fill="#8b5e3c" stroke="#5a3418" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="32" fill="#6b4226" stroke="#4a2c10" stroke-width="1.5"/>
+    <!-- Housing brand center detail -->
+    <circle cx="0" cy="0" r="12" fill="#c8751a" stroke="#8b5e3c" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="7" fill="#d97706"/>
+    <!-- Belt clip on top -->
+    <rect x="-6" y="-42" width="12" height="10" rx="3" fill="#5a3418" stroke="#3a1f08" stroke-width="1"/>
+    <!-- Unrolled ribbon extending right and curling -->
+    <path d="M38,0 Q70,-8 100,2 Q130,12 148,8 Q165,4 175,12 Q182,18 178,28 Q174,38 165,38 Q155,38 148,32 Q140,26 122,28 Q100,30 80,22 Q60,14 38,10"
+          fill="url(#tapeGrad)" stroke="#c8b870" stroke-width="0.8"/>
+    <!-- Tape bottom edge -->
+    <path d="M38,10 Q60,20 80,28 Q100,36 122,34 Q140,32 148,38 Q155,44 165,44 Q175,44 180,34 Q182,30 178,28"
+          fill="#e8c878" opacity="0.7" stroke="#b8a060" stroke-width="0.8"/>
+    <!-- Tick marks on tape -->
+    <g stroke="#4a2c10" stroke-width="0.8" opacity="0.8">
+      <!-- Major marks -->
+      <line x1="55" y1="4" x2="55" y2="14"/>
+      <line x1="72" y1="7" x2="72" y2="14"/>
+      <line x1="89" y1="10" x2="89" y2="17"/>
+      <line x1="106" y1="13" x2="106" y2="18"/>
+      <line x1="122" y1="14" x2="122" y2="19"/>
+      <line x1="138" y1="16" x2="138" y2="21"/>
+      <line x1="153" y1="17" x2="153" y2="21"/>
+      <!-- Minor marks between -->
+      <line x1="63" y1="6" x2="63" y2="12"/>
+      <line x1="80" y1="9" x2="80" y2="15"/>
+      <line x1="97" y1="12" x2="97" y2="16"/>
+      <line x1="114" y1="13" x2="114" y2="17"/>
+      <line x1="130" y1="15" x2="130" y2="19"/>
+      <line x1="146" y1="16" x2="146" y2="20"/>
+    </g>
+    <!-- Tape numbers -->
+    <g font-size="5.5" font-family="sans-serif" fill="#3a1f08" opacity="0.7">
+      <text x="53" y="22" text-anchor="middle">10</text>
+      <text x="70" y="24" text-anchor="middle">20</text>
+      <text x="87" y="27" text-anchor="middle">30</text>
+      <text x="104" y="28" text-anchor="middle">40</text>
+      <text x="120" y="29" text-anchor="middle">50</text>
+    </g>
+    <!-- Hook end of tape -->
+    <rect x="170" y="7" width="12" height="8" rx="1" fill="#7a7a68" stroke="#5a5a4a" stroke-width="1"/>
+    <line x1="182" y1="8" x2="188" y2="5" stroke="#7a7a68" stroke-width="2"/>
+  </g>
+
+  <!-- ELLIPSE SHADOWS beneath tools (cast on table) -->
+  <g opacity="0.18" fill="#3a1f00">
+    <!-- Compass shadow -->
+    <ellipse cx="298" cy="142" rx="52" ry="14"/>
+    <!-- Trowel shadow -->
+    <ellipse cx="450" cy="152" rx="38" ry="10" transform="rotate(-32,450,152)"/>
+    <!-- Notebook shadow -->
+    <ellipse cx="434" cy="298" rx="68" ry="14" transform="rotate(8,434,298)"/>
+    <!-- Magnifying glass shadow -->
+    <ellipse cx="455" cy="385" rx="40" ry="12" transform="rotate(22,455,385)"/>
+    <!-- Seedling shadow -->
+    <ellipse cx="150" cy="380" rx="38" ry="10"/>
+    <!-- Tape shadow -->
+    <ellipse cx="175" cy="240" rx="95" ry="14"/>
+  </g>
+
+  <!-- WARM SIDE LIGHT edge glow on left -->
+  <rect x="0" y="0" width="30" height="450" fill="#f59e0b" opacity="0.05"/>
+  <!-- Slight vignette -->
+  <rect width="600" height="450" fill="#5a2800" opacity="0.08" rx="0"/>
+</svg>
