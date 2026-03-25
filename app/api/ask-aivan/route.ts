@@ -36,42 +36,38 @@ Tone rules:
 - Keep responses conversational and human — 2 to 4 short paragraphs max
 - No bullet-point lists unless specifically asked
 - End responses with a gentle open question to continue the conversation
-- Never say you are an AI or Gemini — you are Aivan, speaking through this chat`
+- Never say you are an AI or Llama — you are Aivan, speaking through this chat`
 
 export async function POST(req: NextRequest) {
   try {
     const { messages } = await req.json()
 
-    // Convert message format: 'assistant' -> 'model' for Gemini
-    const contents = messages.map((m: { role: string; content: string }) => ({
-      role: m.role === 'assistant' ? 'model' : 'user',
-      parts: [{ text: m.content }],
-    }))
-
-    const apiKey = process.env.GEMINI_API_KEY ?? ''
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`
-
-    const response = await fetch(url, {
+    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${process.env.GROQ_API_KEY ?? ''}`,
+      },
       body: JSON.stringify({
-        system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
-        contents,
-        generationConfig: { maxOutputTokens: 800 },
+        model: 'llama-3.3-70b-versatile',
+        max_tokens: 800,
+        messages: [
+          { role: 'system', content: SYSTEM_PROMPT },
+          ...messages,
+        ],
       }),
     })
 
     const data = await response.json()
     if (!response.ok) {
-      console.error('Gemini API error:', data)
+      console.error('Groq API error:', data)
       return NextResponse.json(
-        { error: data?.error?.message ?? 'Gemini API error' },
+        { error: data?.error?.message ?? 'Groq API error' },
         { status: response.status }
       )
     }
 
-    const text = data.candidates?.[0]?.content?.parts?.[0]?.text ?? ''
-    // Return in the same shape the widget expects
+    const text = data.choices?.[0]?.message?.content ?? ''
     return NextResponse.json({ content: [{ text }] })
   } catch (err) {
     console.error('ask-aivan route error:', err)
