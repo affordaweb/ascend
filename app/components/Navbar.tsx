@@ -7,6 +7,7 @@ const links = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Aivan Alvarez', href: '/aivan-alvarez' },
+  { label: "Aivan's Wall", href: '/aivans-wall' },
   { label: 'Consulting', href: '/consulting' },
   { label: 'Trainings & Seminars', href: '/trainings-and-seminars' },
   { label: 'Reporting', href: '/reporting' },
