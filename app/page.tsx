@@ -16,7 +16,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import FAQAccordion from './components/FAQAccordion'
 import ScrollReveal from './components/ScrollReveal'
-import HeroCanvas from './components/HeroCanvas'
+import HoneycombCanvas from './components/HoneycombCanvas'
 
 export const metadata: Metadata = {
   title: 'Ascend Development Solutions — Building Better Futures Together',
@@ -78,7 +78,7 @@ export default function HomePage() {
 
         {/* Hero — full viewport, centered */}
         <section className="relative w-full min-h-screen flex items-center justify-center pt-[100px]" style={{ background: '#071829' }}>
-          <HeroCanvas />
+          <HoneycombCanvas />
           <div
             className="absolute inset-0"
             style={{

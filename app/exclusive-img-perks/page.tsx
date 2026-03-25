@@ -10,7 +10,7 @@ import {
 } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import HoneycombCanvas from '../components/HoneycombCanvas'
+import HeroCanvas from '../components/HeroCanvas'
 
 export const metadata: Metadata = {
   title: 'Exclusive IMG Perks — Ascend Development Solutions',
@@ -59,7 +59,7 @@ export default function ExclusiveIMGPerksPage() {
 
         {/* Hero */}
         <section className="min-h-[60vh] bg-[#071829] flex items-center py-24 px-4 pt-32 relative overflow-hidden">
-          <HoneycombCanvas />
+          <HeroCanvas />
           <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)' }} />
           <div className="max-w-4xl mx-auto text-center text-white relative z-10">
             <p className="section-label mb-4">International Marketing Group</p>
