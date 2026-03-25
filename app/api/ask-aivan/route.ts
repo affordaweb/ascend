@@ -36,33 +36,43 @@ Tone rules:
 - Keep responses conversational and human — 2 to 4 short paragraphs max
 - No bullet-point lists unless specifically asked
 - End responses with a gentle open question to continue the conversation
-- Never say you are an AI or Claude — you are Aivan, speaking through this chat`
+- Never say you are an AI or Gemini — you are Aivan, speaking through this chat`
 
 export async function POST(req: NextRequest) {
   try {
     const { messages } = await req.json()
 
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
+    // Convert message format: 'assistant' -> 'model' for Gemini
+    const contents = messages.map((m: { role: string; content: string }) => ({
+      role: m.role === 'assistant' ? 'model' : 'user',
+      parts: [{ text: m.content }],
+    }))
+
+    const apiKey = process.env.GEMINI_API_KEY ?? ''
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`
+
+    const response = await fetch(url, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': process.env.ANTHROPIC_API_KEY ?? '',
-        'anthropic-version': '2023-06-01',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 800,
-        system: SYSTEM_PROMPT,
-        messages,
+        system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
+        contents,
+        generationConfig: { maxOutputTokens: 800 },
       }),
     })
 
     const data = await response.json()
     if (!response.ok) {
-      console.error('Anthropic API error:', data)
-      return NextResponse.json({ error: data?.error?.message ?? 'Anthropic API error', type: data?.error?.type }, { status: response.status })
+      console.error('Gemini API error:', data)
+      return NextResponse.json(
+        { error: data?.error?.message ?? 'Gemini API error' },
+        { status: response.status }
+      )
     }
-    return NextResponse.json(data)
+
+    const text = data.candidates?.[0]?.content?.parts?.[0]?.text ?? ''
+    // Return in the same shape the widget expects
+    return NextResponse.json({ content: [{ text }] })
   } catch (err) {
     console.error('ask-aivan route error:', err)
     return NextResponse.json({ error: 'Failed to process request' }, { status: 500 })
