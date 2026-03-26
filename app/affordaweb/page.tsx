@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { CheckCircle, Globe, Zap, Search, Smartphone, HeartHandshake } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import AffordaWebCanvas from '../components/AffordaWebCanvas'
 
 export const metadata: Metadata = {
   title: 'Affordable Website Design Services | AffordaWeb Solutions',
@@ -85,6 +86,7 @@ export default function AffordaWebPage() {
 
         {/* Hero */}
         <section className="relative bg-[#0f2744] pt-[120px] pb-20 sm:pb-28 overflow-hidden">
+          <AffordaWebCanvas />
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
@@ -200,7 +202,7 @@ export default function AffordaWebPage() {
         <section className="relative bg-[#0f2744] py-20 sm:py-24 px-4 overflow-hidden">
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <Image
-              src="/images/cta-wave-dark.png"
+              src="/images/cta-diamonds.png"
               alt=""
               width={900}
               height={450}
