@@ -388,9 +388,18 @@ export default function HomePage() {
         </section>
 
         {/* FAQs */}
-        <section className="bg-[#f0f4f8] py-20 sm:py-28 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
+        <section className="relative bg-[#f0f4f8] py-20 sm:py-28 px-4 overflow-hidden">
+          {/* Decorative blobs */}
+          <div
+            className="absolute top-0 right-0 w-[480px] h-[480px] rounded-full pointer-events-none opacity-40"
+            style={{ background: 'radial-gradient(circle, rgba(37,99,235,0.08), transparent 70%)', transform: 'translate(30%, -30%)' }}
+          />
+          <div
+            className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none opacity-40"
+            style={{ background: 'radial-gradient(circle, rgba(245,158,11,0.10), transparent 70%)', transform: 'translate(-30%, 30%)' }}
+          />
+          <div className="max-w-4xl mx-auto relative z-10">
+            <div className="text-center mb-14">
               <p className="section-label mb-3">Got Questions?</p>
               <div className="accent-line mb-6" />
               <h2 className="font-[family-name:var(--font-fraunces)] text-4xl md:text-5xl font-bold text-[#1e3a5f] mb-4">

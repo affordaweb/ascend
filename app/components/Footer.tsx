@@ -96,9 +96,7 @@ export default function Footer() {
         <div className="border-t border-white/8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/35 text-xs">
           <p>&copy; 2026 Ascend Development Solutions (ADS). All Rights Reserved.</p>
           <a
-            href="https://affordawebsolutions.com/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="https://www.empowerqueerhub.com/affordaweb"
             className="hover:text-white transition-colors"
           >
             Affordable Web Design Company

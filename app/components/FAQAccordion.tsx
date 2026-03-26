@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import { ChevronDown } from 'lucide-react'
 
 const faqs = [
   {
@@ -32,7 +33,7 @@ const faqs = [
   },
   {
     q: 'Do you conduct face-to-face and online sessions?',
-    a: "Yes. Our team tailors every solution to your organization's structure, industry, and culture. We blend global best practices with local insight to ensure relevance and effectiveness.",
+    a: 'Yes. We offer both in-person and virtual engagements to accommodate your team wherever they are. Our facilitators are experienced in delivering impactful sessions across both formats.',
   },
   {
     q: 'How long do your consulting or training projects usually last?',
@@ -48,26 +49,73 @@ export default function FAQAccordion() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
   return (
-    <div className="space-y-3">
-      {faqs.map((faq, i) => (
-        <div key={i} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-          <button
-            className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 text-[#1e3a5f] font-semibold hover:bg-gray-50 transition-colors"
-            onClick={() => setOpenFaq(openFaq === i ? null : i)}
-          >
-            <span>{faq.q}</span>
-            <span className={`faq-icon shrink-0${openFaq === i ? ' faq-open' : ''}`}>+</span>
-          </button>
+    <div className="space-y-4">
+      {faqs.map((faq, i) => {
+        const isOpen = openFaq === i
+        return (
           <div
-            className="overflow-hidden transition-all duration-300 ease-in-out"
-            style={{ maxHeight: openFaq === i ? '300px' : '0' }}
+            key={i}
+            className={`group relative rounded-2xl overflow-hidden transition-all duration-300 ${
+              isOpen
+                ? 'shadow-xl shadow-[#1e3a5f]/15 ring-1 ring-[#f59e0b]/40'
+                : 'shadow-md shadow-[#1e3a5f]/08 ring-1 ring-transparent hover:shadow-lg hover:shadow-[#1e3a5f]/12 hover:ring-[#f59e0b]/20'
+            }`}
           >
-            <div className="px-6 pb-5 text-[#1a1a2e]/70 leading-relaxed text-sm border-t border-gray-100 pt-4">
-              {faq.a}
+            {/* Left accent bar */}
+            <div
+              className={`absolute left-0 top-0 bottom-0 w-1 transition-all duration-300 rounded-l-2xl ${
+                isOpen ? 'bg-[#f59e0b]' : 'bg-transparent group-hover:bg-[#f59e0b]/40'
+              }`}
+            />
+
+            <button
+              className={`w-full text-left pl-8 pr-6 py-5 flex items-center gap-5 transition-all duration-300 ${
+                isOpen
+                  ? 'bg-gradient-to-r from-[#f0f4f8] to-white'
+                  : 'bg-white hover:bg-[#fafbfc]'
+              }`}
+              onClick={() => setOpenFaq(isOpen ? null : i)}
+            >
+              {/* Number badge */}
+              <span
+                className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 ${
+                  isOpen
+                    ? 'bg-[#f59e0b] text-white'
+                    : 'bg-[#f59e0b]/12 text-[#f59e0b] group-hover:bg-[#f59e0b]/20'
+                }`}
+              >
+                {String(i + 1).padStart(2, '0')}
+              </span>
+
+              <span
+                className={`flex-1 font-semibold text-sm md:text-base leading-snug transition-colors duration-300 ${
+                  isOpen ? 'text-[#1e3a5f]' : 'text-[#1e3a5f]/80 group-hover:text-[#1e3a5f]'
+                }`}
+              >
+                {faq.q}
+              </span>
+
+              <ChevronDown
+                size={18}
+                className={`shrink-0 transition-all duration-300 ${
+                  isOpen ? 'text-[#f59e0b] rotate-180' : 'text-[#1e3a5f]/35 group-hover:text-[#f59e0b]/60'
+                }`}
+              />
+            </button>
+
+            <div
+              className="overflow-hidden transition-all duration-300 ease-in-out"
+              style={{ maxHeight: isOpen ? '300px' : '0' }}
+            >
+              <div className="pl-8 pr-6 pb-6 pt-0 bg-gradient-to-r from-[#f0f4f8] to-white">
+                <div className="pl-13 border-t border-[#f59e0b]/15 pt-4 ml-[52px]">
+                  <p className="text-[#1a1a2e]/65 leading-relaxed text-sm">{faq.a}</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        )
+      })}
     </div>
   )
 }

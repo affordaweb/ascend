@@ -8,6 +8,9 @@ const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", sty
 export const metadata: Metadata = {
   title: "Ascend Development Solutions",
   description: "Empowering organizations through ESG and SDG-aligned trainings, seminars, reporting, and consultancy.",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
