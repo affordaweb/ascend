@@ -116,10 +116,10 @@ export default function ContactForm() {
           className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary-500/40 focus:border-primary-500 transition-all"
         >
           <option value="">Select a service…</option>
-          {/* Customize these options per client */}
-          <option value="service-1">Service 1</option>
-          <option value="service-2">Service 2</option>
-          <option value="other">Other</option>
+          <option value="Strategic Consulting">Strategic Consulting</option>
+          <option value="Trainings & Seminars">Customized Trainings &amp; Seminars</option>
+          <option value="Organizational Reporting">Organizational Reporting</option>
+          <option value="Other">Other</option>
         </select>
       </div>
 
@@ -145,6 +145,13 @@ export default function ContactForm() {
       {status === 'error' && (
         <p className="text-center text-sm text-red-500">{errorMsg}</p>
       )}
+
+      <p className="text-center text-[11px] text-gray-400 pt-2">
+        Powered by{' '}
+        <a href="/affordaweb" className="hover:text-gray-600 transition-colors underline underline-offset-2">
+          AffordaWeb Solutions
+        </a>
+      </p>
     </form>
   )
 }
