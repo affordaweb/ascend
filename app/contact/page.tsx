@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { Mail, Phone, Clock, Facebook } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -129,12 +130,19 @@ export default function ContactPage() {
 
         {/* Partner With Us */}
         <section className="bg-[#0f2744] py-20 sm:py-28 px-4 relative overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <Image
+              src="/images/cta-network.png"
+              alt=""
+              width={900}
+              height={450}
+              className="absolute right-0 top-1/2 -translate-y-1/2 h-[130%] w-auto object-contain select-none"
+              style={{ mixBlendMode: 'screen', opacity: 0.13 }}
+            />
+          </div>
           <div
             className="absolute inset-0 pointer-events-none"
-            style={{
-              backgroundImage:
-                'radial-gradient(circle at 80% 20%, rgba(245,158,11,0.07), transparent 55%), radial-gradient(circle at 20% 80%, rgba(37,99,235,0.07), transparent 55%)',
-            }}
+            style={{ background: 'linear-gradient(to right, #0f2744 38%, transparent 75%)' }}
           />
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <p className="section-label mb-3">Partner With Us</p>

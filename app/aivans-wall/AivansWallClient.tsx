@@ -177,7 +177,7 @@ export default function AivansWallClient() {
       <header style={{ background: '#1A2744', padding: '72px 48px 56px', position: 'relative', overflow: 'hidden', paddingTop: '96px' }}>
         <div style={{ position:'absolute', top:-80, left:-80, width:400, height:400, background:'radial-gradient(circle, rgba(200,136,58,0.15) 0%, transparent 70%)', pointerEvents:'none' }} />
         <div style={{ position:'absolute', bottom:-60, right:'10%', width:300, height:300, background:'radial-gradient(circle, rgba(45,90,61,0.25) 0%, transparent 70%)', pointerEvents:'none' }} />
-        <div className="wall-header-inner" style={{ maxWidth:1200, margin:'0 auto', display:'flex', alignItems:'flex-end', justifyContent:'space-between', gap:32, position:'relative', zIndex:1 }}>
+        <div className="wall-header-inner" style={{ maxWidth:1280, margin:'0 auto', display:'flex', alignItems:'flex-end', justifyContent:'space-between', gap:32, position:'relative', zIndex:1 }}>
           <div>
             <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(200,136,58,0.15)', border:'1px solid rgba(200,136,58,0.3)', color:'#e09f52', fontSize:'0.7rem', fontWeight:500, letterSpacing:'0.14em', textTransform:'uppercase', padding:'5px 14px', borderRadius:20, marginBottom:20 }}>
               <span style={{ width:6, height:6, borderRadius:'50%', background:'#e09f52', display:'inline-block', animation:'wall-blink 2s infinite' }} />
@@ -208,7 +208,7 @@ export default function AivansWallClient() {
 
       {/* Filter bar */}
       <nav style={{ background:'white', borderBottom:'1px solid rgba(45,90,61,0.1)', position:'sticky', top:0, zIndex:100, boxShadow:'0 2px 20px rgba(26,39,68,0.06)' }}>
-        <div className="wall-filter-inner" style={{ maxWidth:1200, margin:'0 auto', padding:'0 48px', display:'flex', alignItems:'center', overflowX:'auto' }}>
+        <div className="wall-filter-inner" style={{ maxWidth:1280, margin:'0 auto', padding:'0 48px', display:'flex', alignItems:'center', overflowX:'auto' }}>
           {FILTERS.map(f => (
             <button key={f.key} onClick={() => setFilter(f.key)} className="wall-filter-btn" style={{ background:'none', border:'none', cursor:'pointer', fontFamily:'inherit', fontSize:'0.8rem', fontWeight: filter === f.key ? 500 : 400, color: filter === f.key ? '#2D5A3D' : '#7a8499', padding:'18px 20px', whiteSpace:'nowrap', borderBottom: filter === f.key ? '2px solid #2D5A3D' : '2px solid transparent', transition:'all 0.2s', display:'flex', alignItems:'center', gap:6 }}>
               {f.label}
@@ -224,7 +224,7 @@ export default function AivansWallClient() {
       </nav>
 
       {/* Main */}
-      <div className="wall-main-pad" style={{ maxWidth:1200, margin:'0 auto', padding:'48px 48px 80px', position:'relative', zIndex:1 }}>
+      <div className="wall-main-pad" style={{ maxWidth:1280, margin:'0 auto', padding:'48px 48px 80px', position:'relative', zIndex:1 }}>
 
         {/* Masonry grid */}
         <div className="wall-masonry">

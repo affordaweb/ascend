@@ -101,21 +101,6 @@ export default function ExclusiveIMGPerksPage() {
           </div>
         </section>
 
-        {/* Perks Illustration */}
-        <section className="bg-white py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/images/illus-harvest.svg"
-                alt="IMG Perks"
-                width={1200}
-                height={600}
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </div>
-        </section>
-
         {/* Financial Check-up */}
         <section className="bg-[#f0f4f8] py-20 sm:py-28 px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -144,13 +129,13 @@ export default function ExclusiveIMGPerksPage() {
                 Be an IMG Member Now
               </a>
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl bg-white flex items-center justify-center p-6">
               <Image
-                src="/images/illus-experts.svg"
-                alt="Financial Planning"
+                src="/images/cta-steps.png"
+                alt="Financial Growth Steps"
                 width={600}
                 height={450}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
@@ -207,15 +192,15 @@ export default function ExclusiveIMGPerksPage() {
         </section>
 
         {/* Kaiser Health Builder */}
-        <section className="bg-[#f0f4f8] py-20 sm:py-28 px-4">
+        <section className="bg-white py-20 sm:py-28 px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl bg-[#f0f4f8] flex items-center justify-center p-6">
               <Image
-                src="/images/illus-about.svg"
+                src="/images/cta-wave-1.png"
                 alt="Kaiser Health Builder"
                 width={600}
                 height={450}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-contain"
               />
             </div>
             <div>
@@ -247,6 +232,41 @@ export default function ExclusiveIMGPerksPage() {
               >
                 Ultimate Kaiser Health Builder
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="relative bg-[#0f2744] py-20 sm:py-28 px-4 overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <Image
+              src="/images/cta-wave-2.png"
+              alt=""
+              width={900}
+              height={450}
+              className="absolute right-0 top-1/2 -translate-y-1/2 h-[130%] w-auto object-contain select-none"
+              style={{ mixBlendMode: 'screen', opacity: 0.13 }}
+            />
+          </div>
+          <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to right, #0f2744 38%, transparent 75%)' }} />
+          <div className="max-w-4xl mx-auto text-center relative z-10">
+            <p className="section-label mb-3">Your Journey Starts Here</p>
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="h-px w-12 bg-[#f59e0b]/50" />
+              <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b]" />
+              <div className="h-px w-12 bg-[#f59e0b]/50" />
+            </div>
+            <h2 className="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+              Ready to Unlock Your IMG Benefits?
+            </h2>
+            <p className="text-white/65 leading-relaxed mb-10 max-w-2xl mx-auto">
+              Take the first step toward financial empowerment, health security, and a life enriched by world-class membership. Join IMG today and start your ascent.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href="https://1204jf.imgcorp.com/" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                Be an IMG Member
+              </a>
+              <a href="/contact" className="btn-ghost">Contact ADS</a>
             </div>
           </div>
         </section>

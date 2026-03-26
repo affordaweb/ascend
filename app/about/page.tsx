@@ -216,20 +216,35 @@ export default function AboutPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-[#f0f4f8] py-20 sm:py-28 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="relative bg-[#0f2744] py-20 sm:py-28 px-4 overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <Image
+              src="/images/cta-steps.png"
+              alt=""
+              width={900}
+              height={450}
+              className="absolute right-0 top-1/2 -translate-y-1/2 h-[130%] w-auto object-contain select-none"
+              style={{ mixBlendMode: 'screen', opacity: 0.13 }}
+            />
+          </div>
+          <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to right, #0f2744 38%, transparent 75%)' }} />
+          <div className="max-w-4xl mx-auto text-center relative z-10">
             <p className="section-label mb-3">Take the First Step</p>
-            <div className="accent-line mb-6" />
-            <h2 className="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-6">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="h-px w-12 bg-[#f59e0b]/50" />
+              <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b]" />
+              <div className="h-px w-12 bg-[#f59e0b]/50" />
+            </div>
+            <h2 className="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
               Let&apos;s Ascend Together
             </h2>
-            <p className="text-[#1a1a2e]/70 leading-relaxed mb-8 text-lg max-w-3xl mx-auto">
+            <p className="text-white/65 leading-relaxed mb-10 text-lg max-w-3xl mx-auto">
               Let ADS be your partner in shaping strategies that elevate both your organization and
               the people who make it thrive. Your journey toward purposeful growth starts here.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="/contact" className="btn-primary">Contact Us</a>
-              <a href="/consulting" className="btn-outline">Our Services</a>
+              <a href="/consulting" className="btn-ghost">Our Services</a>
             </div>
           </div>
         </section>

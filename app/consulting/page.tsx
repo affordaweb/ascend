@@ -74,7 +74,7 @@ export default function ConsultingPage() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/illus-planning.svg"
+                src="/images/illus-desk.svg"
                 alt="Strategic Consulting"
                 width={600}
                 height={450}
@@ -160,41 +160,40 @@ export default function ConsultingPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-[#f0f4f8] py-20 sm:py-28 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <p className="section-label mb-3">Start Your Journey</p>
-                <div className="accent-line mb-6" style={{ margin: '0.75rem 0 1.5rem' }} />
-                <h2 className="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-6 leading-tight">
-                  Let&apos;s Ascend Together
-                </h2>
-                <blockquote className="font-[family-name:var(--font-fraunces)] text-lg italic text-[#f59e0b] border-l-4 border-[#f59e0b] pl-4 mb-6">
-                  &ldquo;Every great organization begins with a clear vision and the courage to
-                  pursue it.&rdquo;
-                </blockquote>
-                <p className="text-[#1a1a2e]/70 leading-relaxed mb-8">
-                  Whether you&apos;re at the start of your transformation journey or looking to
-                  accelerate progress, ADS is here to partner with you every step of the way.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <a href="/contact" className="btn-primary inline-flex items-center gap-2">
-                    Contact Us <ArrowRight size={16} />
-                  </a>
-                  <a href="/trainings-and-seminars" className="btn-outline">
-                    View Trainings
-                  </a>
-                </div>
-              </div>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/illus-about.svg"
-                  alt="Let's Ascend Together"
-                  width={500}
-                  height={400}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+        <section className="relative bg-[#0f2744] py-20 sm:py-28 px-4 overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <Image
+              src="/images/cta-wave-2.png"
+              alt=""
+              width={900}
+              height={450}
+              className="absolute right-0 top-1/2 -translate-y-1/2 h-[130%] w-auto object-contain select-none"
+              style={{ mixBlendMode: 'screen', opacity: 0.13 }}
+            />
+          </div>
+          <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to right, #0f2744 38%, transparent 75%)' }} />
+          <div className="max-w-4xl mx-auto text-center relative z-10">
+            <p className="section-label mb-3">Start Your Journey</p>
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="h-px w-12 bg-[#f59e0b]/50" />
+              <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b]" />
+              <div className="h-px w-12 bg-[#f59e0b]/50" />
+            </div>
+            <h2 className="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+              Let&apos;s Ascend Together
+            </h2>
+            <blockquote className="font-[family-name:var(--font-fraunces)] text-xl italic text-[#f59e0b] mb-8 max-w-2xl mx-auto">
+              &ldquo;Every great organization begins with a clear vision and the courage to pursue it.&rdquo;
+            </blockquote>
+            <p className="text-white/65 leading-relaxed mb-10 max-w-2xl mx-auto">
+              Whether you&apos;re at the start of your transformation journey or looking to
+              accelerate progress, ADS is here to partner with you every step of the way.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href="/contact" className="btn-primary inline-flex items-center gap-2">
+                Contact Us <ArrowRight size={16} />
+              </a>
+              <a href="/trainings-and-seminars" className="btn-ghost">View Trainings</a>
             </div>
           </div>
         </section>

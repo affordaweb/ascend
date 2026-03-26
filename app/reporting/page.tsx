@@ -159,41 +159,40 @@ export default function ReportingPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-[#f0f4f8] py-20 sm:py-28 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <p className="section-label mb-3">Make Data Work For You</p>
-                <div className="accent-line mb-6" style={{ margin: '0.75rem 0 1.5rem' }} />
-                <h2 className="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl font-bold text-[#1e3a5f] mb-6 leading-tight">
-                  Let&apos;s Build Clarity Together
-                </h2>
-                <blockquote className="font-[family-name:var(--font-fraunces)] text-lg italic text-[#f59e0b] border-l-4 border-[#f59e0b] pl-4 mb-6">
-                  &ldquo;The best decisions are rooted in honest data and clear understanding.&rdquo;
-                </blockquote>
-                <p className="text-[#1a1a2e]/70 leading-relaxed mb-8">
-                  Whether you need a one-time performance report or an ongoing monitoring framework,
-                  ADS is here to help you understand where you are — and chart a course to where you
-                  want to be.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <a href="/contact" className="btn-primary inline-flex items-center gap-2">
-                    Contact Us <ArrowRight size={16} />
-                  </a>
-                  <a href="/consulting" className="btn-outline">
-                    View Consulting
-                  </a>
-                </div>
-              </div>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/illus-sustainability.svg"
-                  alt="Build Clarity Together"
-                  width={500}
-                  height={400}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+        <section className="relative bg-[#0f2744] py-20 sm:py-28 px-4 overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <Image
+              src="/images/cta-ribbons.png"
+              alt=""
+              width={900}
+              height={450}
+              className="absolute right-0 top-1/2 -translate-y-1/2 h-[130%] w-auto object-contain select-none"
+              style={{ mixBlendMode: 'screen', opacity: 0.18 }}
+            />
+          </div>
+          <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to right, #0f2744 38%, transparent 75%)' }} />
+          <div className="max-w-4xl mx-auto text-center relative z-10">
+            <p className="section-label mb-3">Make Data Work For You</p>
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="h-px w-12 bg-[#f59e0b]/50" />
+              <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b]" />
+              <div className="h-px w-12 bg-[#f59e0b]/50" />
+            </div>
+            <h2 className="font-[family-name:var(--font-fraunces)] text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+              Let&apos;s Build Clarity Together
+            </h2>
+            <blockquote className="font-[family-name:var(--font-fraunces)] text-xl italic text-[#f59e0b] mb-8 max-w-2xl mx-auto">
+              &ldquo;The best decisions are rooted in honest data and clear understanding.&rdquo;
+            </blockquote>
+            <p className="text-white/65 leading-relaxed mb-10 max-w-2xl mx-auto">
+              Whether you need a one-time performance report or an ongoing monitoring framework,
+              ADS is here to help you understand where you are — and chart a course to where you want to be.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href="/contact" className="btn-primary inline-flex items-center gap-2">
+                Contact Us <ArrowRight size={16} />
+              </a>
+              <a href="/consulting" className="btn-ghost">View Consulting</a>
             </div>
           </div>
         </section>
