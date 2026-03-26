@@ -1,15 +1,14 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import { Send, CheckCircle, AlertCircle } from 'lucide-react'
 
 // AffordaWeb centralized contact form — pre-wired and ready to use.
-// 1. Set SITE_NAME to the client shortname (e.g. "johnsplumbing")
-// 2. Add the client's production domain to ALLOWED_ORIGINS in the Vercel contact-form project
-//    https://vercel.com/affordawebsolutions-3179s-projects/contact-form/settings/environment-variables
-// 3. Customize fields as needed — any extra fields are passed through and shown in the email
-
 const SITE_NAME = 'ascend'
 const API_URL = 'https://contact-form-lake-theta.vercel.app/api/contact'
+
+const inputClass =
+  'w-full px-4 py-3 rounded-xl border border-[#1e3a5f]/15 bg-white text-[#1a1a2e] text-sm placeholder:text-[#1a1a2e]/35 focus:outline-none focus:ring-2 focus:ring-[#f59e0b]/40 focus:border-[#f59e0b] transition-all'
 
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
@@ -33,7 +32,6 @@ export default function ContactForm() {
           message: data.get('message'),
           website: SITE_NAME,
           _honeypot: data.get('_honeypot') ?? '',
-          // Add extra fields here — they appear in the email automatically
           phone: data.get('phone'),
           service: data.get('service'),
         }),
@@ -56,99 +54,119 @@ export default function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div className="text-center py-12">
-        <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
-          <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
+      <div className="text-center py-10">
+        <div className="w-16 h-16 rounded-full bg-[#f59e0b]/10 border-2 border-[#f59e0b]/30 flex items-center justify-center mx-auto mb-5">
+          <CheckCircle className="text-[#f59e0b]" size={28} />
         </div>
-        <h3 className="text-xl font-bold mb-2">Message Sent!</h3>
-        <p className="text-gray-500 text-sm">We'll get back to you within 24 hours.</p>
+        <h3 className="font-[family-name:var(--font-fraunces)] text-xl font-bold text-[#1e3a5f] mb-2">
+          Message Sent!
+        </h3>
+        <p className="text-[#1a1a2e]/60 text-sm leading-relaxed">
+          Thank you for reaching out. We&apos;ll get back to you within one business day.
+        </p>
       </div>
     )
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
-      {/* Honeypot — hidden from humans, filled by bots */}
+      {/* Honeypot */}
       <input type="text" name="_honeypot" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="name" className="block text-sm font-semibold mb-2">
-            Full Name <span className="text-red-500">*</span>
+          <label htmlFor="cf-name" className="block text-xs font-semibold text-[#1e3a5f] uppercase tracking-wider mb-2">
+            Full Name <span className="text-[#f59e0b]">*</span>
           </label>
           <input
-            type="text" id="name" name="name" required
-            placeholder="Jane Smith"
-            className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/40 focus:border-primary-500 transition-all"
+            type="text" id="cf-name" name="name" required
+            placeholder="Juan dela Cruz"
+            className={inputClass}
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-semibold mb-2">
-            Email Address <span className="text-red-500">*</span>
+          <label htmlFor="cf-email" className="block text-xs font-semibold text-[#1e3a5f] uppercase tracking-wider mb-2">
+            Email Address <span className="text-[#f59e0b]">*</span>
           </label>
           <input
-            type="email" id="email" name="email" required
-            placeholder="jane@example.com"
-            className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/40 focus:border-primary-500 transition-all"
+            type="email" id="cf-email" name="email" required
+            placeholder="juan@example.com"
+            className={inputClass}
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="phone" className="block text-sm font-semibold mb-2">
-          Phone <span className="text-gray-400 font-normal">(optional)</span>
+        <label htmlFor="cf-phone" className="block text-xs font-semibold text-[#1e3a5f] uppercase tracking-wider mb-2">
+          Phone <span className="text-[#1a1a2e]/40 normal-case font-normal">(optional)</span>
         </label>
         <input
-          type="tel" id="phone" name="phone"
-          placeholder="+1 (555) 000-0000"
-          className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/40 focus:border-primary-500 transition-all"
+          type="tel" id="cf-phone" name="phone"
+          placeholder="+63 912 345 6789"
+          className={inputClass}
         />
       </div>
 
       <div>
-        <label htmlFor="service" className="block text-sm font-semibold mb-2">
+        <label htmlFor="cf-service" className="block text-xs font-semibold text-[#1e3a5f] uppercase tracking-wider mb-2">
           Service Interested In
         </label>
         <select
-          id="service" name="service"
-          className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary-500/40 focus:border-primary-500 transition-all"
+          id="cf-service" name="service"
+          className={inputClass}
         >
           <option value="">Select a service…</option>
           <option value="Strategic Consulting">Strategic Consulting</option>
           <option value="Trainings & Seminars">Customized Trainings &amp; Seminars</option>
           <option value="Organizational Reporting">Organizational Reporting</option>
-          <option value="Other">Other</option>
+          <option value="Other">Other / General Inquiry</option>
         </select>
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-semibold mb-2">
-          Message <span className="text-red-500">*</span>
+        <label htmlFor="cf-message" className="block text-xs font-semibold text-[#1e3a5f] uppercase tracking-wider mb-2">
+          Message <span className="text-[#f59e0b]">*</span>
         </label>
         <textarea
-          id="message" name="message" required rows={5}
-          placeholder="Tell us about your project…"
-          className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary-500/40 focus:border-primary-500 transition-all"
+          id="cf-message" name="message" required rows={5}
+          placeholder="Tell us about your organization and how we can help…"
+          className={inputClass + ' resize-none'}
         />
       </div>
+
+      {status === 'error' && (
+        <div className="flex items-center gap-3 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
+          <AlertCircle size={16} className="text-red-500 shrink-0" />
+          <p className="text-sm text-red-600">{errorMsg}</p>
+        </div>
+      )}
 
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="w-full py-4 px-8 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+        className="w-full btn-primary flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none"
       >
-        {status === 'submitting' ? 'Sending…' : 'Send Message'}
+        {status === 'submitting' ? (
+          <>
+            <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+            Sending…
+          </>
+        ) : (
+          <>
+            <Send size={15} />
+            Send Message
+          </>
+        )}
       </button>
 
-      {status === 'error' && (
-        <p className="text-center text-sm text-red-500">{errorMsg}</p>
-      )}
-
-      <p className="text-center text-[11px] text-gray-400 pt-2">
+      <p className="text-center text-[11px] text-[#1a1a2e]/35 pt-1">
         Powered by{' '}
-        <a href="/affordaweb" className="hover:text-gray-600 transition-colors underline underline-offset-2">
+        <a
+          href="https://affordawebsolutions.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-[#1e3a5f] transition-colors underline underline-offset-2"
+        >
           AffordaWeb Solutions
         </a>
       </p>
