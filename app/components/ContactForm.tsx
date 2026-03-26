@@ -1,14 +1,14 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
-import { Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { Mail } from 'lucide-react'
 
 // AffordaWeb centralized contact form — pre-wired and ready to use.
 const SITE_NAME = 'ascend'
 const API_URL = 'https://contact-form-lake-theta.vercel.app/api/contact'
 
 const inputClass =
-  'w-full px-4 py-3 rounded-xl border border-[#1e3a5f]/15 bg-white text-[#1a1a2e] text-sm placeholder:text-[#1a1a2e]/35 focus:outline-none focus:ring-2 focus:ring-[#f59e0b]/40 focus:border-[#f59e0b] transition-all'
+  'w-full border border-gray-200 rounded-xl px-4 py-3 text-[#474747] text-sm focus:outline-none focus:border-[#A9D6B6] focus:ring-2 focus:ring-[#A9D6B6]/40 transition-all'
 
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
@@ -54,15 +54,15 @@ export default function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div className="text-center py-10">
-        <div className="w-16 h-16 rounded-full bg-[#f59e0b]/10 border-2 border-[#f59e0b]/30 flex items-center justify-center mx-auto mb-5">
-          <CheckCircle className="text-[#f59e0b]" size={28} />
+      <div className="bg-[#A9D6B6]/20 border border-[#A9D6B6] rounded-2xl p-10 text-center">
+        <div className="w-12 h-12 bg-[#A9D6B6]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+          <Mail size={22} className="text-[#A9D6B6]" />
         </div>
-        <h3 className="font-[family-name:var(--font-fraunces)] text-xl font-bold text-[#1e3a5f] mb-2">
-          Message Sent!
+        <h3 className="font-serif text-xl font-bold text-[#3A3C51] mb-2">
+          Message Received
         </h3>
-        <p className="text-[#1a1a2e]/60 text-sm leading-relaxed">
-          Thank you for reaching out. We&apos;ll get back to you within one business day.
+        <p className="text-[#474747]">
+          Thank you for reaching out. We&apos;ll get back to you with care.
         </p>
       </div>
     )
@@ -73,48 +73,45 @@ export default function ContactForm() {
       {/* Honeypot */}
       <input type="text" name="_honeypot" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label htmlFor="cf-name" className="block text-xs font-semibold text-[#1e3a5f] uppercase tracking-wider mb-2">
-            Full Name <span className="text-[#f59e0b]">*</span>
+          <label className="block text-[#3A3C51] text-sm font-medium mb-1.5">
+            Full Name <span className="text-red-400">*</span>
           </label>
           <input
-            type="text" id="cf-name" name="name" required
-            placeholder="Juan dela Cruz"
+            type="text" name="name" required
+            placeholder="Your name"
             className={inputClass}
           />
         </div>
         <div>
-          <label htmlFor="cf-email" className="block text-xs font-semibold text-[#1e3a5f] uppercase tracking-wider mb-2">
-            Email Address <span className="text-[#f59e0b]">*</span>
+          <label className="block text-[#3A3C51] text-sm font-medium mb-1.5">
+            Email Address <span className="text-red-400">*</span>
           </label>
           <input
-            type="email" id="cf-email" name="email" required
-            placeholder="juan@example.com"
+            type="email" name="email" required
+            placeholder="your@email.com"
             className={inputClass}
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="cf-phone" className="block text-xs font-semibold text-[#1e3a5f] uppercase tracking-wider mb-2">
-          Phone <span className="text-[#1a1a2e]/40 normal-case font-normal">(optional)</span>
+        <label className="block text-[#3A3C51] text-sm font-medium mb-1.5">
+          Phone Number
         </label>
         <input
-          type="tel" id="cf-phone" name="phone"
+          type="tel" name="phone"
           placeholder="+63 912 345 6789"
           className={inputClass}
         />
       </div>
 
       <div>
-        <label htmlFor="cf-service" className="block text-xs font-semibold text-[#1e3a5f] uppercase tracking-wider mb-2">
+        <label className="block text-[#3A3C51] text-sm font-medium mb-1.5">
           Service Interested In
         </label>
-        <select
-          id="cf-service" name="service"
-          className={inputClass}
-        >
+        <select name="service" className={inputClass}>
           <option value="">Select a service…</option>
           <option value="Strategic Consulting">Strategic Consulting</option>
           <option value="Trainings & Seminars">Customized Trainings &amp; Seminars</option>
@@ -124,48 +121,35 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="cf-message" className="block text-xs font-semibold text-[#1e3a5f] uppercase tracking-wider mb-2">
-          Message <span className="text-[#f59e0b]">*</span>
+        <label className="block text-[#3A3C51] text-sm font-medium mb-1.5">
+          Message <span className="text-red-400">*</span>
         </label>
         <textarea
-          id="cf-message" name="message" required rows={5}
-          placeholder="Tell us about your organization and how we can help…"
+          name="message" required rows={6}
+          placeholder="Tell us more..."
           className={inputClass + ' resize-none'}
         />
       </div>
 
       {status === 'error' && (
-        <div className="flex items-center gap-3 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
-          <AlertCircle size={16} className="text-red-500 shrink-0" />
-          <p className="text-sm text-red-600">{errorMsg}</p>
-        </div>
+        <p className="text-red-500 text-xs text-center">{errorMsg}</p>
       )}
 
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="w-full btn-primary flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none"
+        className="btn-p btn-p-mint flex w-full items-center justify-center gap-2 px-8 py-3.5 text-base disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {status === 'submitting' ? (
-          <>
-            <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
-            Sending…
-          </>
-        ) : (
-          <>
-            <Send size={15} />
-            Send Message
-          </>
-        )}
+        {status === 'submitting' ? 'Sending...' : 'Send Message'}
       </button>
 
-      <p className="text-center text-[11px] text-[#1a1a2e]/35 pt-1">
+      <p className="text-gray-400 text-[11px] text-center pt-1">
         Powered by{' '}
         <a
           href="https://affordawebsolutions.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-[#1e3a5f] transition-colors underline underline-offset-2"
+          className="hover:text-[#3A3C51] transition-colors underline underline-offset-2"
         >
           AffordaWeb Solutions
         </a>
