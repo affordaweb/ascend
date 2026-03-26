@@ -95,12 +95,15 @@ export default function Footer() {
         </div>
         <div className="border-t border-white/8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/35 text-xs">
           <p>&copy; 2026 Ascend Development Solutions (ADS). All Rights Reserved.</p>
-          <a
-            href="https://www.empowerqueerhub.com/affordaweb"
-            className="hover:text-white transition-colors"
-          >
-            Affordable Web Design Company
-          </a>
+          <span>
+            Web design by:{' '}
+            <a
+              href="https://ascend-ochre.vercel.app/affordaweb"
+              className="hover:text-white transition-colors"
+            >
+              AffordaWeb Solutions
+            </a>
+          </span>
         </div>
       </div>
     </footer>
