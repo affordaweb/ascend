@@ -74,7 +74,7 @@ export default function ReportingPage() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/illus-reporting.svg"
+                src="/images/illus-reporting.png"
                 alt="Organizational Reporting"
                 width={600}
                 height={450}

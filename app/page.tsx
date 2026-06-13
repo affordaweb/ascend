@@ -161,7 +161,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/illus-about-team.svg"
+                    src="/images/illus-home-about.png"
                     alt="Meet the ADS Team"
                     width={600}
                     height={450}
@@ -234,7 +234,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl order-last lg:order-first">
                 <Image
-                  src="/images/illus-vision-goal.svg"
+                  src="/images/illus-philosophy.png"
                     alt="Rooted in Filipino Values"
                   width={600}
                   height={450}
@@ -326,7 +326,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/illus-collaboration.svg"
+                  src="/images/illus-team.png"
                     alt="Expert Collaboration"
                   width={600}
                   height={450}
