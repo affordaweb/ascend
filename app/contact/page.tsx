@@ -35,7 +35,7 @@ const contactItems = [
     icon: Facebook,
     label: 'Facebook',
     value: 'Ascend Development Solutions',
-    href: 'https://www.facebook.com/100080045962662/?locale=tl_PH',
+    href: 'https://www.facebook.com/ascenddevelopmentsolutions',
   },
 ]
 

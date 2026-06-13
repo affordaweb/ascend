@@ -11,6 +11,10 @@ import {
   Globe,
   Users,
   HeartHandshake,
+  Facebook,
+  ExternalLink,
+  CalendarDays,
+  Megaphone,
 } from 'lucide-react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -157,8 +161,8 @@ export default function HomePage() {
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/illus-seedling-book.svg"
-                    alt="Who We Are"
+                    src="/images/illus-about-team.svg"
+                    alt="Meet the ADS Team"
                     width={600}
                     height={450}
                     className="w-full h-auto object-cover"
@@ -230,8 +234,8 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl order-last lg:order-first">
                 <Image
-                  src="/images/illus-lake.svg"
-                  alt="Filipino Values"
+                  src="/images/illus-vision-goal.svg"
+                    alt="Rooted in Filipino Values"
                   width={600}
                   height={450}
                   className="w-full h-auto object-cover"
@@ -322,8 +326,8 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/illus-table-birds-eye.svg"
-                  alt="The ADS Team"
+                  src="/images/illus-collaboration.svg"
+                    alt="Expert Collaboration"
                   width={600}
                   height={450}
                   className="w-full h-auto object-cover"
@@ -390,6 +394,99 @@ export default function HomePage() {
             <div className="flex flex-wrap justify-center gap-4">
               <a href="/contact" className="btn-primary">Get in Touch</a>
               <a href="/consulting" className="btn-ghost">View Our Services</a>
+            </div>
+          </div>
+        </section>
+
+        {/* Latest Updates — Facebook feed */}
+        <section className="bg-white py-20 sm:py-28 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-14">
+              <p className="section-label mb-3">Latest Updates</p>
+              <div className="accent-line mb-6" />
+              <h2 className="font-[family-name:var(--font-fraunces)] text-4xl md:text-5xl font-bold text-[#1e3a5f] mb-4">
+                From Our Facebook Page
+              </h2>
+              <p className="text-[#1a1a2e]/70 max-w-xl mx-auto">
+                Stay connected with Ascend Development Solutions — follow us on Facebook for the latest news, events, and impact stories.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="group bg-[#f0f4f8] rounded-2xl p-6 border border-gray-100 hover:shadow-lg hover:border-[#f59e0b]/20 transition-all duration-300 flex flex-col">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-9 h-9 rounded-full bg-[#1877F2]/10 flex items-center justify-center">
+                    <Megaphone size={16} className="text-[#1877F2]" />
+                  </div>
+                  <span className="text-xs font-semibold text-[#1e3a5f] uppercase tracking-wider">Announcement</span>
+                </div>
+                <p className="text-[#1a1a2e]/80 text-sm leading-relaxed mb-4 flex-1">
+                  ADS is now accepting bookings for organizational training and one-on-one technical assistance
+                  for sustainability reporting in preparation for the PH Sustainability Reporting Law (2026).
+                </p>
+                <div className="flex items-center justify-between pt-3 border-t border-gray-200">
+                  <span className="text-[#7a7a7a] text-xs flex items-center gap-1">
+                    <CalendarDays size={12} /> June 2025
+                  </span>
+                  <a
+                    href="https://www.facebook.com/ascenddevelopmentsolutions"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#1877F2] text-xs font-semibold flex items-center gap-1 hover:gap-2 transition-all"
+                  >
+                    Read more <ExternalLink size={12} />
+                  </a>
+                </div>
+              </div>
+              <div className="group bg-[#f0f4f8] rounded-2xl p-6 border border-gray-100 hover:shadow-lg hover:border-[#f59e0b]/20 transition-all duration-300 flex flex-col">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-9 h-9 rounded-full bg-[#1877F2]/10 flex items-center justify-center">
+                    <Globe size={16} className="text-[#1877F2]" />
+                  </div>
+                  <span className="text-xs font-semibold text-[#1e3a5f] uppercase tracking-wider">Partnership</span>
+                </div>
+                <p className="text-[#1a1a2e]/80 text-sm leading-relaxed mb-4 flex-1">
+                  ADS, in partnership with Wagayway Equality, participated in the PCCM Meeting with the
+                  Global Fund mission as part of the country&apos;s preparation for Grant Cycle 8 (GC8).
+                </p>
+                <div className="flex items-center justify-between pt-3 border-t border-gray-200">
+                  <span className="text-[#7a7a7a] text-xs flex items-center gap-1">
+                    <CalendarDays size={12} /> Q1 2026
+                  </span>
+                  <a
+                    href="https://www.facebook.com/ascenddevelopmentsolutions"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#1877F2] text-xs font-semibold flex items-center gap-1 hover:gap-2 transition-all"
+                  >
+                    Read more <ExternalLink size={12} />
+                  </a>
+                </div>
+              </div>
+              <div className="group bg-gradient-to-br from-[#1877F2]/5 to-[#f59e0b]/5 rounded-2xl p-6 border border-[#1877F2]/10 hover:shadow-lg hover:border-[#1877F2]/20 transition-all duration-300 flex flex-col relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 rounded-full opacity-[0.04] pointer-events-none"
+                  style={{ background: 'radial-gradient(circle, #1877F2, transparent)' }}
+                />
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-9 h-9 rounded-full bg-[#1877F2] flex items-center justify-center">
+                    <Facebook size={16} className="text-white" />
+                  </div>
+                  <span className="text-xs font-semibold text-[#1e3a5f] uppercase tracking-wider">Follow Us</span>
+                </div>
+                <p className="text-[#1a1a2e]/80 text-sm leading-relaxed mb-4 flex-1">
+                  Follow Ascend Development Solutions on Facebook for the latest updates on our
+                  trainings, seminars, consulting services, and community impact stories across the Philippines.
+                </p>
+                <div className="pt-3 border-t border-[#1877F2]/10">
+                  <a
+                    href="https://www.facebook.com/ascenddevelopmentsolutions"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary !bg-[#1877F2] !border-[#1877F2] hover:!bg-[#166fe5] text-xs !py-2.5 !px-5 w-full justify-center inline-flex items-center gap-2"
+                  >
+                    <Facebook size={14} /> Follow on Facebook
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -31,7 +31,7 @@ Years in Industry: 15+
 ## Contact
 Email: info@ascenddevelopmentsolutions.org
 Phone: +63.912.345.6789
-Facebook: https://www.facebook.com/100080045962662/?locale=tl_PH
+Facebook: https://www.facebook.com/ascenddevelopmentsolutions
 Hours: Monday–Friday 9:00 AM–5:00 PM
 
 ## Colors

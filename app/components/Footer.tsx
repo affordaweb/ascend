@@ -36,7 +36,7 @@ export default function Footer() {
               Ascend Development Solutions (ADS) is a growth-focused consultancy dedicated to empowering organizations through strategic guidance, capacity building, and values-driven development.
             </p>
             <a
-              href="https://www.facebook.com/100080045962662/?locale=tl_PH"
+              href="https://www.facebook.com/ascenddevelopmentsolutions"
               target="_blank"
               rel="noopener noreferrer"
               className="icon-social inline-flex items-center gap-2 bg-white/8 border border-white/15 text-white/70 text-sm px-4 py-2 rounded-full hover:bg-[#f59e0b] hover:border-[#f59e0b] hover:text-white transition-all font-medium"
