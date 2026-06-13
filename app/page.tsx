@@ -159,7 +159,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="relative">
-                <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <div className="rounded-2xl shadow-2xl border border-gray-300">
                   <Image
                     src="/images/illus-home-about.png"
                     alt="Meet the ADS Team"
@@ -232,7 +232,7 @@ export default function HomePage() {
         <section className="bg-[#f0f4f8] py-20 sm:py-28">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl order-last lg:order-first">
+              <div className="relative rounded-2xl shadow-2xl border border-gray-300 order-last lg:order-first">
                 <Image
                   src="/images/illus-philosophy.png"
                     alt="Rooted in Filipino Values"
@@ -324,7 +324,7 @@ export default function HomePage() {
         <section className="bg-[#f0f4f8] py-20 sm:py-28">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl shadow-2xl border border-gray-300">
                 <Image
                   src="/images/illus-team.png"
                     alt="Expert Collaboration"

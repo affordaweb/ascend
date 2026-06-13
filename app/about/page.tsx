@@ -64,7 +64,7 @@ export default function AboutPage() {
         {/* Who We Are */}
         <section className="bg-white py-20 sm:py-28 px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-2xl shadow-2xl border border-gray-300">
               <Image
                 src="/images/illus-about-who.png"
                 alt="Who We Are"
@@ -134,7 +134,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="order-1 lg:order-2 relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="order-1 lg:order-2 relative rounded-2xl shadow-2xl border border-gray-300">
               <Image
                 src="/images/illus-about-story.png"
                 alt="Our Story"

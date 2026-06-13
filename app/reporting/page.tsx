@@ -72,7 +72,7 @@ export default function ReportingPage() {
         {/* Transforming Data Into Clarity */}
         <section className="bg-white py-20 sm:py-28 px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-2xl shadow-2xl border border-gray-300">
               <Image
                 src="/images/illus-reporting.png"
                 alt="Organizational Reporting"
