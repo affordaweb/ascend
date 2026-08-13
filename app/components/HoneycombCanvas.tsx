@@ -105,20 +105,20 @@ export default function HoneycombCanvas() {
           const b = cell.brightness
           // Glow fill
           const g = ctx.createRadialGradient(cell.cx, cell.cy, 0, cell.cx, cell.cy, r * 1.2)
-          g.addColorStop(0,   `rgba(251,191,36,${b * 0.18})`)
-          g.addColorStop(0.6, `rgba(240,165,0,${b * 0.09})`)
+          g.addColorStop(0,   `rgba(251,191,36,${b * 0.32})`)
+          g.addColorStop(0.6, `rgba(240,165,0,${b * 0.16})`)
           g.addColorStop(1,   'rgba(240,165,0,0)')
           ctx.fillStyle = g; ctx.fill()
 
           // Border
           hexPath(cell.cx, cell.cy, r)
-          ctx.strokeStyle = `rgba(251,191,36,${b * 0.45})`
-          ctx.lineWidth   = 0.8
+          ctx.strokeStyle = `rgba(251,191,36,${b * 0.7})`
+          ctx.lineWidth   = 1
           ctx.stroke()
         } else {
           // Idle border
-          ctx.strokeStyle = 'rgba(255,255,255,0.04)'
-          ctx.lineWidth   = 0.6
+          ctx.strokeStyle = 'rgba(151,193,232,0.16)'
+          ctx.lineWidth   = 0.8
           ctx.stroke()
         }
       })
