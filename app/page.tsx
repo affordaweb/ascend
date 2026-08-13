@@ -20,7 +20,6 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import FAQAccordion from './components/FAQAccordion'
 import ScrollReveal from './components/ScrollReveal'
-import HoneycombCanvas from './components/HoneycombCanvas'
 
 export const metadata: Metadata = {
   title: 'Ascend Development Solutions — Building Better Futures Together',
@@ -80,53 +79,31 @@ export default function HomePage() {
       <Navbar />
       <main>
 
-        {/* Hero — full viewport, centered */}
-        <section className="relative w-full min-h-screen flex items-center justify-center pt-[100px]" style={{ background: '#071829' }}>
-          <HoneycombCanvas />
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                'linear-gradient(to bottom, rgba(7,24,41,0.30) 0%, rgba(7,24,41,0.40) 50%, rgba(7,24,41,0.65) 100%)',
-            }}
-          />
-          <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-              <span className="w-2 h-2 rounded-full bg-[#f59e0b] animate-pulse" />
-              <span className="text-white/80 text-sm font-medium uppercase tracking-widest">
-                ESG &amp; SDG-Aligned Solutions
-              </span>
+        <section className="editorial-hero">
+          <div className="site-container grid min-h-[calc(100svh-4rem)] items-center gap-8 py-14 md:grid-cols-2 md:gap-14">
+            <div className="relative order-2 md:order-1">
+              <Image src="/images/ascend-2026/Gemini_Generated_Image_32yxx32yxx32yxx3.webp" alt="A professional walking toward sustainable growth" width={1024} height={1024} priority className="editorial-hero-image mx-auto w-full max-w-[38rem]" />
             </div>
-            <h1 className="font-[family-name:var(--font-fraunces)] text-5xl md:text-7xl font-bold text-white leading-tight mb-4">
-              Building Better{' '}
-              <span className="gradient-text-light">Futures Together</span>
-            </h1>
-            <p className="text-xl text-white/80 mb-3 leading-relaxed">
-              Ascend. In Our Shared Humanity, There is a Solution
-            </p>
-            <p className="text-white/55 max-w-2xl mx-auto mb-10 leading-relaxed">
-              Empowering individuals, groups, and institutions through ESG and
-              SDG-aligned trainings, seminars, reporting, and consultancy.
-              Sama-samang pag-angat para sa makatao, makatarungan, at
-              makakalikasang kinabukasan.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href="/consulting" className="btn-primary">Our Services</a>
-              <a href="/contact" className="btn-ghost">Contact Us</a>
+            <div className="relative z-10 order-1 max-w-xl md:order-2">
+              <p className="section-label mb-6">ESG &amp; SDG-Aligned Solutions</p>
+              <h1 className="display-title text-[#123d2d]">Building Better Futures Together</h1>
+              <p className="mt-6 font-[family-name:var(--font-fraunces)] text-xl italic text-[#1f5139]">Ascend. In Our Shared Humanity, There is a Solution</p>
+              <p className="body-copy mt-6">Empowering individuals, groups, and institutions through ESG and SDG-aligned trainings, seminars, reporting, and consultancy. Sama-samang pag-angat para sa makatao, makatarungan, at makakalikasang kinabukasan.</p>
+              <div className="mt-9 flex flex-wrap gap-3"><a href="/consulting" className="btn-primary">Explore Our Services <ArrowRight size={16} className="ml-2" /></a><a href="/contact" className="btn-outline">Contact Us</a></div>
             </div>
           </div>
         </section>
 
         {/* Stats — floating card like CWA */}
-        <section className="bg-white relative z-10 pt-[75px] pb-[48px]">
-          <div className="max-w-5xl mx-auto px-4 -mt-[100px]">
-            <div className="bg-white rounded-2xl shadow-2xl py-8 px-4 grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-100">
+        <section className="impact-band">
+          <div className="site-container py-10">
+            <div className="grid grid-cols-2 divide-x divide-white/15 md:grid-cols-4">
               {stats.map((s) => (
                 <div key={s.l} className="text-center px-6 py-2">
-                  <div className="font-[family-name:var(--font-fraunces)] gradient-text text-3xl md:text-4xl font-bold">
+                  <div className="font-[family-name:var(--font-fraunces)] text-3xl font-bold text-[#e5d5b8] md:text-4xl">
                     {s.n}
                   </div>
-                  <div className="text-[#6b7280] text-xs md:text-sm mt-1">{s.l}</div>
+                  <div className="mt-1 text-xs text-white/70 md:text-sm">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -161,7 +138,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="rounded-2xl shadow-2xl border border-gray-300">
                   <Image
-                    src="/images/illus-home-about.png"
+                    src="/images/ascend-2026/Gemini_Generated_Image_7guo5d7guo5d7guo.webp"
                     alt="Meet the ADS Team"
                     width={600}
                     height={450}
@@ -234,7 +211,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="relative rounded-2xl shadow-2xl border border-gray-300 order-last lg:order-first">
                 <Image
-                  src="/images/illus-philosophy.png"
+                  src="/images/ascend-2026/Gemini_Generated_Image_2nzoky2nzoky2nzo.webp"
                     alt="Rooted in Filipino Values"
                   width={600}
                   height={450}
@@ -326,7 +303,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="relative rounded-2xl shadow-2xl border border-gray-300">
                 <Image
-                  src="/images/illus-team.png"
+                  src="/images/ascend-2026/Gemini_Generated_Image_83rf1a83rf1a83rf.webp"
                     alt="Expert Collaboration"
                   width={600}
                   height={450}
@@ -361,7 +338,7 @@ export default function HomePage() {
         <section className="bg-[#0f2744] py-20 sm:py-28 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <Image
-              src="/images/cta-wave-1.png"
+              src="/images/ascend-2026/Gemini_Generated_Image_7guo5d7guo5d7guo.webp"
               alt=""
               width={900}
               height={450}

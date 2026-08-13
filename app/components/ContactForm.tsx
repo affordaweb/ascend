@@ -8,7 +8,7 @@ const SITE_NAME = 'ascend'
 const API_URL = 'https://contact-form-lake-theta.vercel.app/api/contact'
 
 const inputClass =
-  'w-full border border-gray-200 rounded-xl px-4 py-3 text-[#474747] text-sm focus:outline-none focus:border-[#A9D6B6] focus:ring-2 focus:ring-[#A9D6B6]/40 transition-all'
+  'w-full border border-[#d8d7cc] bg-[#fffdf8] px-4 py-3 text-[#283037] text-sm focus:outline-none focus:border-[#1f5139] focus:ring-2 focus:ring-[#8ba184]/30 transition-all'
 
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
@@ -138,7 +138,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="btn-p btn-p-mint flex w-full items-center justify-center gap-2 px-8 py-3.5 text-base disabled:opacity-60 disabled:cursor-not-allowed"
+        className="btn-primary flex w-full items-center justify-center gap-2 px-8 py-3.5 text-base disabled:cursor-not-allowed disabled:opacity-60"
       >
         {status === 'submitting' ? 'Sending...' : 'Send Message'}
       </button>

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Search, Map, RefreshCw, Users, BarChart3, ArrowRight } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import ConsultingHeroCanvas from '../components/ConsultingHeroCanvas'
+import PageHero from '../components/PageHero'
 
 export const metadata: Metadata = {
   title: 'Strategic Consulting — Ascend Development Solutions',
@@ -45,36 +45,14 @@ export default function ConsultingPage() {
       <Navbar />
       <main>
 
-        {/* Hero */}
-        <section className="min-h-[55vh] bg-[#111118] flex items-center py-24 px-4 pt-32 relative overflow-hidden">
-          <ConsultingHeroCanvas />
-          <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)' }} />
-          <div className="max-w-4xl mx-auto text-center text-white relative z-10">
-            <p className="section-label mb-4">What We Offer</p>
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="h-px w-12 bg-[#f59e0b]/50" />
-              <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b]" />
-              <div className="h-px w-12 bg-[#f59e0b]/50" />
-            </div>
-            <h1 className="font-[family-name:var(--font-fraunces)] text-4xl md:text-6xl font-bold leading-tight mb-4">
-              Strategic Consulting
-            </h1>
-            <p className="font-[family-name:var(--font-fraunces)] text-xl md:text-2xl text-[#fbbf24] italic mb-4">
-              For Purposeful Growth
-            </p>
-            <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-              We partner with organizations to create clarity, alignment, and direction through
-              integrity-driven strategic advisory and consultancy services.
-            </p>
-          </div>
-        </section>
+        <PageHero eyebrow="What We Offer" title="Strategic Consulting" description="For purposeful growth. We partner with organizations to create clarity, alignment, and direction through integrity-driven strategic advisory and consultancy services." image="/images/ascend-2026/Gemini_Generated_Image_2j7xde2j7xde2j7x.webp" imageAlt="Strategic consultant presenting an organizational plan" />
 
         {/* Building Stronger Organizations */}
         <section className="bg-white py-20 sm:py-28 px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative rounded-2xl shadow-2xl border border-gray-300">
               <Image
-                src="/images/illus-consulting.png"
+                src="/images/ascend-2026/Gemini_Generated_Image_41pojw41pojw41po.webp"
                 alt="Strategic Consulting"
                 width={600}
                 height={450}
@@ -163,7 +141,7 @@ export default function ConsultingPage() {
         <section className="relative bg-[#0f2744] py-20 sm:py-28 px-4 overflow-hidden">
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <Image
-              src="/images/cta-wave-2.png"
+              src="/images/ascend-2026/Gemini_Generated_Image_41pojw41pojw41po.webp"
               alt=""
               width={900}
               height={450}

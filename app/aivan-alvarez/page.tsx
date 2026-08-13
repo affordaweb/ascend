@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Mail, Phone, Linkedin, Globe, Users, ShieldCheck, HeartHandshake } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import FounderCanvas from '../components/FounderCanvas'
+import PageHero from '../components/PageHero'
 
 export const metadata: Metadata = {
   title: 'Aivan Castillo Alvarez — Ascend Development Solutions',
@@ -55,26 +55,7 @@ export default function AivanAlvarezPage() {
       <Navbar />
       <main>
 
-        {/* Hero */}
-        <section className="min-h-[55vh] bg-[#1c1c24] flex items-center py-24 px-4 pt-32 relative overflow-hidden">
-          <FounderCanvas />
-          <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)' }} />
-          <div className="max-w-4xl mx-auto text-center text-white relative z-10">
-            <p className="section-label mb-4">Aivan Castillo Alvarez</p>
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="h-px w-12 bg-[#f59e0b]/50" />
-              <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b]" />
-              <div className="h-px w-12 bg-[#f59e0b]/50" />
-            </div>
-            <h1 className="font-[family-name:var(--font-fraunces)] text-4xl md:text-5xl font-bold leading-tight mb-6">
-              Advancing Inclusive Governance and Community-Led Change
-            </h1>
-            <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-              A development leader connecting communities with decision-makers across Asia and the
-              Pacific
-            </p>
-          </div>
-        </section>
+        <PageHero eyebrow="Aivan Castillo Alvarez" title="Advancing Inclusive Governance and Community-Led Change" description="A development leader connecting communities with decision-makers across Asia and the Pacific." image="/images/ascend-2026/Gemini_Generated_Image_83rf1a83rf1a83rf.webp" imageAlt="Collaborative leadership discussion" />
 
         {/* About Aivan */}
         <section className="bg-white py-20 sm:py-28 px-4">
@@ -184,7 +165,7 @@ export default function AivanAlvarezPage() {
         {/* Full-width Quote Banner */}
         <section className="relative h-[320px] overflow-hidden">
           <Image
-            src="/images/illus-banner-growth.png"
+            src="/images/ascend-2026/Gemini_Generated_Image_32yxx32yxx32yxx3.webp"
             alt="Growth and Impact"
             width={1200}
             height={600}
@@ -257,7 +238,7 @@ export default function AivanAlvarezPage() {
         <section className="relative bg-[#0f2744] py-20 sm:py-28 px-4 overflow-hidden">
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <Image
-              src="/images/cta-columns.png"
+              src="/images/ascend-2026/Gemini_Generated_Image_83rf1a83rf1a83rf.webp"
               alt=""
               width={900}
               height={450}

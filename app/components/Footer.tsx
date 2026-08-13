@@ -20,8 +20,8 @@ const usefulLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a1e36] pt-0 pb-8">
-      <div className="h-1 w-full" style={{ background: 'linear-gradient(to right, #f59e0b, #2563eb, #f59e0b)' }} />
+    <footer className="bg-[#123d2d] pt-0 pb-8">
+      <div className="h-1 w-full bg-[#b78b58]" />
       <div className="max-w-7xl mx-auto px-4 pt-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
@@ -30,7 +30,7 @@ export default function Footer() {
               alt="Ascend Development Solutions"
               width={140}
               height={35}
-              className="h-10 w-auto object-contain mb-4 brightness-0 invert"
+              className="mb-4 h-10 w-auto object-contain brightness-0 invert"
             />
             <p className="text-white/55 text-sm leading-relaxed mb-5">
               Ascend Development Solutions (ADS) is a growth-focused consultancy dedicated to empowering organizations through strategic guidance, capacity building, and values-driven development.
@@ -39,7 +39,7 @@ export default function Footer() {
               href="https://www.facebook.com/ascenddevelopmentsolutions"
               target="_blank"
               rel="noopener noreferrer"
-              className="icon-social inline-flex items-center gap-2 bg-white/8 border border-white/15 text-white/70 text-sm px-4 py-2 rounded-full hover:bg-[#f59e0b] hover:border-[#f59e0b] hover:text-white transition-all font-medium"
+              className="icon-social inline-flex items-center gap-2 border border-white/25 px-4 py-2 text-sm font-medium text-white/70 transition-all hover:border-[#b78b58] hover:bg-[#b78b58] hover:text-white"
             >
               <Facebook size={14} /> Facebook
             </a>
@@ -49,7 +49,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {quickLinks.map((l) => (
                 <li key={l.href}>
-                  <a href={l.href} className="text-white/55 hover:text-[#f59e0b] text-sm transition-colors">
+                  <a href={l.href} className="text-sm text-white/55 transition-colors hover:text-[#e5d5b8]">
                     {l.label}
                   </a>
                 </li>
@@ -65,7 +65,7 @@ export default function Footer() {
                     href={l.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white/55 hover:text-[#f59e0b] text-sm transition-colors"
+                    className="text-sm text-white/55 transition-colors hover:text-[#e5d5b8]"
                   >
                     {l.label}
                   </a>
@@ -77,17 +77,17 @@ export default function Footer() {
             <h4 className="text-white font-semibold text-xs uppercase tracking-widest mb-5">Contact</h4>
             <div className="space-y-3.5 text-sm text-white/55">
               <div className="flex items-start gap-3">
-                <Mail size={14} className="text-[#f59e0b] mt-0.5 shrink-0" />
+                <Mail size={14} className="mt-0.5 shrink-0 text-[#e5d5b8]" />
                 <a href="mailto:info@ascenddevelopmentsolutions.org" className="hover:text-white transition-colors">
                   info@ascenddevelopmentsolutions.org
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Phone size={14} className="text-[#f59e0b] shrink-0" />
+                <Phone size={14} className="shrink-0 text-[#e5d5b8]" />
                 <span>+63.912.345.6789</span>
               </div>
               <div className="flex items-start gap-3">
-                <Clock size={14} className="text-[#f59e0b] mt-0.5 shrink-0" />
+                <Clock size={14} className="mt-0.5 shrink-0 text-[#e5d5b8]" />
                 <span>Monday &ndash; Friday<br />9:00 AM &ndash; 5:00 PM</span>
               </div>
             </div>

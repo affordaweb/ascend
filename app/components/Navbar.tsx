@@ -1,74 +1,43 @@
 'use client'
-import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+
 import Image from 'next/image'
+import Link from 'next/link'
+import { Menu, X } from 'lucide-react'
+import { useState } from 'react'
 
 const links = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Aivan Alvarez', href: '/aivan-alvarez' },
-  { label: "Aivan's Wall", href: '/aivans-wall' },
-  { label: 'Consulting', href: '/consulting' },
-  { label: 'Trainings & Seminars', href: '/trainings-and-seminars' },
+  { label: 'Services', href: '/consulting' },
+  { label: 'Trainings', href: '/trainings-and-seminars' },
   { label: 'Reporting', href: '/reporting' },
-  { label: 'Contact', href: '/contact' },
-  { label: 'IMG Perks', href: '/exclusive-img-perks' },
+  { label: "Aivan's Wall", href: '/aivans-wall' },
 ]
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0f2744] shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <a href="/">
-          <Image
-            src="/images/ads-logo.webp"
-            alt="Ascend Development Solutions"
-            width={160}
-            height={40}
-            className="h-10 w-auto object-contain brightness-0 invert"
-          />
-        </a>
-        <nav className="hidden lg:flex items-center gap-5">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-sm font-medium text-white/70 hover:text-white transition-colors whitespace-nowrap"
-            >
-              {l.label}
-            </a>
-          ))}
-          <a href="/contact" className="btn-primary text-sm px-5 py-2 ml-2">
-            Get in Touch
-          </a>
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-[#d8d7cc]/80 bg-[#fffdf8]/95 backdrop-blur">
+      <div className="site-container flex min-h-[5.25rem] items-center justify-between gap-6">
+        <Link href="/" aria-label="Ascend Development Solutions home">
+          <Image src="/images/ads-logo.webp" alt="Ascend Development Solutions" width={160} height={40} className="h-9 w-auto object-contain" priority />
+        </Link>
+        <nav className="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
+          {links.map((link) => <Link key={link.href} href={link.href} className="text-sm font-bold text-[#4e5b53] transition-colors hover:text-[#1f5139]">{link.label}</Link>)}
+          <Link href="/contact" className="btn-primary ml-2">Book a Consultation</Link>
         </nav>
-        <button
-          className="lg:hidden text-white"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
+        <button type="button" className="grid h-11 w-11 place-items-center border border-[#1f5139] text-[#1f5139] lg:hidden" onClick={() => setOpen(!open)} aria-expanded={open} aria-label="Toggle navigation">
+          {open ? <X size={21} /> : <Menu size={21} />}
         </button>
       </div>
-      {open && (
-        <div className="lg:hidden bg-[#0f2744] border-t border-white/10 px-4 pb-5">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="block py-2.5 text-white/70 hover:text-white text-sm font-medium border-b border-white/5"
-              onClick={() => setOpen(false)}
-            >
-              {l.label}
-            </a>
+      {open && <nav className="border-t border-[#d8d7cc] bg-[#fffdf8] px-4 py-5 lg:hidden" aria-label="Mobile navigation">
+        <div className="site-container grid gap-1">
+          {[...links, { label: 'Contact', href: '/contact' }, { label: 'IMG Perks', href: '/exclusive-img-perks' }, { label: 'Meet Aivan Alvarez', href: '/aivan-alvarez' }].map((link) => (
+            <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className="border-b border-[#d8d7cc]/70 py-3 text-base font-bold text-[#283037]">{link.label}</Link>
           ))}
-          <a href="/contact" className="block mt-4 btn-primary text-sm text-center">
-            Get in Touch
-          </a>
         </div>
-      )}
+      </nav>}
     </header>
   )
 }

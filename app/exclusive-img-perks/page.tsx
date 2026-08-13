@@ -10,7 +10,7 @@ import {
 } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import HeroCanvas from '../components/HeroCanvas'
+import PageHero from '../components/PageHero'
 
 export const metadata: Metadata = {
   title: 'Exclusive IMG Perks — Ascend Development Solutions',
@@ -57,49 +57,8 @@ export default function ExclusiveIMGPerksPage() {
       <Navbar />
       <main>
 
-        {/* Hero */}
-        <section className="min-h-[60vh] bg-[#071829] flex items-center py-24 px-4 pt-32 relative overflow-hidden">
-          <HeroCanvas />
-          <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)' }} />
-          <div className="max-w-4xl mx-auto text-center text-white relative z-10">
-            <p className="section-label mb-4">International Marketing Group</p>
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="h-px w-12 bg-[#f59e0b]/50" />
-              <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b]" />
-              <div className="h-px w-12 bg-[#f59e0b]/50" />
-            </div>
-            <h1 className="font-[family-name:var(--font-fraunces)] text-4xl md:text-6xl font-bold leading-tight mb-4">
-              Exclusive IMG Perks
-            </h1>
-            <p className="font-[family-name:var(--font-fraunces)] text-xl text-[#fbbf24] italic mb-6">
-              Your Gateway to Financial Empowerment and Life Enrichment
-            </p>
-            <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed mb-10">
-              Unlock a world of extraordinary advantages designed to empower your financial growth
-              and personal well-being. As a proud member of the International Marketing Group
-              (IMG), you gain access to exclusive benefits that strengthen your financial
-              foundation and enrich your lifestyle.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://1204jf.imgcorp.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                Be an IMG Member
-              </a>
-              <a
-                href="https://1204jf.imgcorp.com/buildingyourfuture/register.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ghost"
-              >
-                Attend Webinar
-              </a>
-            </div>
-          </div>
-        </section>
+        <PageHero eyebrow="International Marketing Group" title="Exclusive IMG Perks" description="Your gateway to financial empowerment and life enrichment. Unlock extraordinary advantages designed to strengthen your financial foundation and enrich your lifestyle." image="/images/ascend-2026/Gemini_Generated_Image_32yxx32yxx32yxx3.webp" imageAlt="A professional journey toward financial growth" />
+        <div className="relative z-20 -mt-8 flex flex-wrap justify-center gap-3 px-4"><a href="https://1204jf.imgcorp.com/" target="_blank" rel="noopener noreferrer" className="btn-primary">Be an IMG Member</a><a href="https://1204jf.imgcorp.com/buildingyourfuture/register.html" target="_blank" rel="noopener noreferrer" className="btn-outline bg-[#fffdf8]">Attend Webinar</a></div>
 
         {/* Financial Check-up */}
         <section className="bg-[#f0f4f8] py-20 sm:py-28 px-4">
@@ -131,7 +90,7 @@ export default function ExclusiveIMGPerksPage() {
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-xl bg-white flex items-center justify-center p-6">
               <Image
-                src="/images/cta-steps.png"
+                src="/images/ascend-2026/Gemini_Generated_Image_32yxx32yxx32yxx3.webp"
                 alt="Financial Growth Steps"
                 width={600}
                 height={450}
@@ -196,7 +155,7 @@ export default function ExclusiveIMGPerksPage() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative rounded-2xl overflow-hidden shadow-xl bg-[#f0f4f8] flex items-center justify-center p-6">
               <Image
-                src="/images/cta-wave-1.png"
+                src="/images/ascend-2026/Gemini_Generated_Image_7fvuwz7fvuwz7fvu.webp"
                 alt="Kaiser Health Builder"
                 width={600}
                 height={450}
@@ -240,7 +199,7 @@ export default function ExclusiveIMGPerksPage() {
         <section className="relative bg-[#0f2744] py-20 sm:py-28 px-4 overflow-hidden">
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <Image
-              src="/images/cta-wave-2.png"
+              src="/images/ascend-2026/Gemini_Generated_Image_32yxx32yxx32yxx3.webp"
               alt=""
               width={900}
               height={450}

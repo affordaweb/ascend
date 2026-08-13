@@ -4,7 +4,7 @@ import { Mail, Phone, Clock, Facebook } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ContactForm from '../components/ContactForm'
-import ContactHeroCanvas from '../components/ContactHeroCanvas'
+import PageHero from '../components/PageHero'
 
 export const metadata: Metadata = {
   title: 'Contact Us — Ascend Development Solutions',
@@ -45,28 +45,10 @@ export default function ContactPage() {
       <Navbar />
       <main>
 
-        {/* Hero */}
-        <section className="min-h-[50vh] bg-gradient-to-br from-[#0f2744] to-[#1e3a5f] flex items-center py-24 px-4 pt-32 relative overflow-hidden">
-          <ContactHeroCanvas />
-          <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)' }} />
-          <div className="max-w-4xl mx-auto text-center text-white relative z-10">
-            <p className="section-label mb-4">Reach Out</p>
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="h-px w-12 bg-[#f59e0b]/50" />
-              <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b]" />
-              <div className="h-px w-12 bg-[#f59e0b]/50" />
-            </div>
-            <h1 className="font-[family-name:var(--font-fraunces)] text-4xl md:text-6xl font-bold leading-tight mb-4">
-              Contact Us
-            </h1>
-            <p className="font-[family-name:var(--font-fraunces)] text-xl md:text-2xl text-[#fbbf24] italic">
-              Let&apos;s Build Meaningful Change, Together
-            </p>
-          </div>
-        </section>
+        <PageHero eyebrow="Let's Connect" title="Start a Conversation With ADS" description="Let's build meaningful change, together. Whether you are exploring our services, seeking a partnership, or simply want to learn more about how ADS can support your organization, we are here to listen and respond." image="/images/ascend-2026/Gemini_Generated_Image_83rf1a83rf1a83rf.webp" imageAlt="A consultant and client discussing organizational plans" />
 
         {/* Contact Section */}
-        <section className="bg-white py-20 sm:py-28 px-4">
+        <section className="bg-[#fffdf8] py-20 sm:py-28 px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
 
             {/* Contact Info */}
@@ -115,7 +97,7 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-[#f0f4f8] rounded-2xl p-8 shadow-sm border border-gray-100">
+            <div className="border border-[#d8d7cc] bg-[#ece9df] p-8 shadow-sm">
               <h3 className="font-[family-name:var(--font-fraunces)] text-2xl font-bold text-[#1e3a5f] mb-2">
                 Send Us a Message
               </h3>
@@ -132,12 +114,12 @@ export default function ContactPage() {
         <section className="bg-[#0f2744] py-20 sm:py-28 px-4 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <Image
-              src="/images/cta-network.png"
+              src="/images/ascend-2026/Gemini_Generated_Image_2nzoky2nzoky2nzo.webp"
               alt=""
               width={900}
               height={450}
               className="absolute right-0 top-1/2 -translate-y-1/2 h-[130%] w-auto object-contain select-none"
-              style={{ mixBlendMode: 'screen', opacity: 0.13 }}
+              style={{ mixBlendMode: 'luminosity', opacity: 0.18 }}
             />
           </div>
           <div

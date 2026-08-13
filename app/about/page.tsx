@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { ShieldCheck, Users, Lightbulb, HeartHandshake } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import AboutHeroCanvas from '../components/AboutHeroCanvas'
+import PageHero from '../components/PageHero'
 
 export const metadata: Metadata = {
   title: 'About ADS — Ascend Development Solutions',
@@ -40,33 +40,14 @@ export default function AboutPage() {
       <Navbar />
       <main>
 
-        {/* Hero */}
-        <section className="min-h-[55vh] bg-[#0a2a35] flex items-center py-24 px-4 pt-32 relative overflow-hidden">
-          <AboutHeroCanvas />
-          <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)' }} />
-          <div className="max-w-4xl mx-auto text-center text-white relative z-10">
-            <p className="section-label mb-4">Our Story</p>
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="h-px w-12 bg-[#f59e0b]/50" />
-              <div className="w-1.5 h-1.5 rounded-full bg-[#f59e0b]" />
-              <div className="h-px w-12 bg-[#f59e0b]/50" />
-            </div>
-            <h1 className="font-[family-name:var(--font-fraunces)] text-4xl md:text-6xl font-bold leading-tight mb-6">
-              About Ascend Development Solutions
-            </h1>
-            <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-              A professional services firm dedicated to advancing sustainable organizational growth
-              and human capital development across the Philippines and Asia-Pacific.
-            </p>
-          </div>
-        </section>
+        <PageHero eyebrow="Our Story" title="About Ascend Development Solutions" description="A professional services firm dedicated to advancing sustainable organizational growth and human capital development across the Philippines and Asia-Pacific." image="/images/ascend-2026/Gemini_Generated_Image_7guo5d7guo5d7guo.webp" imageAlt="Collaborative sustainability planning" />
 
         {/* Who We Are */}
         <section className="bg-white py-20 sm:py-28 px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative rounded-2xl shadow-2xl border border-gray-300">
               <Image
-                src="/images/illus-about-who.png"
+                src="/images/ascend-2026/Gemini_Generated_Image_7fvuwz7fvuwz7fvu.webp"
                 alt="Who We Are"
                 width={600}
                 height={450}
@@ -136,7 +117,7 @@ export default function AboutPage() {
             </div>
             <div className="order-1 lg:order-2 relative rounded-2xl shadow-2xl border border-gray-300">
               <Image
-                src="/images/illus-about-story.png"
+                src="/images/ascend-2026/Gemini_Generated_Image_2nzoky2nzoky2nzo.webp"
                 alt="Our Story"
                 width={600}
                 height={450}
@@ -219,7 +200,7 @@ export default function AboutPage() {
         <section className="relative bg-[#0f2744] py-20 sm:py-28 px-4 overflow-hidden">
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <Image
-              src="/images/cta-steps.png"
+              src="/images/ascend-2026/Gemini_Generated_Image_32yxx32yxx32yxx3.webp"
               alt=""
               width={900}
               height={450}
