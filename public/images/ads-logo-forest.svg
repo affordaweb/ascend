@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 180" role="img" aria-labelledby="title">
+  <title id="title">ADS Ascend Development Solutions</title>
+  <rect width="560" height="180" fill="none"/>
+  <path fill="#1f5139" d="M25 105 65 17h35l40 88h-31l-6-16H60l-6 16H23Zm46-61-4 12-4 11h24l-4-11-4-12h-8Z"/>
+  <path fill="#1f5139" d="M153 17h45c35 0 58 17 58 44s-23 44-58 44h-45V17Zm30 23v42h13c18 0 29-8 29-21s-11-21-29-21h-13Z"/>
+  <path fill="#1f5139" d="M276 91l11-21c10 8 25 13 38 13 12 0 17-3 17-8 0-16-64-4-64-36 0-16 14-29 42-29 17 0 33 4 45 12l-10 21c-12-7-23-10-34-10-12 0-17 4-17 9 0 15 64 4 64 35 0 16-14 29-42 29-21 0-42-6-54-15Z"/>
+  <path fill="#b78b58" d="M195 50c8-12 30-19 43-4 5 6 7 16 3 25-3 8-11 16-21 20-11-5-18-12-21-20-4-9-3-16-4-21Zm12 3c-3 7 2 17 13 23 10-6 15-16 12-23-4-9-18-9-25 0Zm13 5c5 0 9 4 9 9s-4 9-9 9-9-4-9-9 4-9 9-9Z"/>
+  <text x="23" y="145" fill="#56735d" font-family="Arial, sans-serif" font-size="29" font-weight="600" letter-spacing="1">Ascend Development Solutions</text>
+</svg>

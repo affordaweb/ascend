@@ -21,7 +21,7 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[#d8d7cc]/80 bg-[#fffdf8]/95 backdrop-blur">
       <div className="site-container flex min-h-[5.25rem] items-center justify-between gap-6">
         <Link href="/" aria-label="Ascend Development Solutions home">
-          <Image src="/images/ads-logo.webp" alt="Ascend Development Solutions" width={160} height={40} className="h-9 w-auto object-contain" priority />
+          <Image src="/images/ads-logo-forest.svg" alt="Ascend Development Solutions" width={224} height={72} className="h-12 w-auto object-contain" priority />
         </Link>
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
           {links.map((link) => <Link key={link.href} href={link.href} className="text-sm font-bold text-[#4e5b53] transition-colors hover:text-[#1f5139]">{link.label}</Link>)}

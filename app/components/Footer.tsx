@@ -26,11 +26,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
             <Image
-              src="/images/ads-logo.webp"
+              src="/images/ads-logo-forest.svg"
               alt="Ascend Development Solutions"
               width={140}
               height={35}
-              className="mb-4 h-10 w-auto object-contain brightness-0 invert"
+              className="mb-4 h-12 w-auto object-contain brightness-0 invert sepia hue-rotate-[85deg] saturate-[0.7] brightness-[2.8]"
             />
             <p className="text-white/55 text-sm leading-relaxed mb-5">
               Ascend Development Solutions (ADS) is a growth-focused consultancy dedicated to empowering organizations through strategic guidance, capacity building, and values-driven development.
